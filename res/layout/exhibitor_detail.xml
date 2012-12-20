@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <TextView
+        android:id="@+id/partner_txvw"
+        style="@style/Font.Normal.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#0000FF"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="TextView"
+        android:textColor="#FFFF00" android:layout_gravity="center_horizontal" android:layout_marginTop="3dp"/>
+
+    <ImageView
+        android:id="@+id/logo_imgvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" android:layout_gravity="center_horizontal" android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/title_txvw"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" style="@style/Font.Normal.Bold" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="3dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingBottom="5dp" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/locate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pin_green_selector"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_toRightOf="@id/locate_btn" android:layout_marginRight="36dp">
+
+            <TextView
+                android:id="@+id/booth_txvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" style="@style/Font.Normal.Bold"/>
+
+            <TextView
+                android:id="@+id/address1_txvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/address2_txvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/link_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/link_btn_selector" android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingRight="10dp" android:paddingTop="5dp" android:paddingLeft="10dp" android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:layout_marginRight="80dp" android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/phone_txvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/email_txvw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/call_btn_selector" android:layout_alignParentRight="true" android:layout_marginRight="40dp"/>
+
+        <Button
+            android:id="@+id/email_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:background="@drawable/email_btn_selector" android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/description_txvw"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="5dp"/>
+
+</LinearLayout>

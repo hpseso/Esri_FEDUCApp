@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        layout="@layout/header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" android:background="@drawable/background_portrait">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" android:layout_marginBottom="58dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ViewFlipper
+                    android:id="@+id/viewFlipper1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="670dp" >
+
+                    
+                    
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:tag="1" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" >
+
+                                <ImageView
+                                    android:id="@+id/welcome_imgvw"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/welcome_screen" />
+
+                                <Button
+                                    android:id="@+id/no1_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_marginTop="160dp"
+                                    android:background="@drawable/no1_selector" />
+
+                                <Button
+                                    android:id="@+id/no2_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="50dp"
+                                    android:layout_marginTop="230dp"
+                                    android:background="@drawable/no2_up_selector" />
+
+                                <Button
+                                    android:id="@+id/no3_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="50dp"
+                                    android:layout_marginTop="350dp"
+                                    android:background="@drawable/no3_selector" />
+
+                                <Button
+                                    android:id="@+id/no4_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="25dp"
+                                    android:background="@drawable/no4_selector" />
+
+                                <TextView
+                                    android:id="@+id/help1_txvw"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/blue_box"
+                                    android:text="1. Tap the next/previous button to go to other panels."
+                                    android:textColor="#FFFFFF" android:layout_toLeftOf="@id/no1_btn" android:layout_marginTop="160dp" android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/help2_txvw"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/no2_btn"
+                                    android:background="@drawable/blue_box"
+                                    android:text="2. Tap any of these buttons to open the various social media web views."
+                                    android:textColor="#FFFFFF" android:layout_alignParentRight="true" android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/help3_txvw"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/blue_box"
+                                    android:text="4. Allow you to see locations on a map, or open a web view for various elements."
+                                    android:textColor="#FFFFFF" android:layout_below="@id/no3_btn" android:layout_alignParentRight="true" android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/help4_txvw"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/no4_btn"
+                                    android:background="@drawable/blue_box"
+                                    android:text="4. Tap to open the map view."
+                                    android:textColor="#FFFFFF" android:visibility="gone"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" >
+
+                                <ImageView
+                                    android:id="@+id/tab_imgvw"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/tab_screen" />
+
+                                <Button
+                                    android:id="@+id/no11_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="35dp"
+                                    android:background="@drawable/no1_selector" />
+
+                                <Button
+                                    android:id="@+id/no12_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="200dp"
+                                    android:layout_marginTop="100dp"
+                                    android:background="@drawable/no2_up_selector" />
+
+                                <TextView
+                                    android:id="@+id/help11_txvw"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/blue_box"
+                                    android:text="1. Filters between exhibitors,sponsors and EXPO hours."
+                                    android:textColor="#FFFFFF" android:layout_below="@id/no11_btn" android:layout_marginLeft="60dp" android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/help12_txvw"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@id/no12_btn"
+                                    android:background="@drawable/blue_box"
+                                    android:text="2. Shows the details of a specifics exihibitors item."
+                                    android:textColor="#FFFFFF" android:layout_marginLeft="70dp" android:visibility="gone"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:tag="2" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/info_screen" />
+
+                                    <Button
+                                        android:id="@+id/no21_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/no1_selector" android:layout_marginLeft="150dp" android:layout_marginTop="580dp"/>
+
+                                    <Button
+                                        android:id="@+id/no22_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/no2_selector" android:layout_alignParentRight="true" android:layout_marginRight="15dp" android:layout_marginTop="560dp"/>
+
+                                    <Button
+                                        android:id="@+id/no23_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/no3_selector" android:layout_centerHorizontal="true" android:layout_marginTop="100dp"/>
+
+                                    <TextView
+                                        android:id="@+id/help21_txvw"
+                                        android:layout_width="200dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/blue_box"
+                                        android:text="1.Filters between the various map views."
+                                        android:textColor="#FFFFFF" android:layout_marginTop="530dp" android:layout_marginLeft="100dp" android:visibility="gone"/>
+
+                                    <TextView
+                                        android:id="@+id/help22_txvw"
+                                        android:layout_width="200dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/blue_box"
+                                        android:text="2.Tap toipen map legend."
+                                        android:textColor="#FFFFFF" android:layout_marginTop="540dp" android:layout_marginLeft="190dp" android:visibility="gone"/>
+
+                                    <TextView
+                                        android:id="@+id/help23_txvw"
+                                        android:layout_width="200dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/blue_box"
+                                        android:text="3.Balloon marks show various items on the map."
+                                        android:textColor="#FFFFFF" android:layout_marginTop="140dp" android:layout_marginLeft="130dp" android:visibility="gone"/>
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" android:layout_weight="1">
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </ViewFlipper>
+
+                <Button
+                    android:id="@+id/prev_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/demo_next_btn_selector" />
+
+                <Button
+                    android:id="@+id/next_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/prev_btn"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/demo_prev_btn_selector" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" android:layout_weight="1">
+                    
+                    <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/other_save_date" android:layout_marginLeft="10dp" android:layout_marginRight="5dp"/>
+                    
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" android:layout_weight="1">
+                    
+                    <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/other_survey" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" android:layout_weight="1">
+                    
+                    <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/other_privacy" android:layout_marginLeft="5dp" android:layout_marginRight="10dp"/>
+                    
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+		<include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/footer" android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+</LinearLayout>

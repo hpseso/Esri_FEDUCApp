@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="fill_parent" android:background="@drawable/background_portrait" android:id="@+id/demo_container">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical" android:layout_marginBottom="36dp">
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" >
+
+             <ViewFlipper
+                 android:id="@+id/viewFlipper1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" >
+
+                 
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/welcome_screen" android:layout_gravity="center_horizontal" android:contentDescription="TODO" android:tag="1"/>
+
+                 <ScrollView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" android:tag="2">
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="330dp"
+                         android:tag="2" >
+
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_centerHorizontal="true"
+                             android:src="@drawable/welcome_screen_noarrow" />
+
+                         <Button
+                             android:id="@+id/no3_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="35dp"
+                             android:layout_marginTop="22dp"
+                             android:background="@drawable/no3_selector" />
+
+                         <TextView
+                             android:id="@+id/help3_txvw"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="70dp"
+                             android:layout_marginTop="50dp"
+                             android:background="@drawable/blue_box"
+                             android:text="3. Tap to open the map view."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+
+                         <Button
+                             android:id="@+id/no2_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentBottom="true"
+                             android:layout_alignParentRight="true"
+                             android:layout_marginBottom="40dp"
+                             android:layout_marginRight="40dp"
+                             android:background="@drawable/no2_selector" />
+
+                         <Button
+                             android:id="@+id/no1_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:layout_marginRight="25dp"
+                             android:background="@drawable/no1_selector" />
+
+                         <TextView
+                             android:id="@+id/help1_txvw"
+                             android:layout_width="200dp"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:layout_marginRight="75dp"
+                             android:background="@drawable/blue_box"
+                             android:text="1. Tap the next/previous button to go to other panels."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+
+                         <TextView
+                             android:id="@+id/help2_txvw"
+                             android:layout_width="200dp"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentBottom="true"
+                             android:layout_alignParentRight="true"
+                             android:layout_marginBottom="50dp"
+                             android:layout_marginRight="80dp"
+                             android:background="@drawable/blue_box"
+                             android:text="2. Tap any of these buttons to open the various social media web views."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+                     </RelativeLayout>
+
+                 </ScrollView>
+
+                 <ScrollView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" android:tag="3">
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="330dp"
+                         android:tag="3" >
+
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center_horizontal"
+                             android:contentDescription="TODO"
+                             android:src="@drawable/tab_screen" />
+
+                         <Button
+                             android:id="@+id/no11_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="100dp"
+                             android:layout_marginTop="40dp"
+                             android:background="@drawable/no1_selector" />
+
+                         <Button
+                             android:id="@+id/no12_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="50dp"
+                             android:layout_marginTop="100dp"
+                             android:background="@drawable/no2_up_selector" />
+
+                         <TextView
+                             android:id="@+id/help12_txvw"
+                             android:layout_width="200dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="80dp"
+                             android:layout_marginTop="150dp"
+                             android:background="@drawable/blue_box"
+                             android:text="2. Show the details of a specific exhibitor item."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+
+                         <TextView
+                             android:id="@+id/help11_txvw"
+                             android:layout_width="200dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="100dp"
+                             android:layout_marginTop="80dp"
+                             android:background="@drawable/blue_box"
+                             android:text="1. Filters between exhibitors, sponsors and EXPO hours."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+                     </RelativeLayout>
+
+                 </ScrollView>
+
+                 <ScrollView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" android:tag="4">
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="330dp"
+                         android:tag="4" >
+
+                         <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_centerHorizontal="true"
+                             android:src="@drawable/info_screen" />
+
+                         <Button
+                             android:id="@+id/help21_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentBottom="true"
+                             android:layout_centerHorizontal="true"
+                             android:layout_marginBottom="18dp"
+                             android:background="@drawable/no1_selector" />
+
+                         <TextView
+                             android:id="@+id/help21_txvw"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_above="@+id/help21_btn"
+                             android:layout_centerHorizontal="true"
+                             android:background="@drawable/blue_box"
+                             android:text="1. Filter between the various map viewes."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone"
+                             android:width="200dp" />
+
+                         <Button
+                             android:id="@+id/help22_btn"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentTop="true"
+                             android:layout_centerHorizontal="true"
+                             android:layout_marginTop="52dp"
+                             android:background="@drawable/no2_selector" />
+
+                         <TextView
+                             android:id="@+id/help22_txvw"
+                             android:layout_width="200dp"
+                             android:layout_height="wrap_content"
+                             android:layout_alignLeft="@+id/help21_txvw"
+                             android:layout_below="@+id/help22_btn"
+                             android:background="@drawable/blue_box"
+                             android:text="2. Balloon marks show various items on the map."
+                             android:textColor="#FFFFFF"
+                             android:visibility="gone" />
+                     </RelativeLayout>
+
+                 </ScrollView>
+
+             </ViewFlipper>
+
+             <Button
+                 android:id="@+id/prev_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:background="@drawable/demo_next_btn_selector" />
+
+             <Button
+                 android:id="@+id/next_btn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:background="@drawable/demo_prev_btn_selector" />
+         </RelativeLayout>
+
+     </LinearLayout>
+
+ </FrameLayout>

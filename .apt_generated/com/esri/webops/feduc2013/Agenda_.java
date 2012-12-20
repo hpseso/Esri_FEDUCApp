@@ -10,7 +10,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
@@ -30,6 +35,81 @@ public final class Agenda_
     }
 
     private void afterSetContentView_() {
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
+        agendaList = ((ListView) findViewById(id.agendaList));
+        session_txvw = ((TextView) findViewById(id.session_txvw));
+        calBtn = ((Button) findViewById(id.cal_btn));
+        {
+            View view = findViewById(id.prev_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        prev_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.cal_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        cal_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.next_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        next_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.sort_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        sort_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        loadView();
     }
 
     @Override

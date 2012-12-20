@@ -10,7 +10,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.Gallery;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
@@ -30,6 +36,55 @@ public final class Overview_
     }
 
     private void afterSetContentView_() {
+        venue_link2_btn = ((Button) findViewById(id.venue_link2_btn));
+        blog_btn = ((Button) findViewById(id.blog_btn));
+        in_btn = ((Button) findViewById(id.in_btn));
+        trans_link3_btn = ((Button) findViewById(id.trans_link3_btn));
+        trans_call4_btn = ((Button) findViewById(id.trans_call4_btn));
+        trans_call3_btn = ((Button) findViewById(id.trans_call3_btn));
+        tweet_btn = ((Button) findViewById(id.tweet_btn));
+        transportation_container = ((LinearLayout) findViewById(id.transportation_container));
+        trans_locate2_btn = ((Button) findViewById(id.trans_locate2_btn));
+        menuGallery = ((Gallery) findViewById(id.menu_gallery));
+        fb_btn = ((Button) findViewById(id.fb_btn));
+        trans_link1_btn = ((Button) findViewById(id.trans_link1_btn));
+        call_txvw = ((TextView) findViewById(id.call_txvw));
+        contact_call_btn = ((Button) findViewById(id.contact_call_btn));
+        trans_call2_btn = ((Button) findViewById(id.trans_call2_btn));
+        venue_link1_txvw = ((TextView) findViewById(id.venue_link1_txvw));
+        venue_call2_btn = ((Button) findViewById(id.venue_call2_btn));
+        home_container = ((LinearLayout) findViewById(id.home_container));
+        contact_locate_btn = ((Button) findViewById(id.contact_locate_btn));
+        email_txvw = ((TextView) findViewById(id.email_txvw));
+        contact_email_btn = ((Button) findViewById(id.contact_email_btn));
+        venue_locate_address2_btn = ((Button) findViewById(id.venue_locate_address2_btn));
+        venue_locate_address1_btn = ((Button) findViewById(id.venue_locate_address1_btn));
+        venue_call1_txvw = ((TextView) findViewById(id.venue_call1_txvw));
+        contact_container = ((LinearLayout) findViewById(id.contact_container));
+        venue_link2_txvw = ((TextView) findViewById(id.venue_link2_txvw));
+        venue_call1_btn = ((Button) findViewById(id.venue_call1_btn));
+        trans_locate3_btn = ((Button) findViewById(id.trans_locate3_btn));
+        venue_container = ((LinearLayout) findViewById(id.venue_container));
+        trans_link2_btn = ((Button) findViewById(id.trans_link2_btn));
+        venue_call2_txvw = ((TextView) findViewById(id.venue_call2_txvw));
+        venue_link1_btn = ((Button) findViewById(id.venue_link1_btn));
+        trans_locate1_btn = ((Button) findViewById(id.trans_locate1_btn));
+        trans_call1_btn = ((Button) findViewById(id.trans_call1_btn));
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        loadView();
     }
 
     @Override

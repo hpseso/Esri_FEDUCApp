@@ -1,5 +1,6 @@
 package com.esri.webops.feduc2013;
 
+
 import android.app.TabActivity;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,6 +16,8 @@ import com.googlecode.androidannotations.annotations.EActivity;
 @EActivity(R.layout.home)
 public class Home extends TabActivity {
 	
+	
+    
 	@AfterViews
 	void loadView() {
 		addTab("Overview", R.drawable.tab_overview, Overview_.class);

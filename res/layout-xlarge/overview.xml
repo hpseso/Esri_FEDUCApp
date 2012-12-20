@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        layout="@layout/header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginBottom="50dp" android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:background="@drawable/background_portrait"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp" >
+
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/overview_top" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="20dp" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1" android:background="#FFFFFF" android:layout_marginRight="10dp">
+
+                        <include
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        layout="@layout/overview_venue" />
+                    </ScrollView>
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1" android:background="#FFFFFF" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+
+                        <include
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        layout="@layout/overview_tranportation" />
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" android:layout_weight="1" android:background="#FFFFFF" android:layout_marginLeft="10dp">
+                        <include
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        layout="@layout/overview_contact" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/footer" android:layout_gravity="bottom"/>
+
+    </FrameLayout>
+
+</LinearLayout>

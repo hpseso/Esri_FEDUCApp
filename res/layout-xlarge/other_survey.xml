@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e5f3f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="10dp">
+
+        <TextView
+            style="@style/Font.Large.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other_survey1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/Font.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/other_survey2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/survey_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a Survey" android:background="@drawable/blue_btn_selector" android:textColor="#FFFFFF" android:padding="10dp" android:layout_gravity="center_horizontal" android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

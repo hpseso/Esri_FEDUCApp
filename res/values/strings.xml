@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_str">image</string>
-    
-    <string name="hello">Hello World, Splash!</string>
-    <string name="app_name">FEDUC2013</string>
-    
-    
+    <string name="button">Button</string>
+    <string name="app_title"><b>Esri</b> Petroleum GIS Conference</string>
 </resources>

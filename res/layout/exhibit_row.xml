@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="10dp" android:paddingRight="10dp" android:background="@drawable/row_bg">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_marginRight="50dp" android:id="@+id/container">
+
+        <TextView
+            android:id="@+id/partner_txvw"
+            style="@style/Font.Normal.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#0000FF"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="TextView"
+            android:textColor="#FFFF00"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/logo_imgvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/label1_txvw"
+            style="@style/Font.Normal.Bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/label2_txvw"
+            style="@style/Font.VSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/locate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pin_green_selector" android:layout_alignParentRight="true" android:layout_marginRight="15dp" android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arraow" android:layout_centerVertical="true" android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

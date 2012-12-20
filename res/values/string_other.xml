@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Save the date  -->
+    <string name="overview_savedate1">Save the Date</string>
+    <string name="overview_savedate2">Esri International User Conference 2012</string>
+    <string name="overview_savedate3">July 23-27, 2012</string>
+    <string name="overview_savedate4">San Diego, CA</string>
+    
+    <string name="overview_savedate5">Esri Partner Conference 2013</string>
+    <string name="overview_savedate6">March 23-26, 2013</string>
+    <string name="overview_savedate7">Palm Springs, CA</string>
+    
+    <!-- Survey -->
+    <string name="other_survey1">Survey</string>
+    <string name="other_survey2">Please take a moment to help us make the Esri conference app even better.  Let us know what you thought of this year\'s application and what you would like to see in the upcoming Esri conference applications. </string>
+    
+    <!-- Privacy -->
+    <string name="other_privacy1">Privacy/Legal</string>
+    <string name="other_privacy2">For questions about our privacy policy or other legal information please go to: </string>
+    <string name="other_privacy3"><u>http://www.esri.com/legal/index.html</u></string>
+    <string name="other_privacy4">Map Attributions</string>
+    <string name="other_privacy5">Mapping API provided by Esri ArcGIS API for iOS.</string>
+    <string name="other_privacy6"><u>http://resources.arcgis.com/content/arcgis-ios</u></string>
+    <string name="other_privacy7">Imagery, OSM and topographical maps are provided by third-party sources.  For a list of the sources please visit</string>
+    <string name="other_privacy8"><u>http://resources.arcgis.com/content/community-maps/world-imagery-map</u></string>
+    <string name="other_privacy9"> , </string>
+    <string name="other_privacy10"><u>http://www.openstreetmap.org/</u></string>
+    <string name="other_privacy11">, and</string>
+    <string name="other_privacy12"><u>http://resources.arcgis.com/content/community-maps/world-topographic-map</u></string>
+    <string name="other_privacy13">Map Data Copyright</string>
+    <string name="other_privacy14">© ESRI, i-cubed, USDA FSA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGP, DeLorme, NAVTEQ, TomTom, AND, Intermap, NRCAN, and the GIS User Community, OpenStreetMap contributors, CC-BY-SA</string>
+    <string name="other_privacy15">App Version 1.0</string>
+</resources>

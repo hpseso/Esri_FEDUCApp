@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        layout="@layout/header" />
+    
+    <LinearLayout
+        android:id="@+id/hours_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:id="@+id/title_txvw"
+            style="@style/Font.Normal.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="GIS Solutions EXPO" />
+
+        <TextView
+            android:id="@+id/description_txvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Browse innovative geospatial solutions and network with other attendees." />
+
+        <TextView
+            style="@style/Font.Normal.Bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Expo Hours" android:background="@drawable/table_header_bg" android:padding="5dp" android:textColor="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="Monday, April 30" android:background="@drawable/table_cell_left_bg" android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:text="12:00 PM - 7:30 PM" android:background="@drawable/table_cell_right_bg" android:padding="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="Tuesday, May 1" android:background="@drawable/table_cell_left_bg" android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:text="9:30 AM - 5:30 PM" android:background="@drawable/table_cell_right_bg" android:padding="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="Wednesday, May 2" android:background="@drawable/table_cell_left_bg" android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:text="9:30 AM - 3:30 PM" android:background="@drawable/table_cell_right_bg" android:padding="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

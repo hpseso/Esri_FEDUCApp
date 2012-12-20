@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Map Info  -->
+    <string name="link1"><u>ArcGIS API for Android</u></string>
+    <string name="link2"><u>World Topo</u></string>
+    <string name="link3"><u>Open Street Map</u></string>
+    <string name="link4"><u>World Imagery</u></string>
+    <string name="link5"><u>World Boundaries and Places</u></string>
+    <string name="link6"><u>World Tranportation</u></string>
+    <string name="link7"><u>Points of Interest</u></string>
+    <string name="link8"><u>Floor Plan</u></string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" android:id="@+id/home_container">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="265dp" >
+
+                <ImageView
+                    android:id="@+id/imgvw"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/key_message" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" android:paddingBottom="3dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical" android:background="@drawable/transparent_bg" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:paddingBottom="0dp" android:layout_marginBottom="3dp">
+
+                        <TextView
+                            style="@style/Font.Large"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="@string/home_content1"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/Font.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/home_content2"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/Font.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/home_content3"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true" android:paddingBottom="10dp" android:paddingLeft="8dp" android:paddingRight="4dp">
+
+                        <Button
+                            android:id="@+id/blog_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/blog_btn_selector" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+
+                        <Button
+                            android:id="@+id/in_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/in_btn_selector" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+
+                        <Button
+                            android:id="@+id/fb_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/fb_btn_selector" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+
+                        <Button
+                            android:id="@+id/tweet_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tweet_btn_selector" android:layout_marginLeft="1dp" android:layout_marginRight="1dp"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Font.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/home_content4" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

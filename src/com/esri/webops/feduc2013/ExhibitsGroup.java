@@ -19,7 +19,7 @@ public class ExhibitsGroup extends ActivityGroup {
           group = this;  
   
           View view = getLocalActivityManager().startActivity("Home", new  
-                                            Intent(this,Exhibits_.class)  
+                                            Intent(this,ExhibitsAll_.class)  
                                             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))  
                                             .getDecorView();  
           replaceView(view);  

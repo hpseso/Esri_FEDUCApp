@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FEDUC2013</string>
+    
+    <!-- Home Screen -->
+    <string name="home_content1">Esri Petroleum GIS Conference 2012</string>
+    <string name="home_content2">April 30–May 2, 2012</string>
+    <string name="home_content3">Houston, Texas</string>
+    <string name="home_content4">Welcome,\nDiscover ways geographic technology is used by oil, gas, and energy industries around the world to meet the energy challenges of a changing world at the Esri Petroleum GIS Conference in Houston, Texas.</string>
+    
+    <string name="home_venue1"><b>Venue -\nGeorge R. Brown Convention Center</b></string>
+    <string name="home_venue2">1001 Avenida De Las Americas\nHouston, TX 77010</string>
+    <string name="home_venue3_1">Front Desk:</string>
+    <string name="home_venue3_2"><u>(713) 853-8000</u></string>
+    <string name="home_venue4"><u>http://www.esri.com/pugiosappvenue</u></string>
+    <string name="home_venue5"><b>Hilton Americas-Houston</b></string>
+    <string name="home_venue6">Stay in our participating hotel to get the best rates in the area.</string>
+    <string name="home_venue7">1600 Lamar St,\nHouston, TX 77010 </string>
+    <string name="home_venue8_1">Front Desk:</string>
+    <string name="home_venue8_2"><u>(713) 793-8000</u></string>
+    <string name="home_venue9"><u>http://www.esri.com/pugiosapphotel</u></string>
+    
+    <string name="home_transportation1"><b>Rental Cars</b></string>
+    <string name="home_transportation2">Esri has contracted with rental car agencies to offer discounted rates to conference participants. When you arrange your car reservations, be sure to specify you want the Esri conference rate or use the discount number below.</string>
+    <string name="home_transportation3"><b>Hertz Corporation</b></string>
+    <string name="home_transportation4">Hertz CV Number: 016S0013</string>
+    <string name="home_transportation5">800-654-2240 (U.S. and Canada)</string>
+    <string name="home_transportation6">405-749-4434 (International)</string>
+    <string name="home_transportation7"><b>Avis Rent-A-Car</b></string>
+    <string name="home_transportation8">Number: G028103</string>
+    <string name="home_transportation9">800-331-1600</string>
+    <string name="home_transportation10"><b>Enterprise Rent-A-Car</b></string>
+    <string name="home_transportation11">Discount Number:\n32N1827 | PIN: ESR</string>
+    <string name="home_transportation12">800-Rent-A-Car (1-800-736-8222)</string>
+    
+    
+    <string name="home_contact1"><b>Contact Esri</b></string>
+    <string name="home_contact2">For on-site, conference related questions, visit the registration desk.  For other general Esri related questions call or email the corporate office.</string>
+    <string name="home_contact3">Locate the Registration Desk</string>
+    <string name="home_contact4_1">Call Us: </string>
+    <string name="home_contact4_2"> <u>(909) 793 2853</u></string>
+    <string name="home_contact5_1">E-mail Us: </string>
+    <string name="home_contact5_2"><u>pug@esri.com</u></string>
+</resources>

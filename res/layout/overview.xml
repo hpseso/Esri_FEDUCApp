@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".Splash"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Overview Activity"
-    />
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        layout="@layout/header" />
+
+    <Gallery
+        android:id="@+id/menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/submenubar_pointer" android:padding="0dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" android:background="@drawable/background_portrait">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" android:layout_marginBottom="45dp">
+
+           <!--  <android.support.v4.view.ViewPager
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:id="@+id/viewpager"/> -->
+			    
+			    <include layout="@layout/overview_top" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+			    <include layout="@layout/overview_contact" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+			    <include layout="@layout/overview_venue" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+			    <include layout="@layout/overview_tranportation" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <include
+            android:layout_width="fill_parent"
+            layout="@layout/footer" android:layout_gravity="bottom" android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
 </LinearLayout>

@@ -10,12 +10,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
-public final class Exhibits_
-    extends Exhibits
+public final class ExhibitsAll_
+    extends ExhibitsAll
 {
 
 
@@ -30,6 +34,54 @@ public final class Exhibits_
     }
 
     private void afterSetContentView_() {
+        sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        hours_txvw = ((TextView) findViewById(id.hours_txvw));
+        all_txvw = ((TextView) findViewById(id.all_txvw));
+        exhibitList = ((ListView) findViewById(id.exhibitList));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
+        {
+            View view = findViewById(id.hours_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        hours_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.sponsor_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        sponsor_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        loadView();
     }
 
     @Override
@@ -58,8 +110,8 @@ public final class Exhibits_
         return super.onKeyDown(keyCode, event);
     }
 
-    public static Exhibits_.IntentBuilder_ intent(Context context) {
-        return new Exhibits_.IntentBuilder_(context);
+    public static ExhibitsAll_.IntentBuilder_ intent(Context context) {
+        return new ExhibitsAll_.IntentBuilder_(context);
     }
 
     public static class IntentBuilder_ {
@@ -69,14 +121,14 @@ public final class Exhibits_
 
         public IntentBuilder_(Context context) {
             context_ = context;
-            intent_ = new Intent(context, Exhibits_.class);
+            intent_ = new Intent(context, ExhibitsAll_.class);
         }
 
         public Intent get() {
             return intent_;
         }
 
-        public Exhibits_.IntentBuilder_ flags(int flags) {
+        public ExhibitsAll_.IntentBuilder_ flags(int flags) {
             intent_.setFlags(flags);
             return this;
         }
