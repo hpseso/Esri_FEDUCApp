@@ -5,32 +5,22 @@
 
 package com.esri.webops.feduc2013;
 
-import java.io.Serializable;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import com.esri.android.map.MapView;
-import com.esri.core.geometry.Point;
-import com.esri.core.map.FeatureSet;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
-import com.googlecode.androidannotations.api.BackgroundExecutor;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class Map_
     extends Map
 {
 
-    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,195 +30,10 @@ public final class Map_
     }
 
     private void init_(Bundle savedInstanceState) {
-        Bundle extras_ = this.getIntent().getExtras();
-        if (extras_!= null) {
-            if (extras_.containsKey("EXHIBIT_POINT")) {
-                try {
-                    exhibitPoint = cast_(extras_.get("EXHIBIT_POINT"));
-                } catch (ClassCastException e) {
-                    Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
-            if (extras_.containsKey("AGENDA_POINT")) {
-                try {
-                    agendaPoint = cast_(extras_.get("AGENDA_POINT"));
-                } catch (ClassCastException e) {
-                    Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
-            if (extras_.containsKey("MAP_TYPE")) {
-                try {
-                    loadMap = cast_(extras_.get("MAP_TYPE"));
-                } catch (ClassCastException e) {
-                    Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
-        }
     }
 
     private void afterSetContentView_() {
-        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
-        imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
-        map_label = ((TextView) findViewById(id.map_label));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
-        m_btn = ((Button) findViewById(id.m_btn));
         mapView = ((MapView) findViewById(id.map));
-        info_view = ((LinearLayout) findViewById(id.info_view));
-        osm_txvw = ((TextView) findViewById(id.osm_txvw));
-        {
-            View view = findViewById(id.link7_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link7_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link1_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link1_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.info_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        info_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link3_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link3_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.m_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        m_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.osm_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        osm_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link8_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link8_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.info_close_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        info_close_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link6_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link6_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link2_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link2_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.world_topo_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        world_topo_txvw();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = findViewById(id.close_btn);
             if (view!= null) {
@@ -237,48 +42,6 @@ public final class Map_
 
                     public void onClick(View view) {
                         close_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link5_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link5_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.imagery_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        imagery_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link4_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link4_txvw();
                     }
 
                 }
@@ -318,47 +81,6 @@ public final class Map_
         return new Map_.IntentBuilder_(context);
     }
 
-    @SuppressWarnings("unchecked")
-    private<T >T cast_(Object object) {
-        return ((T) object);
-    }
-
-    @Override
-    public void loadPOIonMap(final FeatureSet fset) {
-        handler_.post(new Runnable() {
-
-
-            @Override
-            public void run() {
-                try {
-                    Map_.super.loadPOIonMap(fset);
-                } catch (RuntimeException e) {
-                    Log.e("Map_", "A runtime exception was thrown while executing code in a runnable", e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void loadPOI() {
-        BackgroundExecutor.execute(new Runnable() {
-
-
-            @Override
-            public void run() {
-                try {
-                    Map_.super.loadPOI();
-                } catch (RuntimeException e) {
-                    Log.e("Map_", "A runtime exception was thrown while executing code in a runnable", e);
-                }
-            }
-
-        }
-        );
-    }
-
     public static class IntentBuilder_ {
 
         private Context context_;
@@ -380,21 +102,6 @@ public final class Map_
 
         public void start() {
             context_.startActivity(intent_);
-        }
-
-        public Map_.IntentBuilder_ exhibitPoint(Point exhibitPoint) {
-            intent_.putExtra("EXHIBIT_POINT", ((Serializable) exhibitPoint));
-            return this;
-        }
-
-        public Map_.IntentBuilder_ agendaPoint(Point agendaPoint) {
-            intent_.putExtra("AGENDA_POINT", ((Serializable) agendaPoint));
-            return this;
-        }
-
-        public Map_.IntentBuilder_ loadMap(Integer loadMap) {
-            intent_.putExtra("MAP_TYPE", ((Serializable) loadMap));
-            return this;
         }
 
     }
