@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/map.xml" />
+    </issue>
+    <issue id="ScrollViewSize">
+        <ignore path="res/layout/map.xml" />
+    </issue>
+    <issue id="SpUsage">
+        <ignore path="res/layout/map.xml" />
+    </issue>
+</lint>
