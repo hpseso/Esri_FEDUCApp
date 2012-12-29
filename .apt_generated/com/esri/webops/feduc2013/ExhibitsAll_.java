@@ -34,19 +34,19 @@ public final class ExhibitsAll_
     }
 
     private void afterSetContentView_() {
-        exhibitList = ((ListView) findViewById(id.exhibitList));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
-        all_txvw = ((TextView) findViewById(id.all_txvw));
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        exhibitList = ((ListView) findViewById(id.exhibitList));
+        all_txvw = ((TextView) findViewById(id.all_txvw));
         hours_txvw = ((TextView) findViewById(id.hours_txvw));
         {
-            View view = findViewById(id.sponsor_txvw);
+            View view = findViewById(id.map_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        sponsor_txvw();
+                        map_btn();
                     }
 
                 }
@@ -68,13 +68,13 @@ public final class ExhibitsAll_
             }
         }
         {
-            View view = findViewById(id.map_btn);
+            View view = findViewById(id.sponsor_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        map_btn();
+                        sponsor_txvw();
                     }
 
                 }
