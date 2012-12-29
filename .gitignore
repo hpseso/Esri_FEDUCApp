@@ -17,5 +17,6 @@ local.properties
 
 #.apt_generated (annotation files)
 .apt_generated
+.apt_generated/*
 
 *.DS_Store
