@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="HardcodedText">
+        <ignore path="res/layout/agenda.xml" />
         <ignore path="res/layout/exhibits.xml" />
+        <ignore path="res/layout/exhibits_sponsor.xml" />
         <ignore path="res/layout/map.xml" />
     </issue>
     <issue id="ScrollViewSize">
