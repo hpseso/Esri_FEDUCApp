@@ -33,6 +33,7 @@
                     android:id="@+id/sort_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
                     android:text="Sort" android:layout_centerVertical="true" android:background="@drawable/green_btn_selector" android:minWidth="60dp"/>
 
                 <Button

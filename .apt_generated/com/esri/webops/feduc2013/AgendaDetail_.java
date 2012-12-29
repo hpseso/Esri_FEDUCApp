@@ -46,19 +46,19 @@ public final class AgendaDetail_
     }
 
     private void afterSetContentView_() {
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
-        back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
-        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
-        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
         map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
-        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
-        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
+        back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
         author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
+        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
+        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
+        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
+        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
+        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
+        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
         org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
         hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
         title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
-        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
-        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.back_btn);
             if (view!= null) {
@@ -74,20 +74,6 @@ public final class AgendaDetail_
             }
         }
         {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.locate_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        locate_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(com.esri.webops.feduc2013.R.id.cal_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -95,6 +81,20 @@ public final class AgendaDetail_
 
                     public void onClick(View view) {
                         cal_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.locate_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        locate_btn();
                     }
 
                 }

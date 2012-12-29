@@ -193,6 +193,7 @@
                 android:background="@drawable/tab_left_selected"
                 android:gravity="center"
                 android:padding="8dp"
+                android:textColor="#FFFFFF"
                 android:text="World Topo" />
 
             <TextView
@@ -202,6 +203,7 @@
                 android:background="@drawable/tab_center_normal"
                 android:gravity="center"
                 android:padding="8dp"
+                android:textColor="#FFFFFF"
                 android:text="Imagery" />
 
             <TextView
@@ -210,6 +212,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/tab_right_normal"
                 android:gravity="center"
+                android:textColor="#FFFFFF"
                 android:padding="8dp"
                 android:text="OSM" />
         </LinearLayout>
