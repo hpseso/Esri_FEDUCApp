@@ -1,9 +1,45 @@
 package com.esri.webops.feduc2013;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.Calendar;
 import java.util.logging.Logger;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpVersion;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.ClientConnectionManager;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.protocol.HTTP;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -17,14 +53,30 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ViewSwitcher.ViewFactory;
 
+import com.esri.webops.feduc2013.comman.App;
+
+@SuppressLint("HandlerLeak")
 public class BaseActivity extends Activity  implements ViewFactory  {
 
 	ImageSwitcher adImageSwitcher;
+	ProgressDialog progressDialog;
+	
 	
 	public void loadMap(int which) {
 		Intent intent = new Intent(this,Map_.class);
 		intent.putExtra("MAP_TYPE", which);
 		startActivity(intent);
+	}
+	
+	protected void setPref(String key, String val) {
+		SharedPreferences.Editor pref = getSharedPreferences(App.Esri_Prefrences, MODE_PRIVATE).edit();
+		pref.putString(key, val);
+		pref.commit();
+	}
+	
+	protected String getStringPref(String key) {
+		SharedPreferences pref = getSharedPreferences(App.Esri_Prefrences, MODE_PRIVATE);
+		return pref.getString(key, "");
 	}
 	
 	public void call(String number) {
@@ -115,14 +167,13 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				
 				int imageNo = prefRead.getInt("LAST_IMAGE", 0);
 				
-				
-				adImageSwitcher.setImageResource(sponsorImages[imageNo]);
-				adHandler.sendEmptyMessageDelayed(0, 10000);
-				
-				if (imageNo == 14)
+				if (imageNo >= 9)
 					imageNo = 0;
 				else
 					imageNo +=1;
+				
+				adImageSwitcher.setImageResource(sponsorImages[imageNo]);
+				adHandler.sendEmptyMessageDelayed(0, 10000);
 				
 				prefEdit.putInt("LAST_IMAGE", imageNo);
 				prefEdit.commit();
@@ -166,24 +217,105 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 	}
 	
 	private Integer[] sponsorImages = {
-			R.drawable.cartopac_survey_logo_shadow,R.drawable.coler_colantonio_logo_shadow,
-			R.drawable.digital_globe_logo_shadow,R.drawable.eagle_information_mapping_logo_shadow,
-			R.drawable.geofields_logo_shadow,R.drawable.geologic_logo_shadow,
-			R.drawable.global_information_systems_logo_shadow,R.drawable.inner_corridor_logo_shadow,
-			R.drawable.latitude_geographics_logo_shadow,R.drawable.neuralog_logo_shadow,
-			R.drawable.new_century_logo_shadow,R.drawable.petris_logo_shadow,
-			R.drawable.petrosys_logo_shadow,R.drawable.petroweb_logo_shadow,
-			R.drawable.valtus_logo_shadow
+			R.drawable.new_light_logo_shadow,R.drawable.umbc_logo_shadow,
+			R.drawable.niit_logo_shadow,R.drawable.location_age_logo_shadow,
+			R.drawable.rok_logo_shadow,R.drawable.amazon_logo_shadow,
+			R.drawable.component_one_shadow,R.drawable.cyber_tech_shadow,
+			R.drawable.green_horne_logo_shadow,R.drawable.energov_logo_shadow,
 	};
 	
 	private String[] sponsorURLS = {
-			"http://www.cartopac.com","http://www.col-col-geospatial.com",
-			"http://www.digitalglobe.com","http://www.eaglemap.com",
-			"http://www.geofields.com","http://www.geologic.com",
-			"http://www.globalinformationsystems.com","http://www.teachmegis.com",
-			"http://www.latitudegeo.com","http://www.neuralog.com",
-			"http://www.newcenturysoftware.com","http://www.Petris.com",
-			"http://www.petrosys.com.au","http://www.petroweb.com",
-			"http://www.valtus.com"
+			"http://www.NLTGIS.com","http://www.umbc.edu/shadygrove",
+			"http://www.niit-tech.com","http://www.locationage.com",
+			"http://www.roktech.net","http://www.aws.amazon.com",
+			"http://www.componentone.com","http://www.cybertech.com",
+			"http://www.greenhorne.com","http://www.energov.com"
 	};
+	
+	
+	protected InputStream makeWebPost(String url) throws Exception{
+		
+		HttpParams httpParameters = new BasicHttpParams();
+		int timeoutConnection = 20000;
+        HttpProtocolParams.setVersion(httpParameters, HttpVersion.HTTP_1_1);
+        HttpProtocolParams.setContentCharset(httpParameters, HTTP.UTF_8);
+		HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+		int timeoutSocket = 20000;
+		HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+		HttpClient client = getNewHttpClient(httpParameters);
+		
+		//HttpPost  request = new HttpPost (url);
+		
+		HttpGet request = new HttpGet(url);
+		
+		//request.addHeader("Content-Type","application/x-www-form-urlencoded");
+		request.addHeader("X-Parse-Application-Id","Df44YCNSuORX2ZvO5CjUksvpCOBzB2yXYeAioSwf");
+		request.addHeader("X-Parse-REST-API-Key","p6TuDb4kxTABZBfA67RfRTBurEAOLpeTOP66BtJ3");
+		
+		HttpResponse response;
+        response = client.execute(request);
+        return response.getEntity().getContent();
+	}
+	
+	protected HttpClient getNewHttpClient(HttpParams params) {
+        try {
+            KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+            trustStore.load(null, null);
+
+            SSLSocketFactory sf = new MySSLSocketFactory(trustStore);
+            sf.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+
+            SchemeRegistry registry = new SchemeRegistry();
+            registry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+            registry.register(new Scheme("https", sf, 443));
+
+            ClientConnectionManager ccm = new ThreadSafeClientConnManager(params, registry);
+
+            return new DefaultHttpClient(ccm, params);
+        } catch (Exception e) {
+            return new DefaultHttpClient();
+        }
+    }
+	
+	protected class MySSLSocketFactory extends SSLSocketFactory {
+        SSLContext sslContext = SSLContext.getInstance("TLS");
+
+        public MySSLSocketFactory(KeyStore truststore) throws NoSuchAlgorithmException, KeyManagementException, KeyStoreException, UnrecoverableKeyException {
+            super(truststore);
+
+            TrustManager tm = new X509TrustManager() {
+                public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                }
+
+                public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                }
+
+                public X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+            };
+
+            sslContext.init(null, new TrustManager[] { tm }, null);
+        }
+
+        @Override
+        public Socket createSocket(Socket socket, String host, int port, boolean autoClose) throws IOException, UnknownHostException {
+            return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
+        }
+
+        @Override
+        public Socket createSocket() throws IOException {
+            return sslContext.getSocketFactory().createSocket();
+        }
+    }
+	
+	protected String parseResponseToString (InputStream stream) throws Exception {
+    	StringBuffer buf = new StringBuffer();
+    		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+	        String line = null;
+	        while ((line = reader.readLine()) != null) {
+	     	   buf.append(line);
+	        }
+    	return buf.toString();
+    }
 }

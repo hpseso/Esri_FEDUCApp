@@ -30,40 +30,83 @@
                 android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="3dp" android:paddingBottom="3dp" android:background="@drawable/green_header">
 
                 <Button
-                    android:id="@+id/sort_btn"
+                    android:id="@+id/refresh_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Sort" android:layout_centerVertical="true" android:background="@drawable/green_btn_selector" android:minWidth="60dp"/>
-
-                <Button
-                    android:id="@+id/prev_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/sort_btn" android:background="@drawable/previous_btn_selector" android:layout_centerVertical="true" android:layout_marginLeft="5dp"/>
-
-                <Button
-                    android:id="@+id/next_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/next_btn_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true" 
+                    android:padding="0dp"
+                    android:background="@drawable/refresh_btn_selector" />
+                
                 <Button
                     android:id="@+id/cal_btn"
-                    android:layout_width="fill_parent"
+                    android:text="Select Date"
+                    android:textColor="#FFFFFF"
+                    android:padding="7dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monday 30 April 2012" android:layout_toLeftOf="@id/next_btn" android:layout_centerVertical="true" android:background="@drawable/cdate_btn_selector" android:layout_marginRight="10dp" android:layout_toRightOf="@id/prev_btn" android:layout_marginLeft="10dp"/>
-
+                    android:background="@drawable/cdate_btn_selector" 
+                    android:layout_alignParentRight="true" 
+                    android:layout_centerVertical="true"/>
                 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:layout_toLeftOf="@id/cal_btn"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+	                
+	                <TextView
+	                    android:id="@+id/all_txvw"
+	                    android:layout_width="80dp"
+	                    android:layout_height="wrap_content"
+	                    android:textColor="#FFFFFF"
+	                    android:text="All" android:gravity="center" android:padding="7dp" android:background="@drawable/tab_left_selected"/>
+	
+	                <TextView
+	                    android:id="@+id/type_txvw"
+	                    android:layout_width="80dp"
+	                    android:layout_height="wrap_content"
+	                    android:textColor="#FFFFFF"
+	                    android:text="Type" android:gravity="center" android:padding="7dp" android:background="@drawable/tab_right_normal"/>
 
+            	</LinearLayout>
+                
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/session_txvw"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+            <RelativeLayout
                 android:background="#000000"
-                android:text="All Sessions"
-                android:textColor="#FFFFFF" android:paddingBottom="3dp" android:paddingLeft="8dp" android:paddingRight="3dp" android:paddingTop="3dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/session_txvw"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:text="All Sessions"
+                    android:textColor="#FFFFFF" />
+                
+                <TextView
+                    android:id="@+id/date_txvw"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:text="Mon, 10 December 2012"
+                    android:textColor="#FFFFFF" />
+
+            </RelativeLayout>
 
             <ListView
                 android:id="@+id/agendaList"

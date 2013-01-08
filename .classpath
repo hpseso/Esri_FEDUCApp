@@ -12,5 +12,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/androidannotations-2.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/hadi_sdk.jar"/>
 	<classpathentry exported="true" kind="con" path="com.esri.arcgis.android.LIBRARIES"/>
+	<classpathentry exported="true" kind="lib" path="lib/gson-2.2.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -8,6 +8,8 @@ package com.esri.webops.feduc2013;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,12 +19,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
+import com.googlecode.androidannotations.api.BackgroundExecutor;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class Agenda_
     extends Agenda
 {
 
+    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,18 +39,47 @@ public final class Agenda_
     }
 
     private void afterSetContentView_() {
-        session_txvw = ((TextView) findViewById(id.session_txvw));
+        date_txvw = ((TextView) findViewById(id.date_txvw));
         agendaList = ((ListView) findViewById(id.agendaList));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
         calBtn = ((Button) findViewById(id.cal_btn));
+        session_txvw = ((TextView) findViewById(id.session_txvw));
         {
-            View view = findViewById(id.next_btn);
+            View view = findViewById(id.refresh_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        next_btn();
+                        refresh_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.all_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        all_txvw();
                     }
 
                 }
@@ -68,41 +101,13 @@ public final class Agenda_
             }
         }
         {
-            View view = findViewById(id.sort_btn);
+            View view = findViewById(id.type_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        sort_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.prev_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        prev_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.map_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        map_btn();
+                        type_txvw();
                     }
 
                 }
@@ -140,6 +145,42 @@ public final class Agenda_
 
     public static Agenda_.IntentBuilder_ intent(Context context) {
         return new Agenda_.IntentBuilder_(context);
+    }
+
+    @Override
+    public void updateUI() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    Agenda_.super.updateUI();
+                } catch (RuntimeException e) {
+                    Log.e("Agenda_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void loadDataFromWeb() {
+        BackgroundExecutor.execute(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    Agenda_.super.loadDataFromWeb();
+                } catch (RuntimeException e) {
+                    Log.e("Agenda_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_ {

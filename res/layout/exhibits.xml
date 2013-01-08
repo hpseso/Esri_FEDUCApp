@@ -19,33 +19,60 @@
             android:layout_height="match_parent"
             android:orientation="vertical" android:layout_marginBottom="55dp">
 
-            <LinearLayout
+            <RelativeLayout
+                android:background="@drawable/green_header"
+                android:padding="5dp" 
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" android:gravity="center_horizontal" android:padding="5dp" android:background="@drawable/green_header">
-
-                <TextView
-                    android:id="@+id/all_txvw"
-                    android:layout_width="90dp"
+                android:layout_height="wrap_content" >
+				
+                <Button
+                    android:id="@+id/refresh_btn"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="All" android:gravity="center" android:padding="7dp" android:background="@drawable/tab_left_selected"/>
-
-                <TextView
-                    android:id="@+id/sponsor_txvw"
-                    android:layout_width="90dp"
+                    android:layout_centerVertical="true" 
+                    android:layout_alignParentLeft="true"
+                    android:padding="0dp"
+                    android:background="@drawable/refresh_btn_selector" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Sponsors" android:gravity="center" android:padding="7dp" android:background="@drawable/tab_center_normal"/>
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:id="@+id/hours_txvw"
-                    android:layout_width="90dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="Hours" android:gravity="center" android:padding="7dp" android:background="@drawable/tab_right_normal"/>
+                    <TextView
+                        android:id="@+id/all_txvw"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_left_selected"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="All"
+                        android:textColor="#FFFFFF" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/sponsor_txvw"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_center_normal"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="Sponsors"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/hours_txvw"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_right_normal"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="Hours"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+            </RelativeLayout>
 
             <ListView
                 android:id="@+id/exhibitList"

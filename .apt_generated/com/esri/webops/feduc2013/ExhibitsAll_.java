@@ -8,6 +8,8 @@ package com.esri.webops.feduc2013;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,12 +18,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
+import com.googlecode.androidannotations.api.BackgroundExecutor;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class ExhibitsAll_
     extends ExhibitsAll
 {
 
+    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,18 +39,18 @@ public final class ExhibitsAll_
 
     private void afterSetContentView_() {
         hours_txvw = ((TextView) findViewById(id.hours_txvw));
+        sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         all_txvw = ((TextView) findViewById(id.all_txvw));
         exhibitList = ((ListView) findViewById(id.exhibitList));
-        empty_txvw = ((TextView) findViewById(id.empty_txvw));
-        sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
         {
-            View view = findViewById(id.sponsor_txvw);
+            View view = findViewById(id.hours_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        sponsor_txvw();
+                        hours_txvw();
                     }
 
                 }
@@ -68,13 +72,27 @@ public final class ExhibitsAll_
             }
         }
         {
-            View view = findViewById(id.hours_txvw);
+            View view = findViewById(id.refresh_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        hours_txvw();
+                        refresh_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.sponsor_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        sponsor_txvw();
                     }
 
                 }
@@ -112,6 +130,42 @@ public final class ExhibitsAll_
 
     public static ExhibitsAll_.IntentBuilder_ intent(Context context) {
         return new ExhibitsAll_.IntentBuilder_(context);
+    }
+
+    @Override
+    public void updateUI() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    ExhibitsAll_.super.updateUI();
+                } catch (RuntimeException e) {
+                    Log.e("ExhibitsAll_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void loadDataFromWeb() {
+        BackgroundExecutor.execute(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    ExhibitsAll_.super.loadDataFromWeb();
+                } catch (RuntimeException e) {
+                    Log.e("ExhibitsAll_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_ {
