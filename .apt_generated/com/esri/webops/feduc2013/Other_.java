@@ -38,67 +38,53 @@ public final class Other_
     }
 
     private void afterSetContentView_() {
+        plink4_btn = ((Button) findViewById(id.plink4_btn));
+        next_btn = ((Button) findViewById(id.next_btn));
+        no4_btn = ((Button) findViewById(id.no4_btn));
+        plink2_btn = ((Button) findViewById(id.plink2_btn));
+        demo_container = ((FrameLayout) findViewById(id.demo_container));
+        no1_btn = ((Button) findViewById(id.no1_btn));
         plink2_txvw = ((TextView) findViewById(id.plink2_txvw));
-        plink3_txvw = ((TextView) findViewById(id.plink3_txvw));
+        no12_btn = ((Button) findViewById(id.no12_btn));
+        no11_btn = ((Button) findViewById(id.no11_btn));
+        plink3_btn = ((Button) findViewById(id.plink3_btn));
         help4_txvw = ((TextView) findViewById(id.help4_txvw));
+        survey_container = ((LinearLayout) findViewById(id.survey_container));
+        plink4_txvw = ((TextView) findViewById(id.plink4_txvw));
+        help21_txvw = ((TextView) findViewById(id.help21_txvw));
+        help3_txvw = ((TextView) findViewById(id.help3_txvw));
         help12_txvw = ((TextView) findViewById(id.help12_txvw));
-        sdate_cal2_btn = ((Button) findViewById(id.sdate_cal2_btn));
+        help2_txvw = ((TextView) findViewById(id.help2_txvw));
+        no23_btn = ((Button) findViewById(id.no23_btn));
+        viewFlipper1 = ((ViewFlipper) findViewById(id.viewFlipper1));
         plink5_txvw = ((TextView) findViewById(id.plink5_txvw));
         sdate_container = ((LinearLayout) findViewById(id.sdate_container));
-        prev_btn = ((Button) findViewById(id.prev_btn));
-        help3_txvw = ((TextView) findViewById(id.help3_txvw));
-        plink4_txvw = ((TextView) findViewById(id.plink4_txvw));
-        no22_btn = ((Button) findViewById(id.no22_btn));
-        help23_txvw = ((TextView) findViewById(id.help23_txvw));
-        plink3_btn = ((Button) findViewById(id.plink3_btn));
-        no12_btn = ((Button) findViewById(id.no12_btn));
-        help11_txvw = ((TextView) findViewById(id.help11_txvw));
-        help2_txvw = ((TextView) findViewById(id.help2_txvw));
-        demo_container = ((FrameLayout) findViewById(id.demo_container));
-        no11_btn = ((Button) findViewById(id.no11_btn));
-        survey_container = ((LinearLayout) findViewById(id.survey_container));
-        no1_btn = ((Button) findViewById(id.no1_btn));
-        survey_btn = ((Button) findViewById(id.survey_btn));
-        plink4_btn = ((Button) findViewById(id.plink4_btn));
-        plink2_btn = ((Button) findViewById(id.plink2_btn));
-        plink1_btn = ((Button) findViewById(id.plink1_btn));
-        no4_btn = ((Button) findViewById(id.no4_btn));
-        sdate_cal1_btn = ((Button) findViewById(id.sdate_cal1_btn));
+        menuGallery = ((Gallery) findViewById(id.menu_gallery));
         plink1_txvw = ((TextView) findViewById(id.plink1_txvw));
         no21_btn = ((Button) findViewById(id.no21_btn));
-        viewFlipper1 = ((ViewFlipper) findViewById(id.viewFlipper1));
-        no2_btn = ((Button) findViewById(id.no2_btn));
-        menuGallery = ((Gallery) findViewById(id.menu_gallery));
-        next_btn = ((Button) findViewById(id.next_btn));
-        no3_btn = ((Button) findViewById(id.no3_btn));
+        survey_btn = ((Button) findViewById(id.survey_btn));
         privacy_container = ((LinearLayout) findViewById(id.privacy_container));
-        help21_txvw = ((TextView) findViewById(id.help21_txvw));
         help1_txvw = ((TextView) findViewById(id.help1_txvw));
-        no23_btn = ((Button) findViewById(id.no23_btn));
+        prev_btn = ((Button) findViewById(id.prev_btn));
+        sdate_cal2_btn = ((Button) findViewById(id.sdate_cal2_btn));
+        plink3_txvw = ((TextView) findViewById(id.plink3_txvw));
+        sdate_cal1_btn = ((Button) findViewById(id.sdate_cal1_btn));
+        plink1_btn = ((Button) findViewById(id.plink1_btn));
+        no3_btn = ((Button) findViewById(id.no3_btn));
         plink5_btn = ((Button) findViewById(id.plink5_btn));
+        no22_btn = ((Button) findViewById(id.no22_btn));
         help22_txvw = ((TextView) findViewById(id.help22_txvw));
+        help11_txvw = ((TextView) findViewById(id.help11_txvw));
+        help23_txvw = ((TextView) findViewById(id.help23_txvw));
+        no2_btn = ((Button) findViewById(id.no2_btn));
         {
-            View view = findViewById(id.no3_btn);
+            View view = findViewById(id.no11_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        no3_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.help12_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        help12_txvw();
+                        no11_btn();
                     }
 
                 }
@@ -120,13 +106,13 @@ public final class Other_
             }
         }
         {
-            View view = findViewById(id.help4_txvw);
+            View view = findViewById(id.help3_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        help4_txvw();
+                        help3_txvw();
                     }
 
                 }
@@ -141,132 +127,6 @@ public final class Other_
 
                     public void onClick(View view) {
                         no22_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.prev_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        prev_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.help23_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        help23_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.no11_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        no11_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.no21_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        no21_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.no2_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        no2_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.no1_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        no1_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.help2_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        help2_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.map_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        map_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.help3_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        help3_txvw();
                     }
 
                 }
@@ -302,13 +162,13 @@ public final class Other_
             }
         }
         {
-            View view = findViewById(id.help22_txvw);
+            View view = findViewById(id.no3_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        help22_txvw();
+                        no3_btn();
                     }
 
                 }
@@ -330,6 +190,132 @@ public final class Other_
             }
         }
         {
+            View view = findViewById(id.help21_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help21_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.help12_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help12_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.help22_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help22_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.no21_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        no21_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.help2_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help2_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.no2_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        no2_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.help4_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help4_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.help23_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        help23_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.prev_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        prev_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.no23_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -344,13 +330,27 @@ public final class Other_
             }
         }
         {
-            View view = findViewById(id.help21_txvw);
+            View view = findViewById(id.map_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        help21_txvw();
+                        map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.no1_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        no1_btn();
                     }
 
                 }
