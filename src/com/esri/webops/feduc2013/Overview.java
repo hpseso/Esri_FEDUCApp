@@ -2,9 +2,11 @@ package com.esri.webops.feduc2013;
 
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -259,10 +261,15 @@ public class Overview extends BaseActivity {
 
         public View getView(final int position, View convertView, ViewGroup parent) {
 
+        	Display display = getWindowManager().getDefaultDisplay();
+        	Logger.getLogger("Esri").info("ImageAdapter widht" + display.getWidth());
             TextView i = new TextView(mContext);
             i.setTextAppearance(getApplicationContext(), R.style.boldText);
             i.setText(mImageIds.get(position));
-            i.setLayoutParams(new Gallery.LayoutParams(200, 50));
+            if (display.getWidth() > 700) 
+            	i.setLayoutParams(new Gallery.LayoutParams(300, 50));
+            else
+            	i.setLayoutParams(new Gallery.LayoutParams(200, 50));
             i.setPadding(6, 6, 6, 6);
             i.setGravity(Gravity.CENTER);
             return i;

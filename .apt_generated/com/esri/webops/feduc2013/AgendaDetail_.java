@@ -46,19 +46,19 @@ public final class AgendaDetail_
     }
 
     private void afterSetContentView_() {
-        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
-        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
-        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
-        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
-        author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
-        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
-        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
-        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
-        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
         back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
+        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
+        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
         description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
         map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
+        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
+        author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
+        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
+        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
+        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.cal_btn);
             if (view!= null) {

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -196,11 +197,15 @@ public class Other extends BaseActivity {
         }
 
         public View getView(final int position, View convertView, ViewGroup parent) {
-
+        	Display display = getWindowManager().getDefaultDisplay();
+        	
             TextView i = new TextView(mContext);
             i.setTextAppearance(getApplicationContext(), R.style.boldText);
             i.setText(mImageIds.get(position));
-            i.setLayoutParams(new Gallery.LayoutParams(200, 50));
+            if (display.getWidth() > 700) 
+            	i.setLayoutParams(new Gallery.LayoutParams(300, 50));
+            else
+            	i.setLayoutParams(new Gallery.LayoutParams(200, 50));
             i.setPadding(6, 6, 6, 6);
             i.setGravity(Gravity.CENTER);
             return i;
@@ -296,12 +301,15 @@ public class Other extends BaseActivity {
 		help1_txvw.setVisibility(View.VISIBLE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+		
+		if (help4_txvw != null) {
+			help4_txvw.setVisibility(View.GONE);
+			help11_txvw.setVisibility(View.GONE);
+			help12_txvw.setVisibility(View.GONE);
+			help21_txvw.setVisibility(View.GONE);
+			help22_txvw.setVisibility(View.GONE);
+			help23_txvw.setVisibility(View.GONE);
+		}
 	}
 	
 	@Click
@@ -311,12 +319,15 @@ public class Other extends BaseActivity {
 		help2_txvw.setVisibility(View.VISIBLE);
 		help1_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+		
+		if (help4_txvw != null) {
+			help4_txvw.setVisibility(View.GONE);
+			help11_txvw.setVisibility(View.GONE);
+			help12_txvw.setVisibility(View.GONE);
+			help21_txvw.setVisibility(View.GONE);
+			help22_txvw.setVisibility(View.GONE);
+			help23_txvw.setVisibility(View.GONE);
+		}
 	}
 	
 	@Click
@@ -326,12 +337,14 @@ public class Other extends BaseActivity {
 		help3_txvw.setVisibility(View.VISIBLE);
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+		if (help4_txvw != null) {
+			help4_txvw.setVisibility(View.GONE);
+			help11_txvw.setVisibility(View.GONE);
+			help12_txvw.setVisibility(View.GONE);
+			help21_txvw.setVisibility(View.GONE);
+			help22_txvw.setVisibility(View.GONE);
+			help23_txvw.setVisibility(View.GONE);
+		}
 	}
 	
 	@Click

@@ -74,9 +74,20 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 		pref.commit();
 	}
 	
+	protected void setPref(String key, int val) {
+		SharedPreferences.Editor pref = getSharedPreferences(App.Esri_Prefrences, MODE_PRIVATE).edit();
+		pref.putInt(key, val);
+		pref.commit();
+	}
+	
 	protected String getStringPref(String key) {
 		SharedPreferences pref = getSharedPreferences(App.Esri_Prefrences, MODE_PRIVATE);
 		return pref.getString(key, "");
+	}
+	
+	protected int getIntPref(String key, int def) {
+		SharedPreferences pref = getSharedPreferences(App.Esri_Prefrences, MODE_PRIVATE);
+		return pref.getInt(key, def);
 	}
 	
 	public void call(String number) {

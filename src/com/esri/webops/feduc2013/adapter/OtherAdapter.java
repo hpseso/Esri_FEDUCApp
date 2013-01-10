@@ -85,6 +85,7 @@ public class OtherAdapter extends PagerAdapter {
         		no1Btn.setOnClickListener(new OnClickListener() {
 					@Override
 					public void onClick(View v) {
+						
 						help1Txvw.clearAnimation();
 						help1Txvw.setAnimation(AnimationUtils.loadAnimation(activity, R.anim.fade_in));
 						help1Txvw.setVisibility(View.VISIBLE);

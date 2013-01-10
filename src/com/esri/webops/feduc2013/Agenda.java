@@ -54,7 +54,7 @@ public class Agenda extends BaseActivity {
 	@ViewById
 	TextView empty_txvw;
 	
-	int d = 11, m=12,y=2012;
+	int d = 10, m=12,y=2012;
 	AgendaAdapter adapter;
 	
 	CharSequence[] sessionList = new CharSequence[] {
@@ -82,6 +82,11 @@ public class Agenda extends BaseActivity {
 		adImageSwitcher = (ImageSwitcher) findViewById(R.id.adImageSwitcher);
 		agendaList.setEmptyView(empty_txvw);
 		initImageSwithcer();
+		
+		d = getIntPref(App.AGENDA_DAY, 10);
+		m = getIntPref(App.AGENDA_MONTH, 12);
+		y = getIntPref(App.AGENDA_YEAR, 2012);
+		
 		filterList();
 		populateCalBtn();
 		
@@ -94,6 +99,15 @@ public class Agenda extends BaseActivity {
 		progressDialog.setMessage("Loading ... please wait");
 		progressDialog.show();
 		loadDataFromWeb();
+	}
+	
+	@Override
+	public void onResume() {
+		
+		d = getIntPref(App.AGENDA_DAY, 10);
+		m = getIntPref(App.AGENDA_MONTH, 12);
+		y = getIntPref(App.AGENDA_YEAR, 2012);
+		super.onResume();
 	}
 	
 	@Background
@@ -217,6 +231,11 @@ public class Agenda extends BaseActivity {
                 d = datePicker.getDayOfMonth();
                 y = datePicker.getYear();
                 m = datePicker.getMonth()+1;
+                
+                setPref(App.AGENDA_DAY, d);
+                setPref(App.AGENDA_MONTH, m);
+                setPref(App.AGENDA_YEAR, y);
+                
                 filterList();
                 dialog.dismiss();
             }
