@@ -2,13 +2,17 @@
 <resources>
     <!-- Save the date  -->
     <string name="overview_savedate1">Save the Date</string>
-    <string name="overview_savedate2">Esri International User Conference 2012</string>
-    <string name="overview_savedate3">July 23-27, 2012</string>
-    <string name="overview_savedate4">San Diego, CA</string>
+    <string name="overview_savedate2">Esri Partner Conference</string>
+    <string name="overview_savedate3">March 23-26, 2013</string>
+    <string name="overview_savedate4">Palm Springs, CA, USA</string>
     
-    <string name="overview_savedate5">Esri Partner Conference 2013</string>
-    <string name="overview_savedate6">March 23-26, 2013</string>
-    <string name="overview_savedate7">Palm Springs, CA</string>
+    <string name="overview_savedate5">Esri Developer Summit</string>
+    <string name="overview_savedate6">March 25-28, 2013</string>
+    <string name="overview_savedate7">Palm Springs, CA, USA</string>
+    
+    <string name="overview_savedate8">Esri International User Conference</string>
+    <string name="overview_savedate9">July 8-12, 2013</string>
+    <string name="overview_savedate10">San Diego, CA, USA</string>
     
     <!-- Survey -->
     <string name="other_survey1">Survey</string>

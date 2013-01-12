@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="HardcodedText">
+        <ignore path="res/layout-xlarge/other_survey.xml" />
         <ignore path="res/layout/agenda.xml" />
         <ignore path="res/layout/exhibits.xml" />
         <ignore path="res/layout/exhibits_sponsor.xml" />
@@ -9,11 +10,18 @@
     </issue>
     <issue id="ScrollViewSize">
         <ignore path="res/layout/map.xml" />
+        <ignore path="res/layout/overview_tranportation.xml" />
     </issue>
     <issue id="SpUsage">
         <ignore path="res/layout/map.xml" />
     </issue>
     <issue id="UselessParent">
+        <ignore path="res/layout-xlarge/other_save_date.xml" />
+        <ignore path="res/layout-xlarge/other_survey.xml" />
+        <ignore path="res/layout/other_save_date.xml" />
+        <ignore path="res/layout/overview_contact.xml" />
         <ignore path="res/layout/overview_top.xml" />
+        <ignore path="res/layout/overview_tranportation.xml" />
+        <ignore path="res/layout/overview_venue.xml" />
     </issue>
 </lint>

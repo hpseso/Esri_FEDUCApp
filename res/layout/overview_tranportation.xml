@@ -14,34 +14,14 @@
 
             <TextView
                 style="@style/Font.Large.Bold"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/home_transportation1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:gravity="center_vertical" >
-
-                <TextView
-                    style="@style/Font.Normal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/home_transportation2" />
-            </LinearLayout>
-
-            <TextView
-                style="@style/Font.Large.Bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/home_transportation3" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical" >
 
@@ -49,13 +29,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/pin_red_selector" android:id="@+id/trans_locate1_btn"/>
+                    android:background="@drawable/pin_red_selector" 
+                    android:id="@+id/trans_locate1_btn"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/link_btn_selector" android:id="@+id/trans_link1_btn"/>
+                    android:background="@drawable/link_btn_selector" 
+                    android:id="@+id/trans_link1_btn"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -67,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="@string/home_transportation4" />
+                        android:text="@string/home_transportation2" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -85,11 +67,54 @@
                     android:background="@drawable/call_btn_selector" />
 
                 <TextView
+                    android:id="@+id/trans_call1_txvw"
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/home_transportation5" />
+                    android:textColor="#0000FF"
+                    android:text="@string/home_transportation3" />
+            </LinearLayout>
+            
+            
+            <TextView
+                style="@style/Font.Large.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/home_transportation4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/pin_red_selector" 
+                    android:id="@+id/trans_locate2_btn"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/link_btn_selector" 
+                    android:id="@+id/trans_link2_btn"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/Font.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/home_transportation5" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -106,13 +131,15 @@
                     android:background="@drawable/call_btn_selector" />
 
                 <TextView
+                    android:id="@+id/trans_call2_txvw"
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:textColor="#0000FF"
                     android:text="@string/home_transportation6" />
             </LinearLayout>
-
+            
             <TextView
                 style="@style/Font.Large.Bold"
                 android:layout_width="wrap_content"
@@ -130,20 +157,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/pin_red_selector" android:id="@+id/trans_locate2_btn"/>
+                    android:background="@drawable/pin_red_selector" 
+                    android:id="@+id/trans_locate3_btn"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/link_btn_selector" android:id="@+id/trans_link2_btn"/>
+                    android:background="@drawable/link_btn_selector" 
+                    android:id="@+id/trans_link3_btn"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
 
                     <TextView
-                        android:id="@+id/TextView01"
                         style="@style/Font.Normal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,13 +194,15 @@
                     android:background="@drawable/call_btn_selector" />
 
                 <TextView
+                    android:id="@+id/trans_call3_txvw"
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:textColor="#0000FF"
                     android:text="@string/home_transportation9" />
             </LinearLayout>
-
+            
             <TextView
                 style="@style/Font.Large.Bold"
                 android:layout_width="wrap_content"
@@ -190,20 +220,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/pin_red_selector" android:id="@+id/trans_locate3_btn"/>
+                    android:background="@drawable/pin_red_selector" 
+                    android:id="@+id/trans_locate4_btn"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/link_btn_selector" android:id="@+id/trans_link3_btn"/>
+                    android:background="@drawable/link_btn_selector" 
+                    android:id="@+id/trans_link4_btn"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
 
                     <TextView
-                        android:id="@+id/TextView02"
                         style="@style/Font.Normal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -226,12 +257,78 @@
                     android:background="@drawable/call_btn_selector" />
 
                 <TextView
+                    android:id="@+id/trans_call4_txvw"
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
+                    android:textColor="#0000FF"
                     android:text="@string/home_transportation12" />
             </LinearLayout>
+            
+            <TextView
+                style="@style/Font.Large.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/home_transportation13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/pin_red_selector" 
+                    android:id="@+id/trans_locate5_btn"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/link_btn_selector" 
+                    android:id="@+id/trans_link5_btn"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/Font.Normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/home_transportation14" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/trans_call5_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/call_btn_selector" />
+
+                <TextView
+                    android:id="@+id/trans_call5_txvw"
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#0000FF"
+                    android:text="@string/home_transportation15" />
+            </LinearLayout>
+            
         </LinearLayout>
 
     </ScrollView>

@@ -27,19 +27,25 @@
     
     
     
-    <string name="home_transportation1"><b>Rental Cars</b></string>
-    <string name="home_transportation2">Esri has contracted with rental car agencies to offer discounted rates to conference participants. When you arrange your car reservations, be sure to specify you want the Esri conference rate or use the discount number below.</string>
-    <string name="home_transportation3"><b>Hertz Corporation</b></string>
-    <string name="home_transportation4">Hertz CV Number: 016S0013</string>
-    <string name="home_transportation5">800-654-2240 (U.S. and Canada)</string>
-    <string name="home_transportation6">405-749-4434 (International)</string>
-    <string name="home_transportation7"><b>Avis Rent-A-Car</b></string>
-    <string name="home_transportation8">Number: G028103</string>
-    <string name="home_transportation9">800-331-1600</string>
-    <string name="home_transportation10"><b>Enterprise Rent-A-Car</b></string>
-    <string name="home_transportation11">Discount Number:\n32N1827 | PIN: ESR</string>
-    <string name="home_transportation12">800-Rent-A-Car (1-800-736-8222)</string>
+    <string name="home_transportation1"><b>Smithsonian National Portrait Gallery</b></string>
+    <string name="home_transportation2">8th St. at F St., NW\nWashington, DC 20001</string>
+    <string name="home_transportation3"><u>(202) 633-8300</u></string>
     
+    <string name="home_transportation4"><b>Smithsonian National Air and Space Museum</b></string>
+    <string name="home_transportation5">600 Independence Avenue Southwest  Washington, DC 20560</string>
+    <string name="home_transportation6"><u>(202) 633-1000</u></string>
+    
+    <string name="home_transportation7"><b>Smithsonian National Zoological Park</b></string>
+    <string name="home_transportation8">3001 Connecticut Ave NW  Washington, DC 20008</string>
+    <string name="home_transportation9"><u>(202) 633-2922</u></string>
+    
+    <string name="home_transportation10"><b>Capital Children\'s Museum</b></string>
+    <string name="home_transportation11">151 St. George Blvd  Oxon Hill, MD 20745</string>
+    <string name="home_transportation12"><u>(301) 392-2400</u></string>
+    
+    <string name="home_transportation13"><b>Smithsonian National Portrait Gallery</b></string>
+    <string name="home_transportation14">1501 Maine Avenue Southwest  Washington, DC 20024</string>
+    <string name="home_transportation15"><u>(202) 479-2426</u></string>
     
     <string name="home_contact1"><b>Contact Esri</b></string>
     <string name="home_contact2">For on-site, conference related questions, visit the registration desk.  For other general Esri related questions call or email the corporate office.</string>
@@ -47,5 +53,5 @@
     <string name="home_contact4_1">Call Us: </string>
     <string name="home_contact4_2"> <u>(909)793-2853</u></string>
     <string name="home_contact5_1">E-mail Us: </string>
-    <string name="home_contact5_2"><u>feduc@esri.com</u></string>
+    <string name="home_contact5_2"> <u>feduc@esri.com</u></string>
 </resources>
