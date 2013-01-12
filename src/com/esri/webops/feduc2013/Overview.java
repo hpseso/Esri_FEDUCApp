@@ -50,19 +50,22 @@ public class Overview extends BaseActivity {
 	TextView venue_call1_txvw,venue_call2_txvw,venue_call3_txvw,venue_link1_txvw,venue_link2_txvw,venue_link3_txvw;
 	
 	@ViewById
-	Button trans_locate1_btn,trans_link1_btn,trans_call1_btn,trans_call1_txvw;
+	Button trans_locate1_btn,trans_link1_btn,trans_call1_btn;
 	
 	@ViewById
-	Button trans_locate2_btn,trans_link2_btn,trans_call2_btn,trans_call2_txvw;
+	Button trans_locate2_btn,trans_link2_btn,trans_call2_btn;
 	
 	@ViewById
-	Button trans_locate3_btn,trans_link3_btn,trans_call3_btn,trans_call3_txvw;
+	Button trans_locate3_btn,trans_link3_btn,trans_call3_btn;
 	
 	@ViewById
-	Button trans_locate4_btn,trans_link4_btn,trans_call4_btn,trans_call4_txvw;
+	Button trans_locate4_btn,trans_link4_btn,trans_call4_btn;
 	
 	@ViewById
-	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn,trans_call5_txvw;
+	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn;
+	
+	@ViewById
+	TextView trans_call1_txvw,trans_call2_txvw,trans_call3_txvw,trans_call4_txvw,trans_call5_txvw;
 	
 	
 	
@@ -71,16 +74,7 @@ public class Overview extends BaseActivity {
 	
 	@AfterViews
 	void loadView () {
-		
-//		Intent intent = new Intent(Intent.ACTION_EDIT);
-//        intent.setType("vnd.android.cursor.item/event");
-//        intent.putExtra("beginTime", Calendar.getInstance().getTimeInMillis());
-//        intent.putExtra("allDay", false);
-//        intent.putExtra("rrule", "FREQ=YEARLY");
-//        intent.putExtra("endTime", Calendar.getInstance().getTimeInMillis()+60*1000);
-//        intent.putExtra("title", "Hetal's programming event");
-//        startActivity(intent);
-        
+		        
 		adImageSwitcher = (ImageSwitcher) findViewById(R.id.adImageSwitcher);
 		initImageSwithcer();
 		
@@ -120,7 +114,7 @@ public class Overview extends BaseActivity {
 		in_btn.setTag("http://www.linkedin.com/company/esri");
 		
 		fb_btn.setOnClickListener(linkListener);
-		fb_btn.setTag(" https://www.facebook.com/esrigis");
+		fb_btn.setTag("https://www.facebook.com/esrigis");
 		
 		tweet_btn.setOnClickListener(linkListener);
 		tweet_btn.setTag("https://twitter.com/EsriFederalGovt");
@@ -148,11 +142,30 @@ public class Overview extends BaseActivity {
 		venue_link1_btn.setOnClickListener(linkListener);
 		venue_link1_btn.setTag("http://www.dcconvention.com");
 		
+		venue_call1_txvw.setOnClickListener(callListener);
+		venue_call1_txvw.setTag("2022493000");
+		
+		venue_link1_txvw.setOnClickListener(linkListener);
+		venue_link1_txvw.setTag("http://www.dcconvention.com");
+		
+		
 		venue_call2_btn.setOnClickListener(callListener);
 		venue_call2_btn.setTag("4107857000");
 		
 		venue_link2_btn.setOnClickListener(linkListener);
 		venue_link2_btn.setTag("http://www.huntvalleyinn.com");
+
+		venue_call2_txvw.setOnClickListener(callListener);
+		venue_call2_txvw.setTag("4107857000");
+		
+		venue_link2_txvw.setOnClickListener(linkListener);
+		venue_link2_txvw.setTag("http://www.huntvalleyinn.com");
+
+		venue_call3_btn.setOnClickListener(callListener);
+		venue_call3_btn.setTag("2025821234");
+		
+		venue_link3_btn.setOnClickListener(linkListener);
+		venue_link3_btn.setTag("http://grandwashington.hyatt.com");
 		
 		venue_call3_txvw.setOnClickListener(callListener);
 		venue_call3_txvw.setTag("2025821234");
@@ -162,13 +175,13 @@ public class Overview extends BaseActivity {
 		
 		
 		venue_locate_address1_btn.setOnClickListener(mapListener);
-		venue_locate_address1_btn.setTag("2");
+		venue_locate_address1_btn.setTag("");
 		
 		venue_locate_address2_btn.setOnClickListener(mapListener);
-		venue_locate_address2_btn.setTag("3");
+		venue_locate_address2_btn.setTag("");
 		
 		venue_locate_address3_btn.setOnClickListener(mapListener);
-		venue_locate_address3_btn.setTag("3");
+		venue_locate_address3_btn.setTag("");
 		
 		
 		// Tranportation
@@ -301,7 +314,7 @@ public class Overview extends BaseActivity {
             if (display.getWidth() > 700) 
             	i.setLayoutParams(new Gallery.LayoutParams(300, 50));
             else
-            	i.setLayoutParams(new Gallery.LayoutParams(200, 50));
+            	i.setLayoutParams(new Gallery.LayoutParams(210, 50));
             i.setPadding(6, 6, 6, 6);
             i.setGravity(Gravity.CENTER);
             return i;
@@ -332,7 +345,7 @@ public class Overview extends BaseActivity {
 	OnClickListener mapListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			loadMap(Integer.parseInt(v.getTag().toString()));
+			//loadMap(Integer.parseInt(v.getTag().toString()));
 		}
 	};
 	

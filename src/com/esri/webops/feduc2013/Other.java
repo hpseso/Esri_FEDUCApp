@@ -40,7 +40,7 @@ public class Other extends BaseActivity {
 	Button survey_btn;
 	
 	@ViewById
-	Button sdate_cal1_btn,sdate_cal2_btn;
+	Button sdate_cal1_btn,sdate_cal2_btn,sdate_cal3_btn;
 	
 	@ViewById
 	Button plink1_btn,plink2_btn,plink3_btn,plink4_btn,plink5_btn;
@@ -75,7 +75,6 @@ public class Other extends BaseActivity {
 			
 			ArrayList<String> list = new ArrayList<String>();
 			list.add("App Demo");
-			list.add("Survey");
 			list.add("Save the Date");
 			list.add("Privacy/Legal");
 			
@@ -98,14 +97,17 @@ public class Other extends BaseActivity {
 			});
 		}
 		
-		survey_btn.setOnClickListener(linkListener);
-		survey_btn.setTag("http://www.esri.com/pugiosappsurvey");
-		
+//		survey_btn.setOnClickListener(linkListener);
+//		survey_btn.setTag("http://www.esri.com/pugiosappsurvey");
+//		
 		sdate_cal1_btn.setTag("1");
 		sdate_cal1_btn.setOnClickListener(calListener);
 		
 		sdate_cal2_btn.setTag("2");
 		sdate_cal2_btn.setOnClickListener(calListener);
+		
+		sdate_cal3_btn.setTag("3");
+		sdate_cal3_btn.setOnClickListener(calListener);
 		
 		plink1_btn.setOnClickListener(linkListener);
 		plink1_btn.setTag("http://www.esri.com/legal/index.html");
@@ -151,19 +153,19 @@ public class Other extends BaseActivity {
 				sdate_container.setVisibility(View.GONE);
 				privacy_container.setVisibility(View.GONE);
 			break;
+//			case 1:
+//				survey_container.setVisibility(View.VISIBLE);
+//				demo_container.setVisibility(View.GONE);
+//				sdate_container.setVisibility(View.GONE);
+//				privacy_container.setVisibility(View.GONE);
+//			break;
 			case 1:
-				survey_container.setVisibility(View.VISIBLE);
-				demo_container.setVisibility(View.GONE);
-				sdate_container.setVisibility(View.GONE);
-				privacy_container.setVisibility(View.GONE);
-			break;
-			case 2:
 				sdate_container.setVisibility(View.VISIBLE);
 				survey_container.setVisibility(View.GONE);
 				demo_container.setVisibility(View.GONE);
 				privacy_container.setVisibility(View.GONE);
 			break;
-			case 3:
+			case 2:
 				privacy_container.setVisibility(View.VISIBLE);
 				survey_container.setVisibility(View.GONE);
 				sdate_container.setVisibility(View.GONE);

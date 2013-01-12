@@ -40,9 +40,9 @@ public final class ExhibitsSponsor_
     private void afterSetContentView_() {
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
         sponsorList = ((ListView) findViewById(id.sponsorList));
-        all_txvw = ((TextView) findViewById(id.all_txvw));
-        hours_txvw = ((TextView) findViewById(id.hours_txvw));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
+        hours_txvw = ((TextView) findViewById(id.hours_txvw));
+        all_txvw = ((TextView) findViewById(id.all_txvw));
         {
             View view = findViewById(id.all_txvw);
             if (view!= null) {
@@ -58,20 +58,6 @@ public final class ExhibitsSponsor_
             }
         }
         {
-            View view = findViewById(id.hours_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        hours_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.refresh_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -79,6 +65,20 @@ public final class ExhibitsSponsor_
 
                     public void onClick(View view) {
                         refresh_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.hours_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        hours_txvw();
                     }
 
                 }

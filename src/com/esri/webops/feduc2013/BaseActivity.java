@@ -106,7 +106,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 	public void email(String email) {
 		Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 		emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {email});
-		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Inquiry from the PUG 2012 Conference App");
+		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Inquiry from the FEDUC 2013 Conference App");
 		emailIntent.setType("plain/text");
 		startActivity(emailIntent);
 	}
@@ -117,24 +117,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 		long endTime = Calendar.getInstance().getTimeInMillis() + (1000*60);
 		switch (type) {
 			case 1: {
-				title = "Esri International User Conference 2012";
-				
-				Calendar scal = Calendar.getInstance();
-				scal.set(Calendar.DAY_OF_MONTH, 23);
-				scal.set(Calendar.MONTH, Calendar.JULY);
-				scal.set(Calendar.YEAR, 2012);
-				startTime = scal.getTimeInMillis();
-				
-				Calendar ecal = Calendar.getInstance();
-				ecal.set(Calendar.DAY_OF_MONTH, 27);
-				ecal.set(Calendar.MONTH, Calendar.JULY);
-				ecal.set(Calendar.YEAR, 2012);
-				startTime = ecal.getTimeInMillis();
-			}
-			break;
-			
-			case 2: {
-				title = "Esri Partner Conference 2013";
+				title = "Esri Partner Conference";
 				
 				Calendar scal = Calendar.getInstance();
 				scal.set(Calendar.DAY_OF_MONTH, 23);
@@ -146,7 +129,41 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				ecal.set(Calendar.DAY_OF_MONTH, 26);
 				ecal.set(Calendar.MONTH, Calendar.MARCH);
 				ecal.set(Calendar.YEAR, 2013);
-				startTime = ecal.getTimeInMillis();
+				endTime = ecal.getTimeInMillis();
+			}
+			break;
+			
+			case 2: {
+				title = "Esri Developer Summit";
+				
+				Calendar scal = Calendar.getInstance();
+				scal.set(Calendar.DAY_OF_MONTH, 25);
+				scal.set(Calendar.MONTH, Calendar.MARCH);
+				scal.set(Calendar.YEAR, 2013);
+				startTime = scal.getTimeInMillis();
+				
+				Calendar ecal = Calendar.getInstance();
+				ecal.set(Calendar.DAY_OF_MONTH, 28);
+				ecal.set(Calendar.MONTH, Calendar.MARCH);
+				ecal.set(Calendar.YEAR, 2013);
+				endTime = ecal.getTimeInMillis();
+			}
+			break;
+			
+			case 3: {
+				title = "Esri International User Conference";
+				
+				Calendar scal = Calendar.getInstance();
+				scal.set(Calendar.DAY_OF_MONTH, 8);
+				scal.set(Calendar.MONTH, Calendar.JULY);
+				scal.set(Calendar.YEAR, 2013);
+				startTime = scal.getTimeInMillis();
+				
+				Calendar ecal = Calendar.getInstance();
+				ecal.set(Calendar.DAY_OF_MONTH, 12);
+				ecal.set(Calendar.MONTH, Calendar.JULY);
+				ecal.set(Calendar.YEAR, 2013);
+				endTime = ecal.getTimeInMillis();
 			}
 			break;
 		}

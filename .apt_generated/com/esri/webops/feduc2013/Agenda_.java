@@ -41,9 +41,23 @@ public final class Agenda_
     private void afterSetContentView_() {
         session_txvw = ((TextView) findViewById(id.session_txvw));
         agendaList = ((ListView) findViewById(id.agendaList));
-        calBtn = ((Button) findViewById(id.cal_btn));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
         date_txvw = ((TextView) findViewById(id.date_txvw));
+        calBtn = ((Button) findViewById(id.cal_btn));
+        {
+            View view = findViewById(id.type_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        type_txvw();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(id.refresh_btn);
             if (view!= null) {
@@ -52,20 +66,6 @@ public final class Agenda_
 
                     public void onClick(View view) {
                         refresh_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.map_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        map_btn();
                     }
 
                 }
@@ -87,20 +87,6 @@ public final class Agenda_
             }
         }
         {
-            View view = findViewById(id.type_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        type_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.all_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -108,6 +94,20 @@ public final class Agenda_
 
                     public void onClick(View view) {
                         all_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        map_btn();
                     }
 
                 }
