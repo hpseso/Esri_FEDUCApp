@@ -46,35 +46,21 @@ public final class ExhibitsDetail_
     }
 
     private void afterSetContentView_() {
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
-        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
-        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
-        partner_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.partner_txvw));
-        call_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.call_btn));
-        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
-        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
-        email_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.email_btn));
-        booth_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.booth_txvw));
         locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
         address1_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address1_txvw));
-        back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
+        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
         logo_imgvw = ((ImageView) findViewById(com.esri.webops.feduc2013.R.id.logo_imgvw));
         address2_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address2_txvw));
-        {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.call_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        call_btn();
-                    }
-
-                }
-                );
-            }
-        }
+        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
+        call_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.call_btn));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
+        booth_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.booth_txvw));
+        email_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.email_btn));
+        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
+        partner_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.partner_txvw));
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.email_btn);
             if (view!= null) {
@@ -90,20 +76,6 @@ public final class ExhibitsDetail_
             }
         }
         {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.link_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        link_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(com.esri.webops.feduc2013.R.id.back_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -111,6 +83,34 @@ public final class ExhibitsDetail_
 
                     public void onClick(View view) {
                         back_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.call_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        call_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.link_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    public void onClick(View view) {
+                        link_btn();
                     }
 
                 }

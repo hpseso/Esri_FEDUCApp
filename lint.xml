@@ -4,6 +4,7 @@
         <ignore path="res/layout/agenda.xml" />
         <ignore path="res/layout/exhibits.xml" />
         <ignore path="res/layout/exhibits_sponsor.xml" />
+        <ignore path="res/layout/header.xml" />
         <ignore path="res/layout/map.xml" />
     </issue>
     <issue id="ScrollViewSize">
@@ -11,5 +12,8 @@
     </issue>
     <issue id="SpUsage">
         <ignore path="res/layout/map.xml" />
+    </issue>
+    <issue id="UselessParent">
+        <ignore path="res/layout/overview_top.xml" />
     </issue>
 </lint>

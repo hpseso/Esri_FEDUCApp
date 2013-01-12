@@ -3,22 +3,29 @@
     <string name="app_name">FEDUC2013</string>
     
     <!-- Home Screen -->
-    <string name="home_content1">Esri Petroleum GIS Conference 2012</string>
-    <string name="home_content2">April 30–May 2, 2012</string>
-    <string name="home_content3">Houston, Texas</string>
-    <string name="home_content4">Welcome,\nDiscover ways geographic technology is used by oil, gas, and energy industries around the world to meet the energy challenges of a changing world at the Esri Petroleum GIS Conference in Houston, Texas.</string>
+    <string name="home_content1">Esri Federal GIS Conference</string>
+    <string name="home_content2"></string>
+    <string name="home_content3"></string>
+    <string name="home_content4">2013 Esri Federal GIS Conference\nEsri® technology helps meet federal missions in virtually every agency, from providing health care and emerging services to managing facilities and natural resources. This event offers every resource possible to help you maximize the powerful geospatial technology.</string>
     
-    <string name="home_venue1"><b>Venue -\nGeorge R. Brown Convention Center</b></string>
-    <string name="home_venue2">1001 Avenida De Las Americas\nHouston, TX 77010</string>
+    <string name="home_venue1"><b>Venue -\nWalter E. Washington Convention Center</b></string>
+    <string name="home_venue2">801 Mt Vernon Pl NW\nWashington, DC 20001</string>
     <string name="home_venue3_1">Front Desk:</string>
-    <string name="home_venue3_2"><u>(713) 853-8000</u></string>
-    <string name="home_venue4"><u>http://www.esri.com/pugiosappvenue</u></string>
-    <string name="home_venue5"><b>Hilton Americas-Houston</b></string>
+    <string name="home_venue3_2"><u>(202) 249-3000</u></string>
+    <string name="home_venue4"><u>http://www.dcconvention.com</u></string>
+    <string name="home_venue5"><b>Baltimore Hotel, Hunt Valley Inn</b></string>
     <string name="home_venue6">Stay in our participating hotel to get the best rates in the area.</string>
-    <string name="home_venue7">1600 Lamar St,\nHouston, TX 77010 </string>
+    <string name="home_venue7">245 Shawan Road Hunt Valley,\nMD 21031 </string>
     <string name="home_venue8_1">Front Desk:</string>
-    <string name="home_venue8_2"><u>(713) 793-8000</u></string>
-    <string name="home_venue9"><u>http://www.esri.com/pugiosapphotel</u></string>
+    <string name="home_venue8_2"><u>(410) 785-7000</u></string>
+    <string name="home_venue9"><u>http://www.huntvalleyinn.com</u></string>
+    <string name="home_venue10"><b>Hotel - Grand Hyatt</b></string>
+    <string name="home_venue11">1000 H Street Northwest,\nWashington, DC 20001</string>
+    <string name="home_venue12">Front Desk:</string>
+    <string name="home_venue13"><u>(202) 582-1234</u></string>
+    <string name="home_venue14"><u>http://grandwashington.hyatt.com</u></string>
+    
+    
     
     <string name="home_transportation1"><b>Rental Cars</b></string>
     <string name="home_transportation2">Esri has contracted with rental car agencies to offer discounted rates to conference participants. When you arrange your car reservations, be sure to specify you want the Esri conference rate or use the discount number below.</string>
@@ -38,7 +45,7 @@
     <string name="home_contact2">For on-site, conference related questions, visit the registration desk.  For other general Esri related questions call or email the corporate office.</string>
     <string name="home_contact3">Locate the Registration Desk</string>
     <string name="home_contact4_1">Call Us: </string>
-    <string name="home_contact4_2"> <u>(909) 793 2853</u></string>
+    <string name="home_contact4_2"> <u>(909)793-2853</u></string>
     <string name="home_contact5_1">E-mail Us: </string>
-    <string name="home_contact5_2"><u>pug@esri.com</u></string>
+    <string name="home_contact5_2"><u>feduc@esri.com</u></string>
 </resources>

@@ -106,23 +106,23 @@ public class Overview extends BaseActivity {
 		
 		// HOME
 		blog_btn.setOnClickListener(linkListener);
-		blog_btn.setTag("http://www.esri.com/pugiosappblog");
+		blog_btn.setTag("http://blogs.esri.com/esri/esri-insider/");
 		
 		in_btn.setOnClickListener(linkListener);
-		in_btn.setTag("http://www.esri.com/pugiosappLinkedin");
+		in_btn.setTag("http://www.linkedin.com/company/esri");
 		
 		fb_btn.setOnClickListener(linkListener);
-		fb_btn.setTag("http://www.esri.com/pugiosappfacebook");
+		fb_btn.setTag(" https://www.facebook.com/esrigis");
 		
 		tweet_btn.setOnClickListener(linkListener);
-		tweet_btn.setTag("http://www.esri.com/pugiosapptwitter");
+		tweet_btn.setTag("https://twitter.com/EsriFederalGovt");
 		
 		// CONTACT
 		contact_call_btn.setOnClickListener(callListener);
 		contact_call_btn.setTag("9097932853");
 		
 		contact_email_btn.setOnClickListener(emailListener);
-		contact_email_btn.setTag("pug@esri.com");
+		contact_email_btn.setTag("feduc@esri.com");
 		
 		call_txvw.setOnClickListener(callListener);
 		call_txvw.setTag("9097932853");
