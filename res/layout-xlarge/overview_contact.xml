@@ -4,112 +4,107 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" android:background="#e5f3f7" android:padding="10dp">
 
-    <TextView
-        style="@style/Font.Large.Bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_contact1" />
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical" >
-
-        <TextView
-            style="@style/Font.Normal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/home_contact2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical" >
-
-        <Button
-            android:id="@+id/contact_locate_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/pin_brown_selector" />
-
-        <TextView
-            style="@style/Font.Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="@string/home_contact3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical" >
-
-        <Button
-            android:id="@+id/contact_call_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/call_btn_selector" />
-
-        <TextView
-            android:id="@+id/txvw"
-            style="@style/Font.Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="@string/home_contact4_1" />
-
-        <TextView
-            android:id="@+id/call_txvw"
-            style="@style/Font.Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_contact4_2"
-            android:textColor="#0000FF" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical" >
-
-        <Button
-            android:id="@+id/contact_email_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/email_btn_selector" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/TextView01"
-                style="@style/Font.Normal"
-                android:layout_width="wrap_content"
+                style="@style/Font.Large.Bold"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="@string/home_contact5_1" />
+                android:text="@string/home_contact1" />
 
-            <TextView
-                android:id="@+id/email_txvw"
-                style="@style/Font.Normal"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="19dp"
-                android:text="@string/home_contact5_2"
-                android:textColor="#0000FF" />
-        </RelativeLayout>
-    </LinearLayout>
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
 
+                <TextView
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/home_contact2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/contact_locate_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/pin_brown_selector" />
+
+                <TextView
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/home_contact3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/call_btn_selector" android:id="@+id/contact_call_btn"/>
+
+                <TextView
+                    android:id="@+id/txvw"
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/home_contact4_1" />
+
+                <TextView
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_contact4_2"
+                    android:textColor="#0000FF" android:id="@+id/call_txvw"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/email_btn_selector" android:id="@+id/contact_email_btn"/>
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/home_contact5_1" />
+
+                <TextView
+                    android:id="@+id/email_txvw"
+                    style="@style/Font.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_contact5_2"
+                    android:textColor="#0000FF" />
+            </LinearLayout>
+        </LinearLayout>
 </LinearLayout>

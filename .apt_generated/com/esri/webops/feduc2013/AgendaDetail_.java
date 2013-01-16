@@ -46,19 +46,19 @@ public final class AgendaDetail_
     }
 
     private void afterSetContentView_() {
-        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
-        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
-        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
-        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
-        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
         locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
+        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
         author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
-        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
-        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
-        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
         back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
+        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
+        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
+        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
+        label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
+        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.locate_btn);
             if (view!= null) {

@@ -47,11 +47,11 @@
 	</style>
 	
 	<style name="Font.Large">
-		<item name="android:textSize">25dip</item>
+		<item name="android:textSize">22dip</item>
 	</style>
 	
 	<style name="Font.Large.Bold">
-		<item name="android:textSize">25dip</item>
+		<item name="android:textSize">22dip</item>
 		<item name="android:textStyle">bold</item>
 	</style>
 	

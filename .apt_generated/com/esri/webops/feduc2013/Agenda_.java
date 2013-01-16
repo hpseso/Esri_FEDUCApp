@@ -39,19 +39,19 @@ public final class Agenda_
     }
 
     private void afterSetContentView_() {
-        agendaList = ((ListView) findViewById(id.agendaList));
-        calBtn = ((Button) findViewById(id.cal_btn));
-        date_txvw = ((TextView) findViewById(id.date_txvw));
-        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         session_txvw = ((TextView) findViewById(id.session_txvw));
+        agendaList = ((ListView) findViewById(id.agendaList));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
+        date_txvw = ((TextView) findViewById(id.date_txvw));
+        calBtn = ((Button) findViewById(id.cal_btn));
         {
-            View view = findViewById(id.map_btn);
+            View view = findViewById(id.type_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        map_btn();
+                        type_txvw();
                     }
 
                 }
@@ -73,13 +73,13 @@ public final class Agenda_
             }
         }
         {
-            View view = findViewById(id.type_txvw);
+            View view = findViewById(id.cal_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        type_txvw();
+                        cal_btn();
                     }
 
                 }
@@ -101,13 +101,13 @@ public final class Agenda_
             }
         }
         {
-            View view = findViewById(id.cal_btn);
+            View view = findViewById(id.map_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     public void onClick(View view) {
-                        cal_btn();
+                        map_btn();
                     }
 
                 }
