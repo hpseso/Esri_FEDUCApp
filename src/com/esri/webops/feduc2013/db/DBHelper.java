@@ -4,6 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.logging.Logger;
 
 import com.esri.webops.feduc2013.comman.App;
 
@@ -38,8 +39,8 @@ public class DBHelper extends SQLiteOpenHelper{
     public void createDataBase() throws IOException{
  
     	boolean dbExist = checkDataBase();
- 
-    	if(dbExist){
+        Logger.getLogger("Esri").info("DB FOUND :::::::" + dbExist);
+        if(dbExist){
     		//do nothing - database already exist
     	}else{
  

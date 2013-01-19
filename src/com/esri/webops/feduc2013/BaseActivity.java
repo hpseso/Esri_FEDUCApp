@@ -60,8 +60,8 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 
 	ImageSwitcher adImageSwitcher;
 	ProgressDialog progressDialog;
-	
-	
+
+
 	public void loadMap(int which) {
 		Intent intent = new Intent(this,Map_.class);
 		intent.putExtra("MAP_TYPE", which);
@@ -126,7 +126,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				startTime = scal.getTimeInMillis();
 				
 				Calendar ecal = Calendar.getInstance();
-				ecal.set(Calendar.DAY_OF_MONTH, 26);
+				ecal.set(Calendar.DAY_OF_MONTH, 27);
 				ecal.set(Calendar.MONTH, Calendar.MARCH);
 				ecal.set(Calendar.YEAR, 2013);
 				endTime = ecal.getTimeInMillis();
@@ -143,7 +143,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				startTime = scal.getTimeInMillis();
 				
 				Calendar ecal = Calendar.getInstance();
-				ecal.set(Calendar.DAY_OF_MONTH, 28);
+				ecal.set(Calendar.DAY_OF_MONTH, 29);
 				ecal.set(Calendar.MONTH, Calendar.MARCH);
 				ecal.set(Calendar.YEAR, 2013);
 				endTime = ecal.getTimeInMillis();
@@ -160,7 +160,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				startTime = scal.getTimeInMillis();
 				
 				Calendar ecal = Calendar.getInstance();
-				ecal.set(Calendar.DAY_OF_MONTH, 12);
+				ecal.set(Calendar.DAY_OF_MONTH, 13);
 				ecal.set(Calendar.MONTH, Calendar.JULY);
 				ecal.set(Calendar.YEAR, 2013);
 				endTime = ecal.getTimeInMillis();
@@ -195,7 +195,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 				
 				int imageNo = prefRead.getInt("LAST_IMAGE", 0);
 				
-				if (imageNo >= 9)
+				if (imageNo >= 5)
 					imageNo = 0;
 				else
 					imageNo +=1;
@@ -245,19 +245,15 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 	}
 	
 	private Integer[] sponsorImages = {
-			R.drawable.new_light_logo_shadow,R.drawable.umbc_logo_shadow,
-			R.drawable.niit_logo_shadow,R.drawable.location_age_logo_shadow,
-			R.drawable.rok_logo_shadow,R.drawable.amazon_logo_shadow,
-			R.drawable.component_one_shadow,R.drawable.cyber_tech_shadow,
-			R.drawable.green_horne_logo_shadow,R.drawable.energov_logo_shadow,
+			R.drawable.exelis_logo,R.drawable.tomtom_logo,
+			R.drawable.ibm_logo,R.drawable.terrago_logo,
+			R.drawable.baker_logo,R.drawable.hdr_logo,
 	};
 	
 	private String[] sponsorURLS = {
-			"http://www.NLTGIS.com","http://www.umbc.edu/shadygrove",
-			"http://www.niit-tech.com","http://www.locationage.com",
-			"http://www.roktech.net","http://www.aws.amazon.com",
-			"http://www.componentone.com","http://www.cybertech.com",
-			"http://www.greenhorne.com","http://www.energov.com"
+            "http://www.exelisvis.com","http://www.tomtom.com/licensing",
+            "http://www.ibm.com","http://www.terragotech.com/",
+            "http://www.mbakercorp.com","http://www.hdrinc.com"
 	};
 	
 	

@@ -22,25 +22,37 @@
         <option name="visible" value="false" />
       </GlobalState>
     </option>
+    <device-configurations>
+      <entry key="file://$PROJECT_DIR$/res/layout-xlarge/overview.xml" value="Portrait" />
+    </device-configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c7362a9-a059-40db-90be-0bd12a2d0429" name="Default" comment="" />
     <ignored path="FEDUC-2013.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329490125" ignored="false" />
+    <file path="/fragment.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358605452979" ignored="false" />
     <file path="/Dummy.txt" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329441334" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Map_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Home_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsSponsor_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsHours_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsDetail_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsAll_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/AgendaDetail_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329098752" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Splash_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329099120" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Overview_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329099120" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Other_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329099120" ignored="false" />
-    <file path="/AgendaAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329122723" ignored="false" />
+    <file path="/AgendaAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358605548013" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329990581" ignored="false" />
+    <file path="/Overview.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358523713768" ignored="false" />
+    <file path="/overview.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358487270708" ignored="false" />
+    <file path="/string_overview.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358504045947" ignored="false" />
+    <file path="/overview_venue.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358504632910" ignored="false" />
+    <file path="/overview_tranportation.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358501763406" ignored="false" />
+    <file path="/Map.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358598736913" ignored="false" />
+    <file path="/map.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358506732317" ignored="false" />
+    <file path="/Agenda.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358593911026" ignored="false" />
+    <file path="/AgendaDB.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358592969870" ignored="false" />
+    <file path="/AgendaDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358604255954" ignored="false" />
+    <file path="/ExhibitAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358535989956" ignored="false" />
+    <file path="/ExhibitsDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358582776739" ignored="false" />
+    <file path="/ExhibitDB.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358595051608" ignored="false" />
+    <file path="/BaseActivity.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358537292601" ignored="false" />
+    <file path="/SessionParser.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358592957260" ignored="false" />
+    <file path="/DBHelper.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358592390059" ignored="false" />
+    <file path="/AgendaAssetDB.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358595025889" ignored="false" />
+    <file path="/Other.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358604555346" ignored="false" />
+    <file path="/other_demo.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358605007322" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,11 +111,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="string_overview.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/values/string_overview.xml">
+      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="232" selection-end="232" vertical-scroll-proportion="0.13554217">
-              <folding />
+            <state line="262" column="47" selection-start="10692" selection-end="10692" vertical-scroll-proportion="3.2505748">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#21059#21075#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgendaAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="72" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,10 +141,30 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/dev_keystore.keystore" />
+    <option name="KEY_ALIAS" value="feduc2013" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/SessionAssetParser.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/ExhibitorParser.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Agenda.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/comman/App.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsSponsor.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaAssetDB.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/ExhibitAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/ExhibitDB.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/AgendaDetail.java" />
+        <option value="$PROJECT_DIR$/res/layout/other_demo.xml" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Other.java" />
         <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java" />
       </list>
     </option>
   </component>
@@ -141,7 +187,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -153,6 +199,63 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feduc2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".apt_generated" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -199,91 +302,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FEDUC-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,25 +309,32 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="ExportedApkPath" value="$USER_HOME$/Desktop/FEDUC2013_0_8.apk" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+    <property name="ExportedModule" value="FEDUC2013" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev_keystore.keystore" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0403626215007009" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="f41ba62b" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Avd2.2google" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/xml" />
+      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -345,19 +370,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -384,6 +396,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -471,37 +496,57 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="825" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="825" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2123386" sideWeight="0.670922" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30487806" sideWeight="0.670922" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297491" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.50071734" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3248227" sideWeight="0.49426112" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19010043" sideWeight="0.670922" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22955523" sideWeight="0.6751773" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21290323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20573477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297491" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -565,48 +610,49 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/string_overview.xml">
+    <entry file="file://$PROJECT_DIR$/res/xml/calloutstyle.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Agenda_.java">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/ExhibitAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="737" selection-end="737" vertical-scroll-proportion="0.33707866">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3150#3151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.factorypath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="49" selection-start="157" selection-end="157" vertical-scroll-proportion="0.101123594">
+        <state line="117" column="47" selection-start="3901" selection-end="3901" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="17" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.5096012">
+        <state line="105" column="34" selection-start="3538" selection-end="3538" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/agenda.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsHours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.13293944">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/home.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="27" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/overview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -616,9 +662,47 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/overview.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/ExhibitDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="32" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/other.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="4" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.6944444">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/AgendaDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="19" selection-start="886" selection-end="886" vertical-scroll-proportion="0.17725259">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/other_demo.xml">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.36">
+        <state line="22" column="99" selection-start="831" selection-end="831" vertical-scroll-proportion="-12.692307">
           <folding />
         </state>
       </provider>
@@ -626,10 +710,29 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/string_overview.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Other.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="232" selection-end="232" vertical-scroll-proportion="0.13554217">
+        <state line="133" column="53" selection-start="4067" selection-end="4067" vertical-scroll-proportion="0.5730337">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="72" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="47" selection-start="10692" selection-end="10692" vertical-scroll-proportion="3.2505748">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#21059#21075#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -650,7 +753,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -686,7 +789,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FEDUC2013</last-edited>
+          <last-edited>Android|FEDUC2013</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

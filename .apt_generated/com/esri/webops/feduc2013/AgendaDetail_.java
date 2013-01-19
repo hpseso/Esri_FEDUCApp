@@ -6,11 +6,11 @@
 package com.esri.webops.feduc2013;
 
 import java.io.Serializable;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.esri.webops.feduc2013.R.layout;
-import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class AgendaDetail_
     extends AgendaDetail
@@ -33,40 +32,47 @@ public final class AgendaDetail_
     }
 
     private void init_(Bundle savedInstanceState) {
-        Bundle extras_ = this.getIntent().getExtras();
-        if (extras_!= null) {
-            if (extras_.containsKey("ID")) {
-                try {
-                    id = cast_(extras_.get("ID"));
-                } catch (ClassCastException e) {
-                    Log.e("AgendaDetail_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
-        }
+        injectExtras_();
     }
 
     private void afterSetContentView_() {
-        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
-        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
-        author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
         back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
-        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
-        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
-        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
         asset_title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.asset_title_txvw));
         label_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.label_txvw));
-        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
         detail_container = ((ScrollView) findViewById(com.esri.webops.feduc2013.R.id.detail_container));
+        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        time_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.time_txvw));
+        org_name_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.org_name_txvw));
+        author_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.author_txvw));
+        cal_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.cal_btn));
+        hall_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.hall_txvw));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.cal_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AgendaDetail_.this.cal_btn();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.locate_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        locate_btn();
+                        AgendaDetail_.this.locate_btn();
                     }
 
                 }
@@ -79,22 +85,9 @@ public final class AgendaDetail_
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        back_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.cal_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        cal_btn();
+                        AgendaDetail_.this.back_btn();
                     }
 
                 }
@@ -122,14 +115,6 @@ public final class AgendaDetail_
         afterSetContentView_();
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
-            onBackPressed();
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
     public static AgendaDetail_.IntentBuilder_ intent(Context context) {
         return new AgendaDetail_.IntentBuilder_(context);
     }
@@ -137,6 +122,26 @@ public final class AgendaDetail_
     @SuppressWarnings("unchecked")
     private<T >T cast_(Object object) {
         return ((T) object);
+    }
+
+    private void injectExtras_() {
+        Intent intent_ = getIntent();
+        Bundle extras_ = intent_.getExtras();
+        if (extras_!= null) {
+            if (extras_.containsKey("ID")) {
+                try {
+                    id = cast_(extras_.get("ID"));
+                } catch (ClassCastException e) {
+                    Log.e("AgendaDetail_", "Could not cast extra to expected type, the field is left to its default value", e);
+                }
+            }
+        }
+    }
+
+    @Override
+    public void setIntent(Intent newIntent) {
+        super.setIntent(newIntent);
+        injectExtras_();
     }
 
     public static class IntentBuilder_ {
@@ -160,6 +165,14 @@ public final class AgendaDetail_
 
         public void start() {
             context_.startActivity(intent_);
+        }
+
+        public void startForResult(int requestCode) {
+            if (context_ instanceof Activity) {
+                ((Activity) context_).startActivityForResult(intent_, requestCode);
+            } else {
+                context_.startActivity(intent_);
+            }
         }
 
         public AgendaDetail_.IntentBuilder_ id(Integer id) {

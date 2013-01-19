@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.esri.core.geometry.Point;
 import com.esri.webops.feduc2013.db.AgendaAssetDB;
 import com.esri.webops.feduc2013.db.AgendaDB;
 import com.esri.webops.feduc2013.util.Util;
@@ -23,7 +24,10 @@ import com.googlecode.androidannotations.annotations.ViewById;
 public class AgendaDetail extends BaseActivity {
 
 	@ViewById
-	Button map_btn,back_btn;
+	Button map_btn;
+
+    @ViewById
+    Button back_btn;
 	
 	@Extra("ID")
 	Integer id =0;
@@ -41,6 +45,7 @@ public class AgendaDetail extends BaseActivity {
 	int eday,emonth,eyear,ehour,emin;
 	
 	double x,y;
+    int floor;
 	
 	@AfterViews
 	void loadView() {
@@ -69,6 +74,8 @@ public class AgendaDetail extends BaseActivity {
 				
 				x = cursor.getDouble(cursor.getColumnIndex("ZXPOINT"));
 				y = cursor.getDouble(cursor.getColumnIndex("ZYPOINT"));
+
+                floor = cursor.getInt(cursor.getColumnIndex("ZFLOOR"));
 				
 				title_txvw.setText(title);
 				hall_txvw.setText(hall);
@@ -143,10 +150,27 @@ public class AgendaDetail extends BaseActivity {
 	@Click
 	void locate_btn() {
 		Logger.getLogger("ESRI").info("Agenda Point:" + x +":"+ y);
-//		Point point = new Point(x, y);
-		Intent intent = new Intent(this,Map_.class);
-//		intent.putExtra("AGENDA_POINT", point);
-		startActivity(intent);
+		Point point = new Point(x, y);
+        int tFloor = floor;
+        Intent intent = new Intent(this,Map_.class);
+        intent.putExtra("AGENDA_POINT", point);
+
+        if (floor == 6) {
+            if (x == 0)
+                tFloor = 1;
+            else
+                tFloor = floor;
+        }
+        else {
+            if (x == 0)
+                tFloor = 1;
+            else
+                tFloor = floor;
+        }
+        intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
+        intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GRAY);
+        intent.putExtra("FLOOR", 0);
+        startActivity(intent);
 	}
 	
 	@Click

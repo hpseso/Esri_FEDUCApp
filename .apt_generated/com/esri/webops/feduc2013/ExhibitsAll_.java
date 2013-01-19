@@ -5,12 +5,12 @@
 
 package com.esri.webops.feduc2013;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
 import com.googlecode.androidannotations.api.BackgroundExecutor;
-import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class ExhibitsAll_
     extends ExhibitsAll
@@ -38,47 +37,35 @@ public final class ExhibitsAll_
     }
 
     private void afterSetContentView_() {
+        all_txvw = ((TextView) findViewById(id.all_txvw));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
         exhibitList = ((ListView) findViewById(id.exhibitList));
-        hours_txvw = ((TextView) findViewById(id.hours_txvw));
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
-        all_txvw = ((TextView) findViewById(id.all_txvw));
-        {
-            View view = findViewById(id.map_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        map_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.hours_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        hours_txvw();
-                    }
-
-                }
-                );
-            }
-        }
+        hours_txvw = ((TextView) findViewById(id.hours_txvw));
         {
             View view = findViewById(id.refresh_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        refresh_btn();
+                        ExhibitsAll_.this.refresh_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsAll_.this.map_btn();
                     }
 
                 }
@@ -91,8 +78,24 @@ public final class ExhibitsAll_
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        sponsor_txvw();
+                        ExhibitsAll_.this.sponsor_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.hours_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsAll_.this.hours_txvw();
                     }
 
                 }
@@ -118,14 +121,6 @@ public final class ExhibitsAll_
     public void setContentView(View view) {
         super.setContentView(view);
         afterSetContentView_();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
-            onBackPressed();
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
     public static ExhibitsAll_.IntentBuilder_ intent(Context context) {
@@ -189,6 +184,14 @@ public final class ExhibitsAll_
 
         public void start() {
             context_.startActivity(intent_);
+        }
+
+        public void startForResult(int requestCode) {
+            if (context_ instanceof Activity) {
+                ((Activity) context_).startActivityForResult(intent_, requestCode);
+            } else {
+                context_.startActivity(intent_);
+            }
         }
 
     }

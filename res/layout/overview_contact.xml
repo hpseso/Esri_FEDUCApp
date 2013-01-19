@@ -6,18 +6,18 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:padding="10dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" android:background="#FFFFFF" android:padding="10dp">
+            android:orientation="vertical" android:background="@drawable/content_bg" android:padding="10dp">
 
             <TextView
                 style="@style/Font.Large.Bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/home_contact1" />
+                android:text="@string/home_contact1" android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,14 +43,14 @@
                     android:id="@+id/contact_locate_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/pin_brown_selector" />
 
                 <TextView
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="5dp"
                     android:text="@string/home_contact3" />
             </LinearLayout>
 
@@ -63,7 +63,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/call_btn_selector" android:id="@+id/contact_call_btn"/>
 
                 <TextView
@@ -71,7 +71,7 @@
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="5dp"
                     android:text="@string/home_contact4_1" />
 
                 <TextView
@@ -91,7 +91,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/email_btn_selector" android:id="@+id/contact_email_btn"/>
 
                 <TextView
@@ -99,7 +99,7 @@
                     style="@style/Font.Normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="5dp"
                     android:text="@string/home_contact5_1" />
 
                 <TextView

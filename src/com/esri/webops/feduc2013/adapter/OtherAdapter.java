@@ -225,13 +225,13 @@ public class OtherAdapter extends PagerAdapter {
 				});
         		
         		break;
+//	        case 1:
+//	            resId = R.layout.other_survey;
+//	            view = inflater.inflate(resId, null,false);
+//	            ((Button) view.findViewById(R.id.survey_btn)).setTag("http://www.esri.com/pugiosappsurvey");
+//        		((Button) view.findViewById(R.id.survey_btn)).setOnClickListener(linkListener);
+//	            break;
 	        case 1:
-	            resId = R.layout.other_survey;
-	            view = inflater.inflate(resId, null,false);
-	            ((Button) view.findViewById(R.id.survey_btn)).setTag("http://www.esri.com/pugiosappsurvey");
-        		((Button) view.findViewById(R.id.survey_btn)).setOnClickListener(linkListener);
-	            break;
-	        case 2:
 	            resId = R.layout.other_save_date;
 	            view = inflater.inflate(resId, null,false);
 	            ((Button) view.findViewById(R.id.sdate_cal1_btn)).setTag("1");
@@ -239,8 +239,11 @@ public class OtherAdapter extends PagerAdapter {
         		
         		((Button) view.findViewById(R.id.sdate_cal2_btn)).setTag("2");
         		((Button) view.findViewById(R.id.sdate_cal2_btn)).setOnClickListener(calListener);
+
+                ((Button) view.findViewById(R.id.sdate_cal2_btn)).setTag("3");
+                ((Button) view.findViewById(R.id.sdate_cal2_btn)).setOnClickListener(calListener);
 	            break;
-	        case 3:
+	        case 2:
 	            resId = R.layout.other_privacy;
 	            view = inflater.inflate(resId, null,false);
 	            Button plink1_btn = (Button) view.findViewById(R.id.plink1_btn);

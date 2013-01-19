@@ -6,19 +6,28 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:padding="10dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp" android:background="#FFFFFF">
+            android:background="@drawable/content_bg" android:padding="10dp">
+
 
             <TextView
                 style="@style/Font.Large.Bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/home_venue1" />
+                android:paddingTop="10dp"
+                android:text="@string/home_venue" />
+
+            <TextView
+                    style="@style/Font.Large.Bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="@string/home_venue1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,13 +114,6 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/home_venue5" />
 
-            <TextView
-                style="@style/Font.Normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/home_venue6" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -190,8 +192,8 @@
                     android:text="@string/home_venue9"
                     android:textColor="#0000ff" android:id="@+id/venue_link2_txvw"/>
             </LinearLayout>
-            
-            
+
+
             <!--  -->
             <TextView
                 style="@style/Font.Large.Bold"

@@ -3,6 +3,7 @@ package com.esri.webops.feduc2013;
 import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.Calendar;
+import java.util.logging.Logger;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -54,26 +55,26 @@ public class Agenda extends BaseActivity {
 	@ViewById
 	TextView empty_txvw;
 	
-	int d = 10, m=12,y=2012;
+	int d = 25, m=2,y=2013;
 	AgendaAdapter adapter;
 	
 	CharSequence[] sessionList = new CharSequence[] {
-		"Esri Collaboration Center",
-		"Plenary Session",
+		"Meals",
+		"General Session",
 		"GIS Solutions EXPO",
-		"Panel Discussion",
-		"User Presentation",
-		"Technical Sessions",
-		"Preconference Training",
-		"Hands On Learning Lab",
-		"Registration",
-		"Lunch",
-		"Continental Breakfast",
 		"Break",
-		"Welcome Social"
+		"Social Event",
+		"Special Interest Group",
+		"User Presentations",
+		"Technical Sessions",
+		"Conference Activity",
+		"Registration",
+		"Demo Theater Presentation",
+		"User Lightning Talks",
+		"Special Interest Group Meeting"
 	};
 	
-	int [] sessionIndex =new  int []{1,2,3,4,5,6,7,12,14,16,11,12,13,14,15,18,19,20};
+	int [] sessionIndex =new  int []{1,2,3,4,5,6,7,8,9,10,11,12,13};
 	
 	int selectedSession = 0;
 	
@@ -116,78 +117,85 @@ public class Agenda extends BaseActivity {
 			
 			AgendaDB adb = new AgendaDB(this);
 			String date = "";
-			date = getStringPref(App.SESSION_UPDATED_AT);
-//			Logger.getLogger("Esri").info("Date:" + date);
+			date = adb.getLastUpdatedDate();
+			Logger.getLogger("Esri").info("Date:" + date);
 			String str = "";
 			if (date != null && date.trim().length() > 0)
 				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+            else
+                str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
+			Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
 			InputStream is =  makeWebPost(App.SESSION_URL +str);
 			String response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response is:" + response);
+			Logger.getLogger("Esri").info("Response is:" + response);
 			
-			int k=0;
+
 			SessionParser parser = new Gson().fromJson(response, SessionParser.class);
 			if (parser != null && parser.sessionList != null && parser.sessionList.size() > 0) {
 				for (SessionParser.Session session : parser.sessionList) {
-					adb.update(session);
-					if (k == parser.sessionList.size() -1) {
-						setPref(App.SESSION_UPDATED_AT, session.updatedAt);
-					}
-					k++;
+					long result = adb.update(session);
+                    Logger.getLogger("Esri").info("Update result is:" + result);
+					if (result == 0) {
+                        result = adb.insert(session);
+                        Logger.getLogger("Esri").info("Insert result is:" + result);
+                    }
 				}
 			}
-			
-			
-			date = "";
+
+            date = "";
 			AgendaAssetDB asdb = new AgendaAssetDB(this);
-			date = getStringPref(App.SESSION_ASSET_UPDATED_AT);
-//			Logger.getLogger("Esri").info("Date For Asset :" + date);
+			date = asdb.getLastUpdatedDate();
+			Logger.getLogger("Esri").info("Date For Asset :" + date);
 			str = "";
 			if (date != null && date.trim().length() > 0)
 				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+            else
+                str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
+			Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
 			is =  makeWebPost(App.SESSION_ASSET_URL +str);
 			response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response for Asset is:" + response);
+			Logger.getLogger("Esri").info("Response for Asset is:" + response);
 			
-			k=0;
+
 			SessionAssetParser sparser = new Gson().fromJson(response, SessionAssetParser.class);
 			if (sparser != null && sparser.sessionAssetList != null && sparser.sessionAssetList.size() > 0) {
 				for (SessionAssetParser.SessionAsset session : sparser.sessionAssetList) {
-					asdb.update(session);
-					if (k == parser.sessionList.size() -1) {
-						setPref(App.SESSION_ASSET_UPDATED_AT, session.updatedAt);
-					}
-					k++;
+					long result = asdb.update(session);
+                    Logger.getLogger("Esri").info("Session Asset Update result is:" + result);
+                    if (result == 0) {
+                        result = asdb.insert(session);
+                        Logger.getLogger("Esri").info("Session Asset Insert result is:" + result);
+                    }
 				}
 			}
 			
 			
 			date = "";
 			ExhibitDB edb = new ExhibitDB(this);
-			date = getStringPref(App.EXHIBITOR_UPDATED_AT);
-//			Logger.getLogger("Esri").info("Date For Exhibitor :" + date);
+			date = edb.getLastUpdatedDate();
+			Logger.getLogger("Esri").info("Date For Exhibitor :" + date);
 			str = "";
 			if (date != null && date.trim().length() > 0)
 				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+            else
+                str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
+			Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
 			is =  makeWebPost(App.EXHIBITOR_URL +str);
 			response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
+			Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
 			
-			k=0;
 			ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
 			if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
 				for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
-					edb.update(session);
-					if (k == parser.sessionList.size() -1) {
-						setPref(App.EXHIBITOR_UPDATED_AT, session.updatedAt);
-					}
-					k++;
+					long result = edb.update(session);
+                    Logger.getLogger("Esri").info("Exhibitor Update result is:" + result);
+                    if (result == 0) {
+                        result = edb.insert(session);
+                        Logger.getLogger("Esri").info("Exhibitor Insert result is:" + result);
+                    }
 				}
 			}
 			
@@ -261,7 +269,7 @@ public class Agenda extends BaseActivity {
 			filter = "ZSTARTDAY=" + d + " AND ZSTARTMONTH=" + m + " AND ZSTARTYEAR=" + y + " AND ZEVENTTYPEID='" + (sessionIndex[selectedSession]) + "'";
 			
 //		Logger.getLogger("ESRI").info("Fiter:" + filter);
-		Cursor c = db.fetchAllRow(filter,"ZSTARTHOUR asc");
+		Cursor c = db.fetchAllRow(filter,"ZSTARTDATE asc");
 		adapter = new AgendaAdapter(this, c, true);
 		agendaList.setAdapter(adapter);
 	}

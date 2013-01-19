@@ -3,22 +3,24 @@
     <string name="app_name">FEDUC2013</string>
     
     <!-- Home Screen -->
-    <string name="home_content1">Esri Federal GIS Conference</string>
+    <string name="home_content1"><b>Esri Federal GIS Conference</b></string>
     <string name="home_content2"></string>
     <string name="home_content3"></string>
-    <string name="home_content4">2013 Esri Federal GIS Conference\nEsri® technology helps meet federal missions in virtually every agency, from providing health care and emerging services to managing facilities and natural resources. This event offers every resource possible to help you maximize the powerful geospatial technology.</string>
-    
+    <string name="home_content4"><b>2013 Esri Federal GIS Conference</b>\nEsri® technology helps meet federal missions in virtually every agency, from providing health care and emerging services to managing facilities and natural resources. This event offers every resource possible to help you maximize the powerful geospatial technology.</string>
+
+    <string name="home_venue"><b>Venue / Hotels</b></string>
     <string name="home_venue1"><b>Venue -\nWalter E. Washington Convention Center</b></string>
     <string name="home_venue2">801 Mt Vernon Pl NW\nWashington, DC 20001</string>
     <string name="home_venue3_1">Front Desk:</string>
     <string name="home_venue3_2"><u>(202) 249-3000</u></string>
     <string name="home_venue4"><u>http://www.dcconvention.com</u></string>
-    <string name="home_venue5"><b>Baltimore Hotel, Hunt Valley Inn</b></string>
-    <string name="home_venue6">Stay in our participating hotel to get the best rates in the area.</string>
-    <string name="home_venue7">245 Shawan Road Hunt Valley,\nMD 21031 </string>
+
+    <string name="home_venue5"><b>Hotel - Residence Inn Washington, DC</b></string>
+    <string name="home_venue7">1199 Vermont Ave NW, Washington D.C., 20001</string>
     <string name="home_venue8_1">Front Desk:</string>
-    <string name="home_venue8_2"><u>(410) 785-7000</u></string>
-    <string name="home_venue9"><u>http://www.huntvalleyinn.com</u></string>
+    <string name="home_venue8_2"><u>(202)898-1100</u></string>
+    <string name="home_venue9"><u>http://www.marriott.com/hotels/travel/wascp-residence-inn-washington-dc-capitol/</u></string>
+
     <string name="home_venue10"><b>Hotel - Grand Hyatt</b></string>
     <string name="home_venue11">1000 H Street Northwest,\nWashington, DC 20001</string>
     <string name="home_venue12">Front Desk:</string>
@@ -26,7 +28,7 @@
     <string name="home_venue14"><u>http://grandwashington.hyatt.com</u></string>
     
     
-    <string name="home_transportation"><b>Transportation</b></string>
+    <string name="home_transportation"><b>Local Attractions</b></string>
     <string name="home_transportation1"><b>Smithsonian National Portrait Gallery</b></string>
     <string name="home_transportation2">8th St. at F St., NW\nWashington, DC 20001</string>
     <string name="home_transportation3"><u>(202) 633-8300</u></string>
@@ -39,11 +41,11 @@
     <string name="home_transportation8">3001 Connecticut Ave NW  Washington, DC 20008</string>
     <string name="home_transportation9"><u>(202) 633-2922</u></string>
     
-    <string name="home_transportation10"><b>Capital Children\'s Museum</b></string>
+    <string name="home_transportation10"><b>National Children\'s Museum</b></string>
     <string name="home_transportation11">151 St. George Blvd  Oxon Hill, MD 20745</string>
     <string name="home_transportation12"><u>(301) 392-2400</u></string>
     
-    <string name="home_transportation13"><b>Smithsonian National Portrait Gallery</b></string>
+    <string name="home_transportation13"><b>Tidal Basin Paddle Boats</b></string>
     <string name="home_transportation14">1501 Maine Avenue Southwest  Washington, DC 20024</string>
     <string name="home_transportation15"><u>(202) 479-2426</u></string>
     

@@ -1,6 +1,10 @@
 package com.esri.webops.feduc2013.parser;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -77,6 +81,20 @@ public class ExhibitorParser {
 		
 		@SerializedName("objectId")
 		public String objectId;
+
+        public long getUpdatedAt () {
+            long date = 0;
+            try {
+                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                Date dt = format.parse(updatedAt.substring(0,updatedAt.length()-5));
+                date = dt.getTime();
+                Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-5) + "->" + date);
+            }
+            catch(Exception ex) {
+                Logger.getLogger("Esri").log(Level.INFO,"Error in date conversion",ex);
+            }
+            return date;
+        }
 		
 	}
 	

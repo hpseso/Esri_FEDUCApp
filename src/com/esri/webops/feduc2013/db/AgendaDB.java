@@ -1,5 +1,8 @@
 package com.esri.webops.feduc2013.db;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -55,10 +58,39 @@ public class AgendaDB extends DB {
 		cVal.put("ZXPOINT",session.xPoint );
 		cVal.put("ZYPOINT",session.yPoint );
 		cVal.put("ZCREATEDAT",session.createdAt );
-		cVal.put("ZUPDATEDAT",session.updatedAt );
+		cVal.put("ZUPDATEDAT",session.getUpdatedAt() );
 		
 		return mDatabase.update(TABLE_NAME, cVal, "ZOBJECTID='" + session.objectId +"'", null);
 	}
+
+    public long insert(Session session) {
+        ContentValues cVal = new ContentValues();
+
+        cVal.put("ZCONFERENCEID",session.conferenceID );
+        cVal.put("ZENDDAY",session.endDay );
+        cVal.put("ZENDHOUR",session.endHour );
+        cVal.put("ZENDMINUTE",session.endMinute );
+        cVal.put("ZENDMONTH",session.endMonth );
+        cVal.put("ZENDYEAR",session.endYear );
+        cVal.put("ZEVENTTYPEDESCRIPTION",session.eventTypeDescription );
+        cVal.put("ZEVENTTYPEID",session.eventTypeID );
+        cVal.put("ZFLOOR",session.floor );
+        cVal.put("ZROOM",session.room );
+        cVal.put("ZSESSIONID",session.sessionID );
+        cVal.put("ZSESSIONTITLE",session.sessionTitle );
+        cVal.put("ZSTARTDAY",session.startDay );
+        cVal.put("ZSTARTHOUR",session.startHour );
+        cVal.put("ZSTARTMINUTE",session.startMinute );
+        cVal.put("ZSTARTMONTH",session.startMonth );
+        cVal.put("ZSTARTYEAR",session.startYear );
+        cVal.put("ZXPOINT",session.xPoint );
+        cVal.put("ZYPOINT",session.yPoint );
+        cVal.put("ZCREATEDAT",session.createdAt );
+        cVal.put("ZUPDATEDAT",session.getUpdatedAt() );
+        cVal.put("ZOBJECTID",session.objectId );
+
+        return mDatabase.insert(TABLE_NAME,null,cVal);
+    }
 	
 	@SuppressLint("SimpleDateFormat")
 	public String getLastUpdatedDate() {
@@ -67,7 +99,15 @@ public class AgendaDB extends DB {
 			Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY _id desc limit 1", null);
 			if (c != null && c.getCount() > 0) {
 				c.moveToFirst();
-				date = c.getString(c.getColumnIndex("ZUPDATEDAT"));
+				long milis = c.getLong(c.getColumnIndex("ZUPDATEDAT"));
+                if (milis > 0) {
+                    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTimeInMillis(milis);
+                    date =  formatter.format(calendar.getTime()) + ".999Z";
+
+                    Logger.getLogger("Esri").info( milis + " converted to :" + date);
+                }
 			}
 		}
 		catch(Exception ex) {

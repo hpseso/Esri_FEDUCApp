@@ -5,12 +5,12 @@
 
 package com.esri.webops.feduc2013;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
 import com.googlecode.androidannotations.api.BackgroundExecutor;
-import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class ExhibitsSponsor_
     extends ExhibitsSponsor
@@ -38,33 +37,20 @@ public final class ExhibitsSponsor_
     }
 
     private void afterSetContentView_() {
-        sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        all_txvw = ((TextView) findViewById(id.all_txvw));
         sponsorList = ((ListView) findViewById(id.sponsorList));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
         hours_txvw = ((TextView) findViewById(id.hours_txvw));
-        all_txvw = ((TextView) findViewById(id.all_txvw));
+        sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
         {
             View view = findViewById(id.all_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        all_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.refresh_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    public void onClick(View view) {
-                        refresh_btn();
+                        ExhibitsSponsor_.this.all_txvw();
                     }
 
                 }
@@ -77,8 +63,24 @@ public final class ExhibitsSponsor_
                 view.setOnClickListener(new OnClickListener() {
 
 
+                    @Override
                     public void onClick(View view) {
-                        hours_txvw();
+                        ExhibitsSponsor_.this.hours_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.refresh_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsSponsor_.this.refresh_btn();
                     }
 
                 }
@@ -104,14 +106,6 @@ public final class ExhibitsSponsor_
     public void setContentView(View view) {
         super.setContentView(view);
         afterSetContentView_();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
-            onBackPressed();
-        }
-        return super.onKeyDown(keyCode, event);
     }
 
     public static ExhibitsSponsor_.IntentBuilder_ intent(Context context) {
@@ -175,6 +169,14 @@ public final class ExhibitsSponsor_
 
         public void start() {
             context_.startActivity(intent_);
+        }
+
+        public void startForResult(int requestCode) {
+            if (context_ instanceof Activity) {
+                ((Activity) context_).startActivityForResult(intent_, requestCode);
+            } else {
+                context_.startActivity(intent_);
+            }
         }
 
     }

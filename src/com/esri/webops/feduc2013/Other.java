@@ -2,6 +2,7 @@ package com.esri.webops.feduc2013;
 
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import android.content.Context;
 import android.content.Intent;
@@ -55,13 +56,13 @@ public class Other extends BaseActivity {
 	TextView help1_txvw,help2_txvw,help3_txvw,help4_txvw,help11_txvw,help12_txvw,help21_txvw,help22_txvw,help23_txvw;;
 	
 	@ViewById
-	ViewFlipper viewFlipper1;
+	ViewFlipper viewFlipper1,viewFlipperMob;
 	
 	@ViewById
-	Button prev_btn,next_btn;
+	Button prev_btn,next_btn,prev_btn_mob,next_btn_mob;
 	
 	@ViewById
-	LinearLayout survey_container,sdate_container,privacy_container;
+	LinearLayout sdate_container,privacy_container;
 	
 	@ViewById
 	FrameLayout demo_container;
@@ -138,6 +139,13 @@ public class Other extends BaseActivity {
 		
 		plink5_txvw.setOnClickListener(linkListener);
 		plink5_txvw.setTag("http://resources.arcgis.com/content/community-maps/world-topographic-map");
+
+
+        if (prev_btn != null)
+        prev_btn.setVisibility(View.GONE);
+
+        if (prev_btn_mob != null)
+        prev_btn_mob.setVisibility(View.GONE);
 	}
 	
 	@Click
@@ -149,7 +157,7 @@ public class Other extends BaseActivity {
 		switch (view) {
 			case 0:
 				demo_container.setVisibility(View.VISIBLE);
-				survey_container.setVisibility(View.GONE);
+//				survey_container.setVisibility(View.GONE);
 				sdate_container.setVisibility(View.GONE);
 				privacy_container.setVisibility(View.GONE);
 			break;
@@ -161,13 +169,12 @@ public class Other extends BaseActivity {
 //			break;
 			case 1:
 				sdate_container.setVisibility(View.VISIBLE);
-				survey_container.setVisibility(View.GONE);
 				demo_container.setVisibility(View.GONE);
 				privacy_container.setVisibility(View.GONE);
 			break;
 			case 2:
 				privacy_container.setVisibility(View.VISIBLE);
-				survey_container.setVisibility(View.GONE);
+//				survey_container.setVisibility(View.GONE);
 				sdate_container.setVisibility(View.GONE);
 				demo_container.setVisibility(View.GONE);
 			break;
@@ -234,13 +241,41 @@ public class Other extends BaseActivity {
 		if (Integer.parseInt(viewFlipper1.getCurrentView().getTag().toString()) > 1)
 			prev_btn.setVisibility(View.VISIBLE);
 		else
-			prev_btn.setVisibility(View.GONE);
+            prev_btn.setVisibility(View.GONE);
 		
 		if (Integer.parseInt(viewFlipper1.getCurrentView().getTag().toString()) < 2)
 			next_btn.setVisibility(View.VISIBLE);
 		else
 			next_btn.setVisibility(View.GONE);
 	}
+
+    @Click
+    void prev_btn_mob() {
+        viewFlipperMob.showPrevious();
+        if (Integer.parseInt(viewFlipperMob.getCurrentView().getTag().toString()) > 1)
+            prev_btn_mob.setVisibility(View.VISIBLE);
+        else
+            prev_btn_mob.setVisibility(View.GONE);
+
+        if (Integer.parseInt(viewFlipperMob.getCurrentView().getTag().toString()) < 4)
+            next_btn_mob.setVisibility(View.VISIBLE);
+        else
+            next_btn_mob.setVisibility(View.GONE);
+    }
+
+    @Click
+    void next_btn_mob() {
+        viewFlipperMob.showNext();
+        if (Integer.parseInt(viewFlipperMob.getCurrentView().getTag().toString()) > 1)
+            prev_btn_mob.setVisibility(View.VISIBLE);
+        else
+            prev_btn_mob.setVisibility(View.GONE);
+
+        if (Integer.parseInt(viewFlipperMob.getCurrentView().getTag().toString()) < 4)
+            next_btn_mob.setVisibility(View.VISIBLE);
+        else
+            next_btn_mob.setVisibility(View.GONE);
+    }
 	
 	@Click
 	void help1_txvw() {
@@ -372,11 +407,13 @@ public class Other extends BaseActivity {
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+        help12_txvw.setVisibility(View.GONE);
+        if (help4_txvw != null) {
+            help4_txvw.setVisibility(View.GONE);
+            help21_txvw.setVisibility(View.GONE);
+            help22_txvw.setVisibility(View.GONE);
+            help23_txvw.setVisibility(View.GONE);
+        }
 	}
 	
 	@Click
@@ -387,26 +424,31 @@ public class Other extends BaseActivity {
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+        help11_txvw.setVisibility(View.GONE);
+        if (help4_txvw != null) {
+		    help4_txvw.setVisibility(View.GONE);
+		    help21_txvw.setVisibility(View.GONE);
+		    help22_txvw.setVisibility(View.GONE);
+		    help23_txvw.setVisibility(View.GONE);
+        }
 	}
 	
 	@Click
 	void no21_btn() {
+
 		help21_txvw.clearAnimation();
 		help21_txvw.setAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in));
 		help21_txvw.setVisibility(View.VISIBLE);
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+        if (help4_txvw != null) {
+            help4_txvw.setVisibility(View.GONE);
+            help11_txvw.setVisibility(View.GONE);
+            help12_txvw.setVisibility(View.GONE);
+            help22_txvw.setVisibility(View.GONE);
+            help23_txvw.setVisibility(View.GONE);
+        }
 	}
 	
 	@Click
@@ -417,11 +459,13 @@ public class Other extends BaseActivity {
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help23_txvw.setVisibility(View.GONE);
+        if (help4_txvw != null) {
+            help4_txvw.setVisibility(View.GONE);
+            help11_txvw.setVisibility(View.GONE);
+            help12_txvw.setVisibility(View.GONE);
+            help21_txvw.setVisibility(View.GONE);
+            help23_txvw.setVisibility(View.GONE);
+        }
 	}
 	
 	@Click
@@ -432,11 +476,13 @@ public class Other extends BaseActivity {
 		help1_txvw.setVisibility(View.GONE);
 		help2_txvw.setVisibility(View.GONE);
 		help3_txvw.setVisibility(View.GONE);
-		help4_txvw.setVisibility(View.GONE);
-		help11_txvw.setVisibility(View.GONE);
-		help12_txvw.setVisibility(View.GONE);
-		help21_txvw.setVisibility(View.GONE);
-		help22_txvw.setVisibility(View.GONE);
+        if (help4_txvw != null) {
+            help4_txvw.setVisibility(View.GONE);
+            help11_txvw.setVisibility(View.GONE);
+            help12_txvw.setVisibility(View.GONE);
+            help21_txvw.setVisibility(View.GONE);
+            help22_txvw.setVisibility(View.GONE);
+        }
 	}
 	
 	

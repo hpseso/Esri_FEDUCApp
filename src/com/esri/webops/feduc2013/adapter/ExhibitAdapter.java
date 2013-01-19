@@ -19,10 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.esri.core.geometry.Point;
-import com.esri.webops.feduc2013.ExhibitsDetail_;
-import com.esri.webops.feduc2013.ExhibitsGroup;
-import com.esri.webops.feduc2013.Map_;
-import com.esri.webops.feduc2013.R;
+import com.esri.webops.feduc2013.*;
 
 public class ExhibitAdapter extends CursorAdapter implements Filterable {
 
@@ -82,7 +79,10 @@ public class ExhibitAdapter extends CursorAdapter implements Filterable {
 				Point point = new Point(x, y);
 				Intent intent = new Intent(context,Map_.class);
 				intent.putExtra("EXHIBIT_POINT", point);
-				context.startActivity(intent);
+                intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
+                intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GREEN);
+                intent.putExtra("FLOOR", 0);
+                context.startActivity(intent);
 			}
 		});
 		
@@ -105,9 +105,9 @@ public class ExhibitAdapter extends CursorAdapter implements Filterable {
 		if (banner != null && banner.length() > 0 ) {
 			try {
 				banner = banner.replaceAll("-", "_");
-				banner += "_other";
+				banner += "";
 				
-				int resID = resources.getIdentifier(banner , "drawable", packageName);
+				int resID = resources.getIdentifier(banner.toLowerCase() , "drawable", packageName);
 				Logger.getLogger("ESRI").info("File:" + banner + "," + packageName + "," + resID);
 				
 				imgvw.setImageResource(resID);
@@ -115,6 +115,7 @@ public class ExhibitAdapter extends CursorAdapter implements Filterable {
 			}
 			catch(Exception ex) {
 				Logger.getLogger("ESRI").log(Level.INFO,"",ex);
+                imgvw.setVisibility(View.GONE);
 			}
 		}
 		else 

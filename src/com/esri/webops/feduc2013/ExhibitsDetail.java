@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.esri.core.geometry.Point;
 import com.esri.webops.feduc2013.db.ExhibitDB;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
@@ -20,8 +21,11 @@ import com.googlecode.androidannotations.annotations.ViewById;
 @EActivity(R.layout.exhibitor_detail)
 public class ExhibitsDetail extends BaseActivity {
 
-	@ViewById
-	Button map_btn,back_btn;
+	@ViewById(R.id.map_btn)
+	Button map_btn;
+
+    @ViewById(R.id.back_btn)
+    Button back_btn;
 	
 	@Extra("ID")
 	Integer id =0;
@@ -89,9 +93,9 @@ public class ExhibitsDetail extends BaseActivity {
 				if (banner != null && banner.length() > 0 ) {
 					try {
 						banner = banner.replaceAll("-", "_");
-						banner += "_other";
+						banner += "";
 						
-						int resID = getResources().getIdentifier(banner , "drawable", getPackageName());
+						int resID = getResources().getIdentifier(banner.toLowerCase() , "drawable", getPackageName());
 						Logger.getLogger("ESRI").info("File:" + banner + "," + getPackageName() + "," + resID);
 						
 						logo_imgvw.setImageResource(resID);
@@ -99,6 +103,7 @@ public class ExhibitsDetail extends BaseActivity {
 					}
 					catch(Exception ex) {
 						Logger.getLogger("ESRI").log(Level.INFO,"",ex);
+                        logo_imgvw.setVisibility(View.GONE);
 					}
 				}
 				else 
@@ -174,8 +179,14 @@ public class ExhibitsDetail extends BaseActivity {
 		Logger.getLogger("ESRI").info("Exhibits Point:" + x + "," + y);
 //		Point point = new Point(x, y);
 		Intent intent = new Intent(this,Map_.class);
-//		intent.putExtra("EXHIBIT_POINT", point);
-		startActivity(intent);
+        Point point = new Point(x, y);
+
+        intent.putExtra("EXHIBIT_POINT", point);
+        intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
+        intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GREEN);
+        intent.putExtra("FLOOR", 0);
+
+        startActivity(intent);
 	}
 	
 	@Click

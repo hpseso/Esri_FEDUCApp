@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.esri.core.geometry.Point;
 import com.esri.webops.feduc2013.Agenda;
+import com.esri.webops.feduc2013.Map;
 import com.esri.webops.feduc2013.Map_;
 import com.esri.webops.feduc2013.R;
 import com.esri.webops.feduc2013.util.Util;
@@ -47,6 +48,7 @@ public class AgendaAdapter extends CursorAdapter implements Filterable {
 		
 		final double x = c.getDouble(c.getColumnIndex("ZXPOINT"));
 		final double y = c.getDouble(c.getColumnIndex("ZYPOINT"));
+        final int floor = c.getInt(c.getColumnIndex("ZFLOOR"));
 		
 		Button locate = (Button) view.findViewById(R.id.locate_btn);
 		locate.setOnClickListener(new OnClickListener() {
@@ -54,9 +56,25 @@ public class AgendaAdapter extends CursorAdapter implements Filterable {
 			@Override
 			public void onClick(View arg0) {
 				Point point = new Point(x, y);
-				
+                int tFloor = floor;
 				Intent intent = new Intent(context,Map_.class);
 				intent.putExtra("AGENDA_POINT", point);
+
+                if (floor == 6) {
+                    if (x == 0)
+                        tFloor = 1;
+                    else
+                        tFloor = floor;
+                }
+                else {
+                    if (x == 0)
+                        tFloor = 1;
+                    else
+                        tFloor = floor;
+                }
+                intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
+                intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GRAY);
+                intent.putExtra("FLOOR", tFloor);
 				context.startActivity(intent);
 			}
 		});

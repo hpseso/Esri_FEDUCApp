@@ -21,6 +21,7 @@ import android.widget.ImageSwitcher;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.esri.core.geometry.Point;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -48,7 +49,8 @@ public class Overview extends BaseActivity {
 	
 	@ViewById
 	TextView venue_call1_txvw,venue_call2_txvw,venue_call3_txvw,venue_link1_txvw,venue_link2_txvw,venue_link3_txvw;
-	
+
+
 	@ViewById
 	Button trans_locate1_btn,trans_link1_btn,trans_call1_btn;
 	
@@ -63,12 +65,7 @@ public class Overview extends BaseActivity {
 	
 	@ViewById
 	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn;
-	
-	@ViewById
-	TextView trans_call1_txvw,trans_call2_txvw,trans_call3_txvw,trans_call4_txvw,trans_call5_txvw;
-	
-	
-	
+
 	@ViewById
 	LinearLayout home_container,transportation_container,venue_container,contact_container;
 	
@@ -85,7 +82,7 @@ public class Overview extends BaseActivity {
 			list.add("Welcome");
 			list.add("Contact Esri");
 			list.add("Venue/Hotel");
-			list.add("Local attractions");
+			list.add("Local Attractions");
 			
 			menuGallery.setAdapter(new ImageAdapter(this, list));
 			menuGallery.setCallbackDuringFling(false);
@@ -133,7 +130,7 @@ public class Overview extends BaseActivity {
 		email_txvw.setTag("feduc@esri.com");
 		
 		contact_locate_btn.setTag("-8574190.190500,4707877.731200");
-		contact_locate_btn.setOnClickListener(mapListener);
+		contact_locate_btn.setOnClickListener(venueMapListener);
 		
 		// VENUE
 		venue_call1_btn.setOnClickListener(callListener);
@@ -150,16 +147,16 @@ public class Overview extends BaseActivity {
 		
 		
 		venue_call2_btn.setOnClickListener(callListener);
-		venue_call2_btn.setTag("4107857000");
+		venue_call2_btn.setTag("(2028981100");
 		
 		venue_link2_btn.setOnClickListener(linkListener);
-		venue_link2_btn.setTag("http://www.huntvalleyinn.com");
+		venue_link2_btn.setTag("http://www.marriott.com/hotels/travel/wascp-residence-inn-washington-dc-capitol/");
 
 		venue_call2_txvw.setOnClickListener(callListener);
-		venue_call2_txvw.setTag("4107857000");
+		venue_call2_txvw.setTag("2028981100");
 		
 		venue_link2_txvw.setOnClickListener(linkListener);
-		venue_link2_txvw.setTag("http://www.huntvalleyinn.com");
+		venue_link2_txvw.setTag("http://www.marriott.com/hotels/travel/wascp-residence-inn-washington-dc-capitol/");
 
 		venue_call3_btn.setOnClickListener(callListener);
 		venue_call3_btn.setTag("2025821234");
@@ -174,14 +171,14 @@ public class Overview extends BaseActivity {
 		venue_link3_txvw.setTag("http://grandwashington.hyatt.com");
 		
 		
-		venue_locate_address1_btn.setOnClickListener(mapListener);
-		venue_locate_address1_btn.setTag("");
+		venue_locate_address1_btn.setOnClickListener(areaMapListener);
+		venue_locate_address1_btn.setTag("-8574157.51319161,4708183.10803689");
 		
-		venue_locate_address2_btn.setOnClickListener(mapListener);
-		venue_locate_address2_btn.setTag("");
+		venue_locate_address2_btn.setOnClickListener(areaMapListener);
+		venue_locate_address2_btn.setTag("-8574968.33729335,4708472.06466857");
 		
-		venue_locate_address3_btn.setOnClickListener(mapListener);
-		venue_locate_address3_btn.setTag("");
+		venue_locate_address3_btn.setOnClickListener(areaMapListener);
+		venue_locate_address3_btn.setTag("-8574537.4322191,4707273.05898016");
 		
 		
 		// Tranportation
@@ -199,22 +196,7 @@ public class Overview extends BaseActivity {
 		
 		trans_call5_btn.setOnClickListener(callListener);
 		trans_call5_btn.setTag("2024792426");
-		
-		trans_call1_txvw.setOnClickListener(callListener);
-		trans_call1_txvw.setTag("2026338300");
-		
-		trans_call2_txvw.setOnClickListener(callListener);
-		trans_call2_txvw.setTag("2026331000");
-		
-		trans_call3_txvw.setOnClickListener(callListener);
-		trans_call3_txvw.setTag("2026332922");
-		
-		trans_call4_txvw.setOnClickListener(callListener);
-		trans_call4_txvw.setTag("3013922400");
-		
-		trans_call5_txvw.setOnClickListener(callListener);
-		trans_call5_txvw.setTag("2024792426");
-		
+
 		trans_link1_btn.setOnClickListener(linkListener);
 		trans_link1_btn.setTag("http://www.npg.si.edu");
 		
@@ -230,20 +212,20 @@ public class Overview extends BaseActivity {
 		trans_link5_btn.setOnClickListener(linkListener);
 		trans_link5_btn.setTag("http://www.tidalbasinpaddleboats.com");
 		
-		trans_locate1_btn.setOnClickListener(mapListener);
-		trans_locate1_btn.setTag("");
+		trans_locate1_btn.setOnClickListener(areaMapRedListener);
+		trans_locate1_btn.setTag("-8574148.90267279,4707058.92430468");
 		
-		trans_locate2_btn.setOnClickListener(mapListener);
-		trans_locate2_btn.setTag("8573827.359297,4705591.670758");
+		trans_locate2_btn.setOnClickListener(areaMapRedListener);
+		trans_locate2_btn.setTag("-8573827.359297,4705591.670758");
 		
-		trans_locate3_btn.setOnClickListener(mapListener);
-		trans_locate3_btn.setTag("8577731.600718,4711621.436788");
+		trans_locate3_btn.setOnClickListener(areaMapRedListener);
+		trans_locate3_btn.setTag("-8577731.600718,4711621.436788");
 		
-		trans_locate4_btn.setOnClickListener(mapListener);
-		trans_locate4_btn.setTag("8574512.797641,4705238.627470");
+		trans_locate4_btn.setOnClickListener(areaMapRedListener);
+		trans_locate4_btn.setTag("-8574512.797641,4705238.627470");
 		
-		trans_locate5_btn.setOnClickListener(mapListener);
-		trans_locate5_btn.setTag("8575387.991478,4705204.734242");
+		trans_locate5_btn.setOnClickListener(areaMapRedListener);
+		trans_locate5_btn.setTag("-8575387.991478,4705204.734242");
 	}
 	
 	@Click
@@ -342,11 +324,64 @@ public class Overview extends BaseActivity {
 		}
 	};
 	
-	OnClickListener mapListener = new OnClickListener() {
+	OnClickListener venueMapListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
+            String xy = v.getTag().toString();
+            if (xy != null && xy.length() > 0) {
+                String arr[] = xy.split(",");
+                if (arr != null && arr.length == 2) {
+                    Intent intent = new Intent(Overview.this,Map_.class);
+                    intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
+                    Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
+                    intent.putExtra("MAP_LEVEL", Map.MAP_LEVEL2);
+                    intent.putExtra("MAP_POINT", point);
+                    intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_BROWN);
+                    startActivity(intent);
+                }
+            }
 			//loadMap(Integer.parseInt(v.getTag().toString()));
 		}
 	};
-	
+
+
+    OnClickListener areaMapListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String xy = v.getTag().toString();
+            if (xy != null && xy.length() > 0) {
+                String arr[] = xy.split(",");
+                if (arr != null && arr.length == 2) {
+                    Intent intent = new Intent(Overview.this,Map_.class);
+                    intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
+                    Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
+                    intent.putExtra("MAP_POINT", point);
+                    intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_BLUE);
+                    startActivity(intent);
+                }
+            }
+            //loadMap(Integer.parseInt(v.getTag().toString()));
+        }
+    };
+
+
+    OnClickListener areaMapRedListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String xy = v.getTag().toString();
+            if (xy != null && xy.length() > 0) {
+                String arr[] = xy.split(",");
+                if (arr != null && arr.length == 2) {
+                    Intent intent = new Intent(Overview.this,Map_.class);
+                    intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
+                    Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
+                    intent.putExtra("MAP_POINT", point);
+                    intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_RED);
+                    startActivity(intent);
+                }
+            }
+            //loadMap(Integer.parseInt(v.getTag().toString()));
+        }
+    };
+
 }
