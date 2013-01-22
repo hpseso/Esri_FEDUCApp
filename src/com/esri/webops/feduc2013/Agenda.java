@@ -13,6 +13,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -39,8 +41,17 @@ import com.googlecode.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.agenda)
 public class Agenda extends BaseActivity {
-	
-	@ViewById
+
+    private static final String LIST_STATE_KEY = "listState";
+    private static final String LIST_POSITION_KEY = "listPosition";
+    private static final String ITEM_POSITION_KEY = "itemPosition";
+
+    private Parcelable mListState = null;
+    private int mListPosition = 0;
+    private int mItemPosition = 0;
+
+
+    @ViewById
 	ListView agendaList;
 	
 	@ViewById
@@ -93,6 +104,53 @@ public class Agenda extends BaseActivity {
 		
 		refresh_btn();
 	}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        d = getIntPref(App.AGENDA_DAY, 10);
+        m = getIntPref(App.AGENDA_MONTH, 12);
+        y = getIntPref(App.AGENDA_YEAR, 2012);
+
+
+        // Load data from DB and put it onto the list
+        filterList();
+
+        // Restore list state and list/item positions
+
+        if (mListState != null)
+            agendaList.onRestoreInstanceState(mListState);
+        agendaList.setSelectionFromTop(mListPosition, mItemPosition);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle state) {
+        super.onRestoreInstanceState(state);
+
+        // Retrieve list state and list/item positions
+        mListState = state.getParcelable(LIST_STATE_KEY);
+        mListPosition = state.getInt(LIST_POSITION_KEY);
+        mItemPosition = state.getInt(ITEM_POSITION_KEY);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle state) {
+        super.onSaveInstanceState(state);
+
+        // Save list state
+        mListState = agendaList.onSaveInstanceState();
+        state.putParcelable(LIST_STATE_KEY, mListState);
+
+        // Save position of first visible item
+        mListPosition = agendaList.getFirstVisiblePosition();
+        state.putInt(LIST_POSITION_KEY, mListPosition);
+
+        // Save scroll position of item
+        View itemView = agendaList.getChildAt(0);
+        mItemPosition = itemView == null ? 0 : itemView.getTop();
+        state.putInt(ITEM_POSITION_KEY, mItemPosition);
+    }
 	
 	@Click
 	void refresh_btn () {
@@ -101,16 +159,7 @@ public class Agenda extends BaseActivity {
 		progressDialog.show();
 		loadDataFromWeb();
 	}
-	
-	@Override
-	public void onResume() {
-		
-		d = getIntPref(App.AGENDA_DAY, 10);
-		m = getIntPref(App.AGENDA_MONTH, 12);
-		y = getIntPref(App.AGENDA_YEAR, 2012);
-		super.onResume();
-	}
-	
+
 	@Background
 	void loadDataFromWeb() {
 		try {

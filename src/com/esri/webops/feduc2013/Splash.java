@@ -1,6 +1,10 @@
 package com.esri.webops.feduc2013;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.logging.Logger;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -19,6 +23,14 @@ public class Splash extends Activity{
 
 	@AfterViews
 	void loadView() {
+
+        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DAY_OF_MONTH,1);
+        cal.set(Calendar.MONTH,Calendar.JANUARY);
+        cal.set(Calendar.YEAR,2001);
+        cal.add(Calendar.SECOND,379982793);
+
 		Message msg = new Message();
 		
 		DBHelper dbHelper = new DBHelper(this);

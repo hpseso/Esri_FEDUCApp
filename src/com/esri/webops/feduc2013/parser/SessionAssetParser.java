@@ -1,6 +1,7 @@
 package com.esri.webops.feduc2013.parser;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -62,8 +63,14 @@ public class SessionAssetParser {
             long date = 0;
             try {
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+
+                Calendar cal = Calendar.getInstance();
+                cal.set(Calendar.DAY_OF_MONTH,1);
+                cal.set(Calendar.MONTH,Calendar.JANUARY);
+                cal.set(Calendar.YEAR,2001);
+
                 Date dt = format.parse(updatedAt.substring(0,updatedAt.length()-5));
-                date = dt.getTime();
+                date = dt.getTime() - cal.getTimeInMillis();
                 Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-5) + "->" + date);
             }
             catch(Exception ex) {

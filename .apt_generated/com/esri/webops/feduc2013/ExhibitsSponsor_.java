@@ -38,10 +38,10 @@ public final class ExhibitsSponsor_
 
     private void afterSetContentView_() {
         all_txvw = ((TextView) findViewById(id.all_txvw));
-        sponsorList = ((ListView) findViewById(id.sponsorList));
-        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         hours_txvw = ((TextView) findViewById(id.hours_txvw));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        sponsorList = ((ListView) findViewById(id.sponsorList));
         {
             View view = findViewById(id.all_txvw);
             if (view!= null) {

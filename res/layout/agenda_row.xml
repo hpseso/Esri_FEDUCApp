@@ -34,7 +34,7 @@
         android:id="@+id/locate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/pin_brown_selector" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="15dp"/>
+        android:background="@drawable/pin_gray_selector" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="15dp"/>
 
     <ImageView
         android:id="@+id/imageView2"

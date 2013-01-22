@@ -9,6 +9,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -35,6 +37,14 @@ import com.googlecode.androidannotations.annotations.ViewById;
 @EActivity(R.layout.exhibits_sponsor)
 public class ExhibitsSponsor extends BaseActivity {
 
+    private static final String LIST_STATE_KEY = "listState";
+    private static final String LIST_POSITION_KEY = "listPosition";
+    private static final String ITEM_POSITION_KEY = "itemPosition";
+
+    private Parcelable mListState = null;
+    private int mListPosition = 0;
+    private int mItemPosition = 0;
+
 	@ViewById
 	ListView sponsorList;
 	
@@ -55,6 +65,48 @@ public class ExhibitsSponsor extends BaseActivity {
 		loadData();
 		loadDataFromWeb();
 	}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Load data from DB and put it onto the list
+        loadData();
+
+        // Restore list state and list/item positions
+
+        if (mListState != null)
+            sponsorList.onRestoreInstanceState(mListState);
+        sponsorList.setSelectionFromTop(mListPosition, mItemPosition);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle state) {
+        super.onRestoreInstanceState(state);
+
+        // Retrieve list state and list/item positions
+        mListState = state.getParcelable(LIST_STATE_KEY);
+        mListPosition = state.getInt(LIST_POSITION_KEY);
+        mItemPosition = state.getInt(ITEM_POSITION_KEY);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle state) {
+        super.onSaveInstanceState(state);
+
+        // Save list state
+        mListState = sponsorList.onSaveInstanceState();
+        state.putParcelable(LIST_STATE_KEY, mListState);
+
+        // Save position of first visible item
+        mListPosition = sponsorList.getFirstVisiblePosition();
+        state.putInt(LIST_POSITION_KEY, mListPosition);
+
+        // Save scroll position of item
+        View itemView = sponsorList.getChildAt(0);
+        mItemPosition = itemView == null ? 0 : itemView.getTop();
+        state.putInt(ITEM_POSITION_KEY, mItemPosition);
+    }
 	
 	private void loadData() {
 		ExhibitDB db = new ExhibitDB(this);

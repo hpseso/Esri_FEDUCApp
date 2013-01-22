@@ -59,7 +59,7 @@
             android:id="@+id/locate_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/pin_green_selector" android:layout_alignParentRight="true"/>
+            android:background="@drawable/pin_gray_selector" android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
     <ScrollView

@@ -99,12 +99,15 @@ public class AgendaDB extends DB {
 			Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY _id desc limit 1", null);
 			if (c != null && c.getCount() > 0) {
 				c.moveToFirst();
-				long milis = c.getLong(c.getColumnIndex("ZUPDATEDAT"));
+				int milis = c.getInt(c.getColumnIndex("ZUPDATEDAT"));
                 if (milis > 0) {
                     DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.setTimeInMillis(milis);
-                    date =  formatter.format(calendar.getTime()) + ".999Z";
+                    Calendar cal = Calendar.getInstance();
+                    cal.set(Calendar.DAY_OF_MONTH,1);
+                    cal.set(Calendar.MONTH,Calendar.JANUARY);
+                    cal.set(Calendar.YEAR,2001);
+                    cal.add(Calendar.SECOND,milis);
+                    date =  formatter.format(cal.getTime()) + ".999Z";
 
                     Logger.getLogger("Esri").info( milis + " converted to :" + date);
                 }
