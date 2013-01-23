@@ -47,14 +47,14 @@ public class Map extends Activity {
     public static final int MAP_LEVEL3 = 3;
 
 
-    static final String FLOOR_PLAN0 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
-    static final String FLOOR_PLAN1 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
-    static final String FLOOR_PLAN3 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
+//    static final String FLOOR_PLAN0 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
+//    static final String FLOOR_PLAN1 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
+//    static final String FLOOR_PLAN3 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
 //    static final String POI = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer";
 
-//    static final String FLOOR_PLAN0 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
-//    static final String FLOOR_PLAN1 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
-//    static final String FLOOR_PLAN3 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
+    static final String FLOOR_PLAN0 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
+    static final String FLOOR_PLAN1 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
+    static final String FLOOR_PLAN3 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
     static final String POI = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer/0";
 
     static final String World_Imagery_Map_URL= "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
@@ -483,6 +483,7 @@ public class Map extends Activity {
         Query query = new Query();
         Envelope zoomExtent = null;
         if (mapPoint != null) {
+            Logger.getLogger("Esri").log(Level.INFO,"Loading  POI with Point extent:" + mapPoint.getX() + ":" + mapPoint.getY());
             Unit mapUnit = SpatialReference.create(3857).getUnit();
             double zoomWidth = Unit.convertUnits(1,Unit.create(LinearUnit.Code.MILE_US),mapUnit);
             zoomExtent = new Envelope(mapPoint,zoomWidth, zoomWidth);
@@ -530,6 +531,8 @@ public class Map extends Activity {
                 attrMap.put("URL", featureGraphic.getAttributeValue("URL"));
                 attrMap.put("Address", featureGraphic.getAttributeValue("Address"));
 
+                Logger.getLogger("Esri").info("Query points data:" + attrMap.toString());
+
 
                 if (featureGraphic.getAttributeValue("poi_type") != null &&  (featureGraphic.getAttributeValue("poi_type").toString().equalsIgnoreCase("Venue") || featureGraphic.getAttributeValue("poi_type").toString().equalsIgnoreCase("Hotel"))) {
                     // Blue Marker
@@ -553,7 +556,7 @@ public class Map extends Activity {
                 }
                 else {
                     // red
-                    graphicsLayer.addGraphic(new Graphic(point, redMarker));
+                    graphicsLayer.addGraphic(new Graphic(point, redMarker,attrMap,null));
                     Logger.getLogger("Esri").info("Adding red marker");
                 }
             }

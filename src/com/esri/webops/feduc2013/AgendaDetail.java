@@ -169,7 +169,7 @@ public class AgendaDetail extends BaseActivity {
         }
         intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
         intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GRAY);
-        intent.putExtra("FLOOR", 0);
+        intent.putExtra("FLOOR", tFloor);
         startActivity(intent);
 	}
 	

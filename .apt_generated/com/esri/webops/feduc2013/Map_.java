@@ -44,17 +44,62 @@ public final class Map_
     }
 
     private void afterSetContentView_() {
-        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
-        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
-        imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
-        info_view = ((LinearLayout) findViewById(id.info_view));
-        m_btn = ((Button) findViewById(id.m_btn));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
-        floor_menu_container = ((LinearLayout) findViewById(id.floor_menu_container));
-        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
-        mapView = ((MapView) findViewById(id.map));
         level_one_txvw = ((TextView) findViewById(id.level_one_txvw));
+        mapView = ((MapView) findViewById(id.map));
+        info_view = ((LinearLayout) findViewById(id.info_view));
+        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
+        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
         level_two_txvw = ((TextView) findViewById(id.level_two_txvw));
+        floor_menu_container = ((LinearLayout) findViewById(id.floor_menu_container));
+        m_btn = ((Button) findViewById(id.m_btn));
+        imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
+        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
+        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
+        {
+            View view = findViewById(id.imagery_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.imagery_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.level_two_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.level_two_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.m_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.m_btn();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(id.link3_txvw);
             if (view!= null) {
@@ -71,14 +116,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.world_topo_txvw);
+            View view = findViewById(id.link6_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.world_topo_txvw();
+                        Map_.this.link6_txvw();
                     }
 
                 }
@@ -86,29 +131,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link8_txvw);
+            View view = findViewById(id.info_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link8_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.m_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.m_btn();
+                        Map_.this.info_btn();
                     }
 
                 }
@@ -146,29 +176,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link4_txvw);
+            View view = findViewById(id.link8_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link4_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.imagery_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.imagery_txvw();
+                        Map_.this.link8_txvw();
                     }
 
                 }
@@ -191,14 +206,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link6_txvw);
+            View view = findViewById(id.link4_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link6_txvw();
+                        Map_.this.link4_txvw();
                     }
 
                 }
@@ -206,44 +221,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.level_two_txvw);
+            View view = findViewById(id.world_topo_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.level_two_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link7_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.link7_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link1_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.link1_txvw();
+                        Map_.this.world_topo_txvw();
                     }
 
                 }
@@ -266,6 +251,21 @@ public final class Map_
             }
         }
         {
+            View view = findViewById(id.link7_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.link7_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.link5_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -281,14 +281,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.info_btn);
+            View view = findViewById(id.link1_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.info_btn();
+                        Map_.this.link1_txvw();
                     }
 
                 }
@@ -344,9 +344,16 @@ public final class Map_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey("MARKER_COLOR")) {
+            if (extras_.containsKey("AGENDA_POINT")) {
                 try {
-                    markerColor = cast_(extras_.get("MARKER_COLOR"));
+                    agendaPoint = cast_(extras_.get("AGENDA_POINT"));
+                } catch (ClassCastException e) {
+                    Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
+                }
+            }
+            if (extras_.containsKey("MAP_LEVEL")) {
+                try {
+                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -365,13 +372,6 @@ public final class Map_
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("FLOOR")) {
-                try {
-                    floor = cast_(extras_.get("FLOOR"));
-                } catch (ClassCastException e) {
-                    Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
             if (extras_.containsKey("EXHIBIT_POINT")) {
                 try {
                     exhibitPoint = cast_(extras_.get("EXHIBIT_POINT"));
@@ -379,16 +379,16 @@ public final class Map_
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MAP_LEVEL")) {
+            if (extras_.containsKey("FLOOR")) {
                 try {
-                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
+                    floor = cast_(extras_.get("FLOOR"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("AGENDA_POINT")) {
+            if (extras_.containsKey("MARKER_COLOR")) {
                 try {
-                    agendaPoint = cast_(extras_.get("AGENDA_POINT"));
+                    markerColor = cast_(extras_.get("MARKER_COLOR"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -469,8 +469,13 @@ public final class Map_
             }
         }
 
-        public Map_.IntentBuilder_ markerColor(Integer markerColor) {
-            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
+        public Map_.IntentBuilder_ agendaPoint(Point agendaPoint) {
+            intent_.putExtra("AGENDA_POINT", ((Serializable) agendaPoint));
+            return this;
+        }
+
+        public Map_.IntentBuilder_ mapLevel(Integer mapLevel) {
+            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
             return this;
         }
 
@@ -484,23 +489,18 @@ public final class Map_
             return this;
         }
 
-        public Map_.IntentBuilder_ floor(Integer floor) {
-            intent_.putExtra("FLOOR", ((Serializable) floor));
-            return this;
-        }
-
         public Map_.IntentBuilder_ exhibitPoint(Point exhibitPoint) {
             intent_.putExtra("EXHIBIT_POINT", ((Serializable) exhibitPoint));
             return this;
         }
 
-        public Map_.IntentBuilder_ mapLevel(Integer mapLevel) {
-            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
+        public Map_.IntentBuilder_ floor(Integer floor) {
+            intent_.putExtra("FLOOR", ((Serializable) floor));
             return this;
         }
 
-        public Map_.IntentBuilder_ agendaPoint(Point agendaPoint) {
-            intent_.putExtra("AGENDA_POINT", ((Serializable) agendaPoint));
+        public Map_.IntentBuilder_ markerColor(Integer markerColor) {
+            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
             return this;
         }
 

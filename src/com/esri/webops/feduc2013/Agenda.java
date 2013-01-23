@@ -95,9 +95,9 @@ public class Agenda extends BaseActivity {
 		agendaList.setEmptyView(empty_txvw);
 		initImageSwithcer();
 		
-		d = getIntPref(App.AGENDA_DAY, 10);
-		m = getIntPref(App.AGENDA_MONTH, 12);
-		y = getIntPref(App.AGENDA_YEAR, 2012);
+		d = getIntPref(App.AGENDA_DAY, 25);
+		m = getIntPref(App.AGENDA_MONTH, 2);
+		y = getIntPref(App.AGENDA_YEAR, 2013);
 		
 		filterList();
 		populateCalBtn();
@@ -109,9 +109,9 @@ public class Agenda extends BaseActivity {
     public void onResume() {
         super.onResume();
 
-        d = getIntPref(App.AGENDA_DAY, 10);
-        m = getIntPref(App.AGENDA_MONTH, 12);
-        y = getIntPref(App.AGENDA_YEAR, 2012);
+        d = getIntPref(App.AGENDA_DAY, 25);
+        m = getIntPref(App.AGENDA_MONTH, 2);
+        y = getIntPref(App.AGENDA_YEAR, 2013);
 
 
         // Load data from DB and put it onto the list

@@ -38,20 +38,35 @@ public final class Agenda_
     }
 
     private void afterSetContentView_() {
-        calBtn = ((Button) findViewById(id.cal_btn));
+        session_txvw = ((TextView) findViewById(id.session_txvw));
         agendaList = ((ListView) findViewById(id.agendaList));
         empty_txvw = ((TextView) findViewById(id.empty_txvw));
-        session_txvw = ((TextView) findViewById(id.session_txvw));
+        calBtn = ((Button) findViewById(id.cal_btn));
         date_txvw = ((TextView) findViewById(id.date_txvw));
         {
-            View view = findViewById(id.all_txvw);
+            View view = findViewById(id.cal_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Agenda_.this.all_txvw();
+                        Agenda_.this.cal_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Agenda_.this.map_btn();
                     }
 
                 }
@@ -74,14 +89,14 @@ public final class Agenda_
             }
         }
         {
-            View view = findViewById(id.cal_btn);
+            View view = findViewById(id.all_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Agenda_.this.cal_btn();
+                        Agenda_.this.all_txvw();
                     }
 
                 }
@@ -97,21 +112,6 @@ public final class Agenda_
                     @Override
                     public void onClick(View view) {
                         Agenda_.this.refresh_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.map_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Agenda_.this.map_btn();
                     }
 
                 }
