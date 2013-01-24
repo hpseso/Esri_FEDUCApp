@@ -37,26 +37,11 @@ public final class ExhibitsAll_
     }
 
     private void afterSetContentView_() {
-        empty_txvw = ((TextView) findViewById(id.empty_txvw));
-        all_txvw = ((TextView) findViewById(id.all_txvw));
         hours_txvw = ((TextView) findViewById(id.hours_txvw));
-        exhibitList = ((ListView) findViewById(id.exhibitList));
+        all_txvw = ((TextView) findViewById(id.all_txvw));
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
-        {
-            View view = findViewById(id.sponsor_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ExhibitsAll_.this.sponsor_txvw();
-                    }
-
-                }
-                );
-            }
-        }
+        exhibitList = ((ListView) findViewById(id.exhibitList));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         {
             View view = findViewById(id.refresh_btn);
             if (view!= null) {
@@ -96,6 +81,21 @@ public final class ExhibitsAll_
                     @Override
                     public void onClick(View view) {
                         ExhibitsAll_.this.hours_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.sponsor_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsAll_.this.sponsor_txvw();
                     }
 
                 }

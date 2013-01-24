@@ -170,7 +170,7 @@ public class Agenda extends BaseActivity {
 			Logger.getLogger("Esri").info("Date:" + date);
 			String str = "";
 			if (date != null && date.trim().length() > 0)
-				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}") + "&limit=1000";
             else
                 str = "?limit=1000";
 			
@@ -198,7 +198,7 @@ public class Agenda extends BaseActivity {
 			Logger.getLogger("Esri").info("Date For Asset :" + date);
 			str = "";
 			if (date != null && date.trim().length() > 0)
-				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}")  + "&limit=1000";
             else
                 str = "?limit=1000";
 			
@@ -227,7 +227,7 @@ public class Agenda extends BaseActivity {
 			Logger.getLogger("Esri").info("Date For Exhibitor :" + date);
 			str = "";
 			if (date != null && date.trim().length() > 0)
-				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}");
+				str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}")  + "&limit=1000";
             else
                 str = "?limit=1000";
 			

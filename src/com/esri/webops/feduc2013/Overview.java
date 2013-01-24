@@ -222,7 +222,8 @@ public class Overview extends BaseActivity {
 		trans_locate3_btn.setTag("-8577731.600718,4711621.436788");
 		
 		trans_locate4_btn.setOnClickListener(areaMapRedListener);
-		trans_locate4_btn.setTag("-8574512.797641,4705238.627470");
+		//trans_locate4_btn.setTag("-8574512.797641,4705238.627470");
+        trans_locate4_btn.setTag("-8573030.8887,4690714.3494");
 		
 		trans_locate5_btn.setOnClickListener(areaMapRedListener);
 		trans_locate5_btn.setTag("-8575387.991478,4705204.734242");
