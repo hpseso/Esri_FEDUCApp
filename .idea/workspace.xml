@@ -59,7 +59,7 @@
     <file path="/SessionAssetParser.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358850432942" ignored="false" />
     <file path="/pin_gray_selector.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358851567082" ignored="false" />
     <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Agenda_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358930583892" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Map_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359056799975" ignored="false" />
+    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Map_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359057646915" ignored="false" />
     <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/AgendaDetail_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358931414231" ignored="false" />
     <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Splash_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359056220354" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,7 +123,7 @@
       <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="79" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.95454544">
+            <state line="49" column="48" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.4090909">
               <folding />
             </state>
           </provider>
@@ -412,7 +412,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ExportedApkPath" value="$USER_HOME$/Desktop/FEDUC2013_1_1_mwo_lb-885964707.apk" />
+    <property name="ExportedApkPath" value="$USER_HOME$/Desktop/FEDUC2013_1_1.apk" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="recentsLimit" value="5" />
@@ -420,7 +420,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dev_keystore.keystore" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="037c710041bf92d7" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="f41ba62b" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
@@ -826,7 +826,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="79" selection-start="3369" selection-end="3369" vertical-scroll-proportion="0.95454544">
+        <state line="49" column="48" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.4090909">
           <folding />
         </state>
       </provider>

@@ -44,26 +44,26 @@ public final class Map_
     }
 
     private void afterSetContentView_() {
-        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
+        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
+        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
         m_btn = ((Button) findViewById(id.m_btn));
         level_one_txvw = ((TextView) findViewById(id.level_one_txvw));
-        info_view = ((LinearLayout) findViewById(id.info_view));
-        mapView = ((MapView) findViewById(id.map));
-        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
-        level_two_txvw = ((TextView) findViewById(id.level_two_txvw));
         floor_menu_container = ((LinearLayout) findViewById(id.floor_menu_container));
-        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
+        mapView = ((MapView) findViewById(id.map));
+        info_view = ((LinearLayout) findViewById(id.info_view));
         imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
+        level_two_txvw = ((TextView) findViewById(id.level_two_txvw));
+        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
+        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
         {
-            View view = findViewById(id.imagery_txvw);
+            View view = findViewById(id.link4_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.imagery_txvw();
+                        Map_.this.link4_txvw();
                     }
 
                 }
@@ -86,59 +86,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link4_txvw);
+            View view = findViewById(id.link1_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link4_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link2_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.link2_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link6_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.link6_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.info_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.info_btn();
+                        Map_.this.link1_txvw();
                     }
 
                 }
@@ -176,14 +131,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link1_txvw);
+            View view = findViewById(id.imagery_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link1_txvw();
+                        Map_.this.imagery_txvw();
                     }
 
                 }
@@ -191,14 +146,14 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.level_three_txvw);
+            View view = findViewById(id.close_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.level_three_txvw();
+                        Map_.this.close_btn();
                     }
 
                 }
@@ -206,14 +161,59 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.link8_txvw);
+            View view = findViewById(id.level_one_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.link8_txvw();
+                        Map_.this.level_one_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link6_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.link6_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link2_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.link2_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.info_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.info_btn();
                     }
 
                 }
@@ -251,21 +251,6 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.level_one_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        Map_.this.level_one_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.link5_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -281,14 +266,29 @@ public final class Map_
             }
         }
         {
-            View view = findViewById(id.close_btn);
+            View view = findViewById(id.level_three_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        Map_.this.close_btn();
+                        Map_.this.level_three_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link8_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        Map_.this.link8_txvw();
                     }
 
                 }
@@ -344,9 +344,9 @@ public final class Map_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey("MAP_LEVEL")) {
+            if (extras_.containsKey("MAP_TYPE")) {
                 try {
-                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
+                    mapType = cast_(extras_.get("MAP_TYPE"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -358,9 +358,9 @@ public final class Map_
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MARKER_COLOR")) {
+            if (extras_.containsKey("MAP_LEVEL")) {
                 try {
-                    markerColor = cast_(extras_.get("MARKER_COLOR"));
+                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -372,16 +372,16 @@ public final class Map_
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MAP_TYPE")) {
+            if (extras_.containsKey("EXHIBIT_POINT")) {
                 try {
-                    mapType = cast_(extras_.get("MAP_TYPE"));
+                    exhibitPoint = cast_(extras_.get("EXHIBIT_POINT"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("EXHIBIT_POINT")) {
+            if (extras_.containsKey("MARKER_COLOR")) {
                 try {
-                    exhibitPoint = cast_(extras_.get("EXHIBIT_POINT"));
+                    markerColor = cast_(extras_.get("MARKER_COLOR"));
                 } catch (ClassCastException e) {
                     Log.e("Map_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -469,8 +469,8 @@ public final class Map_
             }
         }
 
-        public Map_.IntentBuilder_ mapLevel(Integer mapLevel) {
-            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
+        public Map_.IntentBuilder_ mapType(Integer mapType) {
+            intent_.putExtra("MAP_TYPE", ((Serializable) mapType));
             return this;
         }
 
@@ -479,8 +479,8 @@ public final class Map_
             return this;
         }
 
-        public Map_.IntentBuilder_ markerColor(Integer markerColor) {
-            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
+        public Map_.IntentBuilder_ mapLevel(Integer mapLevel) {
+            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
             return this;
         }
 
@@ -489,13 +489,13 @@ public final class Map_
             return this;
         }
 
-        public Map_.IntentBuilder_ mapType(Integer mapType) {
-            intent_.putExtra("MAP_TYPE", ((Serializable) mapType));
+        public Map_.IntentBuilder_ exhibitPoint(Point exhibitPoint) {
+            intent_.putExtra("EXHIBIT_POINT", ((Serializable) exhibitPoint));
             return this;
         }
 
-        public Map_.IntentBuilder_ exhibitPoint(Point exhibitPoint) {
-            intent_.putExtra("EXHIBIT_POINT", ((Serializable) exhibitPoint));
+        public Map_.IntentBuilder_ markerColor(Integer markerColor) {
+            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
             return this;
         }
 

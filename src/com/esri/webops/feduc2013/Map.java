@@ -51,7 +51,7 @@ public class Map extends Activity {
     static final String FLOOR_PLAN0 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
     static final String FLOOR_PLAN1 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
     static final String FLOOR_PLAN3 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
-    static final String POI = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer";
+    static final String POI = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer/0";
 
 //    static final String FLOOR_PLAN0 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
 //    static final String FLOOR_PLAN1 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
