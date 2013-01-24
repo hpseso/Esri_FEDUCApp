@@ -96,6 +96,7 @@ public class SessionParser {
                 cal.set(Calendar.YEAR,2001);
 
                 date = dt.getTime() - cal.getTimeInMillis();
+                date = date / 1000;
                 Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-5) + "->" + date);
             }
             catch(Exception ex) {

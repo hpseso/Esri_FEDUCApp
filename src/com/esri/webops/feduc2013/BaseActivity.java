@@ -20,6 +20,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import com.google.gson.JsonObject;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpVersion;
 import org.apache.http.client.HttpClient;
@@ -54,6 +55,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ViewSwitcher.ViewFactory;
 
 import com.esri.webops.feduc2013.comman.App;
+import org.json.JSONObject;
 
 @SuppressLint("HandlerLeak")
 public class BaseActivity extends Activity  implements ViewFactory  {
@@ -258,7 +260,7 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 	
 	
 	protected InputStream makeWebPost(String url) throws Exception{
-		
+
 		HttpParams httpParameters = new BasicHttpParams();
 		int timeoutConnection = 20000;
         HttpProtocolParams.setVersion(httpParameters, HttpVersion.HTTP_1_1);
@@ -273,9 +275,9 @@ public class BaseActivity extends Activity  implements ViewFactory  {
 		HttpGet request = new HttpGet(url);
 		
 		//request.addHeader("Content-Type","application/x-www-form-urlencoded");
-		request.addHeader("X-Parse-Application-Id","Df44YCNSuORX2ZvO5CjUksvpCOBzB2yXYeAioSwf");
-		request.addHeader("X-Parse-REST-API-Key","p6TuDb4kxTABZBfA67RfRTBurEAOLpeTOP66BtJ3");
-		
+		request.addHeader("X-Parse-Application-Id","Z9KV6PcJMRRb0lGxPqqIrRKxA3d2WN8D4cSwEmqw");
+		request.addHeader("X-Parse-REST-API-Key","WGCdl9usfxVLpu7UyiTRK2I1fClVfSZLXkmc5nao");
+
 		HttpResponse response;
         response = client.execute(request);
         return response.getEntity().getContent();

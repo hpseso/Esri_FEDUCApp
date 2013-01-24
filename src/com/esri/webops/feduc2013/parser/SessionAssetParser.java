@@ -72,6 +72,7 @@ public class SessionAssetParser {
                 Date dt = format.parse(updatedAt.substring(0,updatedAt.length()-5));
                 date = dt.getTime() - cal.getTimeInMillis();
                 Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-5) + "->" + date);
+                date = date / 1000;
             }
             catch(Exception ex) {
                 Logger.getLogger("Esri").log(Level.INFO,"Error in date conversion",ex);

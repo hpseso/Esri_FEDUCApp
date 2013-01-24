@@ -48,15 +48,15 @@ public class Map extends Activity {
     public static final int MAP_LEVEL3 = 3;
 
 
-//    static final String FLOOR_PLAN0 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
-//    static final String FLOOR_PLAN1 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
-//    static final String FLOOR_PLAN3 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
-//    static final String POI = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer";
+    static final String FLOOR_PLAN0 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
+    static final String FLOOR_PLAN1 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
+    static final String FLOOR_PLAN3 = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
+    static final String POI = "http://mwo-lb-885964707.us-east-1.elb.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer";
 
-    static final String FLOOR_PLAN0 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
-    static final String FLOOR_PLAN1 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
-    static final String FLOOR_PLAN3 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
-    static final String POI = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer/0";
+//    static final String FLOOR_PLAN0 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_0/MapServer";
+//    static final String FLOOR_PLAN1 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_1/MapServer";
+//    static final String FLOOR_PLAN3 = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/feduc_floorplan_3/MapServer";
+//    static final String POI = "http://ec2-23-21-114-109.compute-1.amazonaws.com/ArcGIS/rest/services/POIs-nationwide/MapServer/0";
 
     static final String World_Imagery_Map_URL= "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
     static final String World_Transportation_Map_URL= "http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer";

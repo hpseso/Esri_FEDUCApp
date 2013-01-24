@@ -32,7 +32,7 @@ public class AgendaAssetDB extends DB {
     public String getLastUpdatedDate() {
         String date = null;
         try {
-            Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY _id desc limit 1", null);
+            Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY ZUPDATEDAT desc limit 1", null);
             if (c != null && c.getCount() > 0) {
                 c.moveToFirst();
                 int milis = c.getInt(c.getColumnIndex("ZUPDATEDAT"));
