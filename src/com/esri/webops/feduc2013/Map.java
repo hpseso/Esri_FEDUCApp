@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -137,6 +138,7 @@ public class Map extends Activity {
 
         callout = mapView.getCallout();
         callout.setStyle(R.xml.calloutstyle);
+        callout.setMaxWidth(600);
         content = createContent();
 
         greenMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_green));
