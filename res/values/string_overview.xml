@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FEDUC2013</string>
+    <string name="app_name">FedGIS 2013</string>
     
     <!-- Home Screen -->
     <string name="home_content1"><b>Esri Federal GIS Conference</b></string>
