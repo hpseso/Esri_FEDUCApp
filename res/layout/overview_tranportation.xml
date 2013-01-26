@@ -148,89 +148,89 @@
                 android:layout_marginLeft="10dp"
                 android:text="@string/home_transportation8" android:layout_marginTop="5dp"/>
 
-            <TextView
-                style="@style/Font.Large.Bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/home_transportation10" />
+            <!--<TextView-->
+                <!--style="@style/Font.Large.Bold"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:text="@string/home_transportation10" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical" >
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:gravity="center_vertical" >-->
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/pin_red_selector" 
-                    android:id="@+id/trans_locate4_btn"/>
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:background="@drawable/pin_red_selector" -->
+                    <!--android:id="@+id/trans_locate4_btn"/>-->
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:background="@drawable/link_btn_selector" 
-                    android:id="@+id/trans_link4_btn"/>
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:background="@drawable/link_btn_selector" -->
+                    <!--android:id="@+id/trans_link4_btn"/>-->
 
-                <Button
-                    android:id="@+id/trans_call4_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/call_btn_selector" />
-            </LinearLayout>
+                <!--<Button-->
+                    <!--android:id="@+id/trans_call4_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/call_btn_selector" />-->
+            <!--</LinearLayout>-->
 
-            <TextView
-                style="@style/Font.Normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/home_transportation11" android:layout_marginTop="5dp"/>
+            <!--<TextView-->
+                <!--style="@style/Font.Normal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="@string/home_transportation11" android:layout_marginTop="5dp"/>-->
 
-            <TextView
-                style="@style/Font.Large.Bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/home_transportation13" />
+            <!--<TextView-->
+                <!--style="@style/Font.Large.Bold"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:text="@string/home_transportation13" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical" >
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:gravity="center_vertical" >-->
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/pin_red_selector" 
-                    android:id="@+id/trans_locate5_btn"/>
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:background="@drawable/pin_red_selector" -->
+                    <!--android:id="@+id/trans_locate5_btn"/>-->
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:background="@drawable/link_btn_selector" 
-                    android:id="@+id/trans_link5_btn"/>
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:background="@drawable/link_btn_selector" -->
+                    <!--android:id="@+id/trans_link5_btn"/>-->
 
-                <Button
-                    android:id="@+id/trans_call5_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/call_btn_selector" />
-            </LinearLayout>
+                <!--<Button-->
+                    <!--android:id="@+id/trans_call5_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/call_btn_selector" />-->
+            <!--</LinearLayout>-->
 
-            <TextView
-                style="@style/Font.Normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/home_transportation14" />
+            <!--<TextView-->
+                <!--style="@style/Font.Normal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="@string/home_transportation14" />-->
 
         </LinearLayout>
 

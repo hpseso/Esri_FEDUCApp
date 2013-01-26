@@ -83,8 +83,8 @@ public class OverviewAdapter extends PagerAdapter {
 	            ((Button) view.findViewById(R.id.trans_call3_btn)).setOnClickListener(callListener);
 	            ((Button) view.findViewById(R.id.trans_call3_btn)).setTag("8003311600");
 	    		
-	            ((Button) view.findViewById(R.id.trans_call4_btn)).setOnClickListener(callListener);
-	            ((Button) view.findViewById(R.id.trans_call4_btn)).setTag("18007368222");
+//	            ((Button) view.findViewById(R.id.trans_call4_btn)).setOnClickListener(callListener);
+//	            ((Button) view.findViewById(R.id.trans_call4_btn)).setTag("18007368222");
 	    		
 	            ((Button) view.findViewById(R.id.trans_link1_btn)).setOnClickListener(linkListener);
 	            ((Button) view.findViewById(R.id.trans_link1_btn)).setTag("http://www.esri.com/pugiosapphertz");

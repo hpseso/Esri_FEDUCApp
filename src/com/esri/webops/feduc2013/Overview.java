@@ -45,10 +45,10 @@ public class Overview extends BaseActivity {
 	TextView call_txvw,email_txvw;
 	
 	@ViewById
-	Button venue_locate_address1_btn,venue_locate_address2_btn,venue_locate_address3_btn,venue_call1_btn,venue_link1_btn,venue_call2_btn,venue_link2_btn,venue_call3_btn,venue_link3_btn;
+	Button venue_locate_address1_btn,venue_locate_address2_btn,venue_call1_btn,venue_link1_btn,venue_call2_btn,venue_link2_btn;
 	
 	@ViewById
-	TextView venue_call1_txvw,venue_call2_txvw,venue_call3_txvw,venue_link1_txvw,venue_link2_txvw,venue_link3_txvw;
+	TextView venue_call1_txvw,venue_call2_txvw,venue_link1_txvw,venue_link2_txvw;
 
 
 	@ViewById
@@ -60,11 +60,11 @@ public class Overview extends BaseActivity {
 	@ViewById
 	Button trans_locate3_btn,trans_link3_btn,trans_call3_btn;
 	
-	@ViewById
-	Button trans_locate4_btn,trans_link4_btn,trans_call4_btn;
+//	@ViewById
+//	Button trans_locate4_btn,trans_link4_btn,trans_call4_btn;
 	
-	@ViewById
-	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn;
+//	@ViewById
+//	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn;
 
 	@ViewById
 	LinearLayout home_container,transportation_container,venue_container,contact_container;
@@ -150,14 +150,15 @@ public class Overview extends BaseActivity {
 		venue_call2_btn.setTag("(2028981100");
 		
 		venue_link2_btn.setOnClickListener(linkListener);
-		venue_link2_btn.setTag("http://www.marriott.com/hotels/travel/wascp-residence-inn-washington-dc-capitol/");
+		venue_link2_btn.setTag("http://www.marriott.com/residence-inn/travel.mi");
 
 		venue_call2_txvw.setOnClickListener(callListener);
 		venue_call2_txvw.setTag("2028981100");
 		
 		venue_link2_txvw.setOnClickListener(linkListener);
-		venue_link2_txvw.setTag("http://www.marriott.com/hotels/travel/wascp-residence-inn-washington-dc-capitol/");
+		venue_link2_txvw.setTag("http://www.marriott.com/residence-inn/travel.mi");
 
+        /*
 		venue_call3_btn.setOnClickListener(callListener);
 		venue_call3_btn.setTag("2025821234");
 		
@@ -169,17 +170,18 @@ public class Overview extends BaseActivity {
 		
 		venue_link3_txvw.setOnClickListener(linkListener);
 		venue_link3_txvw.setTag("http://grandwashington.hyatt.com");
-		
+		  */
 		
 		venue_locate_address1_btn.setOnClickListener(areaMapListener);
 		venue_locate_address1_btn.setTag("-8574157.51319161,4708183.10803689");
 		
 		venue_locate_address2_btn.setOnClickListener(areaMapListener);
 		venue_locate_address2_btn.setTag("-8574968.33729335,4708472.06466857");
-		
+
+        /*
 		venue_locate_address3_btn.setOnClickListener(areaMapListener);
 		venue_locate_address3_btn.setTag("-8574537.4322191,4707273.05898016");
-		
+		  */
 		
 		// Tranportation
 		trans_call1_btn.setOnClickListener(callListener);
@@ -191,11 +193,11 @@ public class Overview extends BaseActivity {
 		trans_call3_btn.setOnClickListener(callListener);
 		trans_call3_btn.setTag("2026332922");
 		
-		trans_call4_btn.setOnClickListener(callListener);
-		trans_call4_btn.setTag("3013922400");
-		
-		trans_call5_btn.setOnClickListener(callListener);
-		trans_call5_btn.setTag("2024792426");
+//		trans_call4_btn.setOnClickListener(callListener);
+//		trans_call4_btn.setTag("3013922400");
+//
+//		trans_call5_btn.setOnClickListener(callListener);
+//		trans_call5_btn.setTag("2024792426");
 
 		trans_link1_btn.setOnClickListener(linkListener);
 		trans_link1_btn.setTag("http://www.npg.si.edu");
@@ -206,11 +208,11 @@ public class Overview extends BaseActivity {
 		trans_link3_btn.setOnClickListener(linkListener);
 		trans_link3_btn.setTag("http://nationalzoo.si.edu/Contact/");
 		
-		trans_link4_btn.setOnClickListener(linkListener);
-		trans_link4_btn.setTag("http://www.ccm.org");
-		
-		trans_link5_btn.setOnClickListener(linkListener);
-		trans_link5_btn.setTag("http://www.tidalbasinpaddleboats.com");
+//		trans_link4_btn.setOnClickListener(linkListener);
+//		trans_link4_btn.setTag("http://www.ccm.org");
+//
+//		trans_link5_btn.setOnClickListener(linkListener);
+//		trans_link5_btn.setTag("http://www.tidalbasinpaddleboats.com");
 		
 		trans_locate1_btn.setOnClickListener(areaMapRedListener);
 		trans_locate1_btn.setTag("-8574148.90267279,4707058.92430468");
@@ -221,12 +223,12 @@ public class Overview extends BaseActivity {
 		trans_locate3_btn.setOnClickListener(areaMapRedListener);
 		trans_locate3_btn.setTag("-8577731.600718,4711621.436788");
 		
-		trans_locate4_btn.setOnClickListener(areaMapRedListener);
-		//trans_locate4_btn.setTag("-8574512.797641,4705238.627470");
-        trans_locate4_btn.setTag("-8573030.8887,4690714.3494");
-		
-		trans_locate5_btn.setOnClickListener(areaMapRedListener);
-		trans_locate5_btn.setTag("-8575387.991478,4705204.734242");
+//		trans_locate4_btn.setOnClickListener(areaMapRedListener);
+//		//trans_locate4_btn.setTag("-8574512.797641,4705238.627470");
+//        trans_locate4_btn.setTag("-8573030.8887,4690714.3494");
+//
+//		trans_locate5_btn.setOnClickListener(areaMapRedListener);
+//		trans_locate5_btn.setTag("-8575387.991478,4705204.734242");
 	}
 	
 	@Click
