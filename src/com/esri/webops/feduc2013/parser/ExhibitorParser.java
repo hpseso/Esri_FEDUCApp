@@ -83,20 +83,24 @@ public class ExhibitorParser {
 		@SerializedName("objectId")
 		public String objectId;
 
+        public String getUpdatedAtStr () {
+            return updatedAt;
+        }
+
         public long getUpdatedAt () {
             long date = 0;
             try {
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+                Date dt = format.parse(updatedAt.substring(0,updatedAt.length()-1));
 
                 Calendar cal = Calendar.getInstance();
                 cal.set(Calendar.DAY_OF_MONTH,1);
                 cal.set(Calendar.MONTH,Calendar.JANUARY);
                 cal.set(Calendar.YEAR,2001);
 
-                Date dt = format.parse(updatedAt.substring(0,updatedAt.length()-5));
                 date = dt.getTime() - cal.getTimeInMillis();
-                Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-5) + "->" + date);
                 date = date / 1000;
+//                Logger.getLogger("Esri").info( updatedAt + " converted to :" + updatedAt.substring(0,updatedAt.length()-1) + "->" + date);
             }
             catch(Exception ex) {
                 Logger.getLogger("Esri").log(Level.INFO,"Error in date conversion",ex);

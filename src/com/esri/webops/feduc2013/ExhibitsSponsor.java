@@ -157,20 +157,20 @@ public class ExhibitsSponsor extends BaseActivity {
             else
                 str = "?limit=1000";
 
-            Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
+//            Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
             InputStream is =  makeWebPost(App.SESSION_URL +str);
             String response = parseResponseToString(is);
-            Logger.getLogger("Esri").info("Response is:" + response);
+//            Logger.getLogger("Esri").info("Response is:" + response);
 
 
             SessionParser parser = new Gson().fromJson(response, SessionParser.class);
             if (parser != null && parser.sessionList != null && parser.sessionList.size() > 0) {
                 for (SessionParser.Session session : parser.sessionList) {
                     long result = adb.update(session);
-                    Logger.getLogger("Esri").info("Update result is:" + result);
+//                    Logger.getLogger("Esri").info("Update result is:" + result);
                     if (result == 0) {
                         result = adb.insert(session);
-                        Logger.getLogger("Esri").info("Insert result is:" + result);
+//                        Logger.getLogger("Esri").info("Insert result is:" + result);
                     }
                 }
             }
@@ -185,20 +185,20 @@ public class ExhibitsSponsor extends BaseActivity {
             else
                 str = "?limit=1000";
 
-            Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
+//            Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
             is =  makeWebPost(App.SESSION_ASSET_URL +str);
             response = parseResponseToString(is);
-            Logger.getLogger("Esri").info("Response for Asset is:" + response);
+//            Logger.getLogger("Esri").info("Response for Asset is:" + response);
 
 
             SessionAssetParser sparser = new Gson().fromJson(response, SessionAssetParser.class);
             if (sparser != null && sparser.sessionAssetList != null && sparser.sessionAssetList.size() > 0) {
                 for (SessionAssetParser.SessionAsset session : sparser.sessionAssetList) {
                     long result = asdb.update(session);
-                    Logger.getLogger("Esri").info("Session Asset Update result is:" + result);
+//                    Logger.getLogger("Esri").info("Session Asset Update result is:" + result);
                     if (result == 0) {
                         result = asdb.insert(session);
-                        Logger.getLogger("Esri").info("Session Asset Insert result is:" + result);
+//                        Logger.getLogger("Esri").info("Session Asset Insert result is:" + result);
                     }
                 }
             }
@@ -214,19 +214,19 @@ public class ExhibitsSponsor extends BaseActivity {
             else
                 str = "?limit=1000";
 
-            Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
+//            Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
             is =  makeWebPost(App.EXHIBITOR_URL +str);
             response = parseResponseToString(is);
-            Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
+//            Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
 
             ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
             if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
                 for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
                     long result = edb.update(session);
-                    Logger.getLogger("Esri").info("Exhibitor Update result is:" + result);
+//                    Logger.getLogger("Esri").info("Exhibitor Update result is:" + result);
                     if (result == 0) {
                         result = edb.insert(session);
-                        Logger.getLogger("Esri").info("Exhibitor Insert result is:" + result);
+//                        Logger.getLogger("Esri").info("Exhibitor Insert result is:" + result);
                     }
                 }
             }

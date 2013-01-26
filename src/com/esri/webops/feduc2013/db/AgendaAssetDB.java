@@ -32,21 +32,13 @@ public class AgendaAssetDB extends DB {
     public String getLastUpdatedDate() {
         String date = null;
         try {
-            Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY ZUPDATEDAT desc limit 1", null);
+            Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDATSTR FROM " + TABLE_NAME + " ORDER BY ZUPDATEDAT desc limit 1", null);
             if (c != null && c.getCount() > 0) {
                 c.moveToFirst();
-                int milis = c.getInt(c.getColumnIndex("ZUPDATEDAT"));
-                if (milis > 0) {
-                    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-                    Calendar cal = Calendar.getInstance();
-                    cal.set(Calendar.DAY_OF_MONTH,1);
-                    cal.set(Calendar.MONTH,Calendar.JANUARY);
-                    cal.set(Calendar.YEAR,2001);
-                    cal.add(Calendar.SECOND,milis);
-                    date =  formatter.format(cal.getTime()) + ".999Z";
-
-                    Logger.getLogger("Esri").info( milis + " converted to :" + date);
-                }
+                date = c.getString(c.getColumnIndex("ZUPDATEDATSTR"));
+            }
+            else {
+                Logger.getLogger("Esri").info(" Agenda Count is 0");
             }
         }
         catch(Exception ex) {
@@ -71,6 +63,7 @@ public class AgendaAssetDB extends DB {
 		cVal.put("ZSESSIONASSETAUTHORBIO",sessionAsset.sessionAssetAuthorBio );
 		cVal.put("ZCREATEDAT",sessionAsset.createdAt );
 		cVal.put("ZUPDATEDAT",sessionAsset.getUpdatedAt() );
+        cVal.put("ZUPDATEDATSTR",sessionAsset.getUpdatedAtStr() );
 		
 		return mDatabase.update(TABLE_NAME, cVal, "ZOBJECTID='" + sessionAsset.objectId +"'", null);
 	}
@@ -92,6 +85,7 @@ public class AgendaAssetDB extends DB {
         cVal.put("ZCREATEDAT",sessionAsset.createdAt );
         cVal.put("ZUPDATEDAT",sessionAsset.getUpdatedAt() );
         cVal.put("ZOBJECTID",sessionAsset.objectId );
+        cVal.put("ZUPDATEDATSTR",sessionAsset.getUpdatedAtStr() );
 
         return mDatabase.insert(TABLE_NAME,null, cVal);
     }

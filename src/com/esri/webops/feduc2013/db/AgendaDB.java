@@ -59,6 +59,7 @@ public class AgendaDB extends DB {
 		cVal.put("ZYPOINT",session.yPoint );
 		cVal.put("ZCREATEDAT",session.createdAt );
 		cVal.put("ZUPDATEDAT",session.getUpdatedAt() );
+        cVal.put("ZUPDATEDATSTR",session.getUpdatedAtStr() );
 		
 		return mDatabase.update(TABLE_NAME, cVal, "ZOBJECTID='" + session.objectId +"'", null);
 	}
@@ -88,6 +89,7 @@ public class AgendaDB extends DB {
         cVal.put("ZCREATEDAT",session.createdAt );
         cVal.put("ZUPDATEDAT",session.getUpdatedAt() );
         cVal.put("ZOBJECTID",session.objectId );
+        cVal.put("ZUPDATEDATSTR",session.getUpdatedAtStr() );
 
         return mDatabase.insert(TABLE_NAME,null,cVal);
     }
@@ -96,21 +98,10 @@ public class AgendaDB extends DB {
 	public String getLastUpdatedDate() {
 		String date = null;
 		try {
-			Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDAT FROM " + TABLE_NAME + " ORDER BY ZUPDATEDAT desc limit 1", null);
+			Cursor c = mDatabase.rawQuery("SELECT ZUPDATEDATSTR FROM " + TABLE_NAME + " ORDER BY ZUPDATEDAT desc limit 1", null);
 			if (c != null && c.getCount() > 0) {
 				c.moveToFirst();
-				long milis = c.getLong(c.getColumnIndex("ZUPDATEDAT"));
-                if (milis > 0) {
-                    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-                    Calendar cal = Calendar.getInstance();
-                    cal.set(Calendar.DAY_OF_MONTH,1);
-                    cal.set(Calendar.MONTH,Calendar.JANUARY);
-                    cal.set(Calendar.YEAR,2001);
-                    cal.add(Calendar.SECOND,(int)milis);
-                    date =  formatter.format(cal.getTime()) + ".999Z";
-
-                    Logger.getLogger("Esri").info( milis + " converted to :" + date);
-                }
+                date = c.getString(c.getColumnIndex("ZUPDATEDATSTR"));
 			}
             else {
                 Logger.getLogger("Esri").info(" Agenda Count is 0");
