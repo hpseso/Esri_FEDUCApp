@@ -66,8 +66,8 @@ public class ExhibitsDetail extends BaseActivity {
 				String url = cursor.getString(cursor.getColumnIndex("ZSPONSORURL"));
 				
 				try {
-					x = Double.parseDouble(cursor.getString(cursor.getColumnIndex("ZXPOINT")));
-					y = Double.parseDouble(cursor.getString(cursor.getColumnIndex("ZYPOINT")));
+                    x = cursor.getDouble(cursor.getColumnIndex("ZXPOINT"));
+                    y = cursor.getDouble(cursor.getColumnIndex("ZYPOINT"));
 				}
 				catch(Exception ex){
 					x=0d;y=0d;

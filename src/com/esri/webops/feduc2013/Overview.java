@@ -22,10 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.esri.core.geometry.Point;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.ViewById;
+import com.googlecode.androidannotations.annotations.*;
 
 @EActivity(R.layout.overview)
 public class Overview extends BaseActivity {
@@ -65,6 +62,7 @@ public class Overview extends BaseActivity {
 	
 //	@ViewById
 //	Button trans_locate5_btn,trans_link5_btn,trans_call5_btn;
+
 
 	@ViewById
 	LinearLayout home_container,transportation_container,venue_container,contact_container;
@@ -357,6 +355,7 @@ public class Overview extends BaseActivity {
                 if (arr != null && arr.length == 2) {
                     Intent intent = new Intent(Overview.this,Map_.class);
                     intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
+                    intent.putExtra("isShowCallout",true);
                     Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
                     intent.putExtra("MAP_POINT", point);
                     intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_BLUE);
@@ -377,6 +376,7 @@ public class Overview extends BaseActivity {
                 if (arr != null && arr.length == 2) {
                     Intent intent = new Intent(Overview.this,Map_.class);
                     intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
+                    intent.putExtra("isShowCallout",true);
                     Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
                     intent.putExtra("MAP_POINT", point);
                     intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_RED);

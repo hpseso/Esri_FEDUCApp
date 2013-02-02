@@ -84,6 +84,9 @@ public class Map extends Activity {
     @Extra("FLOOR")
     Integer floor;
 
+    @Extra("isShowCallout")
+    Boolean isShowCallout = false;
+
     @ViewById(R.id.map)
 	MapView mapView;
 
@@ -211,14 +214,15 @@ public class Map extends Activity {
 
             public void onSingleTap(float x, float y) {
                 callout.hide();
-
-                int[] graphicIDs = graphicsLayer.getGraphicIDs(x, y, 25);
-                if (graphicIDs != null && graphicIDs.length > 0) {
-                    Graphic gr = graphicsLayer.getGraphic(graphicIDs[0]);
-                    updateContent((String) gr.getAttributeValue("Title"),(String) gr.getAttributeValue("Address"),(String) gr.getAttributeValue("URL"));
-                    Point location = (Point) gr.getGeometry();
-                    callout.setOffset(0, -15);
-                    callout.show(location, content);
+                if (isShowCallout) {
+                    int[] graphicIDs = graphicsLayer.getGraphicIDs(x, y, 25);
+                    if (graphicIDs != null && graphicIDs.length > 0) {
+                        Graphic gr = graphicsLayer.getGraphic(graphicIDs[0]);
+                        updateContent((String) gr.getAttributeValue("Title"),(String) gr.getAttributeValue("Address"),(String) gr.getAttributeValue("URL"));
+                        Point location = (Point) gr.getGeometry();
+                        callout.setOffset(0, -15);
+                        callout.show(location, content);
+                    }
                 }
             }
         });
