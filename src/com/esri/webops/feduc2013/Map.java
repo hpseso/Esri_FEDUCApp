@@ -145,10 +145,15 @@ public class Map extends Activity {
         content = createContent();
 
         greenMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_green));
+        greenMarker.setOffsetY(16);
         greyMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_grey));
+        greyMarker.setOffsetY(16);
         brownMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_brown));
+        brownMarker.setOffsetY(16);
         redMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_red));
+        redMarker.setOffsetY(16);
         blueMarker = new PictureMarkerSymbol(this.getResources().getDrawable(R.drawable.map_locator_blue));
+        blueMarker.setOffsetY(16);
 
 
         tiledTopoLayer = new ArcGISTiledMapServiceLayer(World_Topo_Map_URL);
@@ -171,7 +176,6 @@ public class Map extends Activity {
 
         floor3Layer = new ArcGISDynamicMapServiceLayer(FLOOR_PLAN3);
         floor3Layer.setName("Floor Three Layer");
-
 
         graphicsLayer = new GraphicsLayer();
         graphicsLayer.setName("Point Layer");
@@ -232,6 +236,7 @@ public class Map extends Activity {
 
         Logger.getLogger("Esri").info("Loading marker:" + mapPoint.getX() + ":" + mapPoint.getY());
         Point point = (Point)GeometryEngine.project(mapPoint,SpatialReference.create(3857), mapView.getSpatialReference());
+
         if (markerColor == MAP_MARKER_BROWN)
             graphicsLayer.addGraphic(new Graphic(point,brownMarker ));
         else if (markerColor == MAP_MARKER_BLUE)
@@ -247,13 +252,14 @@ public class Map extends Activity {
         double zoomWidth = Unit.convertUnits(10,Unit.create(LinearUnit.Code.METER),mapUnit);
         Envelope zoomExtent = new Envelope(mapPoint,zoomWidth, zoomWidth);
         mapView.setExtent(zoomExtent);
-
     }
 
     private void loadAgendaPoint() {
 
         Logger.getLogger("Esri").info("Loading marker:" + agendaPoint.getX() + ":" + agendaPoint.getY());
         Point point = (Point)GeometryEngine.project(agendaPoint,SpatialReference.create(3857), mapView.getSpatialReference());
+
+
         if (markerColor == MAP_MARKER_BROWN)
             graphicsLayer.addGraphic(new Graphic(point,brownMarker ));
         else if (markerColor == MAP_MARKER_BLUE)
@@ -288,7 +294,7 @@ public class Map extends Activity {
             graphicsLayer.addGraphic(new Graphic(point,greyMarker ));
 
         Unit mapUnit = SpatialReference.create(3857).getUnit();
-        double zoomWidth = Unit.convertUnits(10,Unit.create(LinearUnit.Code.METER),mapUnit);
+        double zoomWidth = Unit.convertUnits(200,Unit.create(LinearUnit.Code.METER),mapUnit);
         Envelope zoomExtent = new Envelope(exhibitPoint,zoomWidth, zoomWidth);
         mapView.setExtent(zoomExtent);
 
@@ -343,7 +349,10 @@ public class Map extends Activity {
             mapView.addLayer(tiledImageryLayer);
             mapView.addLayer(transportationLayer);
             mapView.addLayer(boundryMapLayer);
+
         }
+
+
     }
 
     private void showAreaMap() {
@@ -371,6 +380,7 @@ public class Map extends Activity {
             mapView.addLayer(floor2Layer);
             mapView.addLayer(floor3Layer);
         }
+
     }
 
     @Click
@@ -379,11 +389,13 @@ public class Map extends Activity {
             graphicsLayer.removeAll();
             m_btn.setText("Floor Plan");
             showAreaMap();
+
         }
         else {
             graphicsLayer.removeAll();
             m_btn.setText("Area Map");
             showVenueMap();
+
         }
     }
 	

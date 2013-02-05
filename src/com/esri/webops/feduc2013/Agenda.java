@@ -174,10 +174,10 @@ public class Agenda extends BaseActivity {
             else
                 str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
+			Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
 			InputStream is =  makeWebPost(App.SESSION_URL +str);
 			String response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response is:" + response);
+			Logger.getLogger("Esri").info("Response is:" + response);
 			
 
 			SessionParser parser = new Gson().fromJson(response, SessionParser.class);
@@ -202,10 +202,10 @@ public class Agenda extends BaseActivity {
             else
                 str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
+			Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
 			is =  makeWebPost(App.SESSION_ASSET_URL +str);
 			response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response for Asset is:" + response);
+			Logger.getLogger("Esri").info("Response for Asset is:" + response);
 			
 
 			SessionAssetParser sparser = new Gson().fromJson(response, SessionAssetParser.class);
@@ -231,12 +231,13 @@ public class Agenda extends BaseActivity {
             else
                 str = "?limit=1000";
 			
-//			Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
+			Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
 			is =  makeWebPost(App.EXHIBITOR_URL +str);
 			response = parseResponseToString(is);
-//			Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
-			
+			Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
+//
 			ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
+            String recordsToDelete = "";
 			if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
 				for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
 					long result = edb.update(session);
@@ -244,8 +245,16 @@ public class Agenda extends BaseActivity {
                     if (result == 0) {
                         result = edb.insert(session);
 //                        Logger.getLogger("Esri").info("Exhibitor Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
 				}
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    edb.delete(recordsToDelete);
+                }
+
 			}
 			
 		}

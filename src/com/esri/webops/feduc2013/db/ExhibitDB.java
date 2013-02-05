@@ -91,6 +91,16 @@ public class ExhibitDB extends DB {
         return mDatabase.insert(TABLE_NAME, null,cVal);
     }
 
+    public void delete (String ids) {
+        try {
+            mDatabase.execSQL("DELETE FROM " + TABLE_NAME + " WHERE ZOBJECTID NOT IN (" + ids + ")");
+        }
+        catch (Exception ex) {
+            Logger.getLogger("Esri").log(Level.INFO,"Error in deleting records", ex);
+        }
+
+    }
+
     @SuppressLint("SimpleDateFormat")
     public String getLastUpdatedDate() {
         String date = null;

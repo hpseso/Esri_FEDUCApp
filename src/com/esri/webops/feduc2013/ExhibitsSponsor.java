@@ -220,6 +220,7 @@ public class ExhibitsSponsor extends BaseActivity {
 //            Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
 
             ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
+            String recordsToDelete = "";
             if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
                 for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
                     long result = edb.update(session);
@@ -227,8 +228,16 @@ public class ExhibitsSponsor extends BaseActivity {
                     if (result == 0) {
                         result = edb.insert(session);
 //                        Logger.getLogger("Esri").info("Exhibitor Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
                 }
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    edb.delete(recordsToDelete);
+                }
+
             }
 
         }
