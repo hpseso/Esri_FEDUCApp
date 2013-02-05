@@ -179,7 +179,7 @@ public class Agenda extends BaseActivity {
 			String response = parseResponseToString(is);
 			Logger.getLogger("Esri").info("Response is:" + response);
 			
-
+            String recordsToDelete = "";
 			SessionParser parser = new Gson().fromJson(response, SessionParser.class);
 			if (parser != null && parser.sessionList != null && parser.sessionList.size() > 0) {
 				for (SessionParser.Session session : parser.sessionList) {
@@ -188,8 +188,15 @@ public class Agenda extends BaseActivity {
 					if (result == 0) {
                         result = adb.insert(session);
 //                        Logger.getLogger("Esri").info("Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
 				}
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    adb.delete(recordsToDelete);
+                }
 			}
 
             date = "";
@@ -206,8 +213,9 @@ public class Agenda extends BaseActivity {
 			is =  makeWebPost(App.SESSION_ASSET_URL +str);
 			response = parseResponseToString(is);
 			Logger.getLogger("Esri").info("Response for Asset is:" + response);
-			
 
+
+            recordsToDelete = "";
 			SessionAssetParser sparser = new Gson().fromJson(response, SessionAssetParser.class);
 			if (sparser != null && sparser.sessionAssetList != null && sparser.sessionAssetList.size() > 0) {
 				for (SessionAssetParser.SessionAsset session : sparser.sessionAssetList) {
@@ -216,8 +224,15 @@ public class Agenda extends BaseActivity {
                     if (result == 0) {
                         result = asdb.insert(session);
 //                        Logger.getLogger("Esri").info("Session Asset Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
 				}
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    asdb.delete(recordsToDelete);
+                }
 			}
 			
 			
@@ -237,7 +252,7 @@ public class Agenda extends BaseActivity {
 			Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
 //
 			ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
-            String recordsToDelete = "";
+            recordsToDelete = "";
 			if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
 				for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
 					long result = edb.update(session);

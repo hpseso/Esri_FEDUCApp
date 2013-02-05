@@ -152,7 +152,7 @@ public class AgendaDetail extends BaseActivity {
 		Logger.getLogger("ESRI").info("Agenda Point:" + x +":"+ y);
 		Point point = new Point(x, y);
         int tFloor = floor;
-        Intent intent = new Intent(this,Map_.class);
+        Intent intent = new Intent(this,VenueMap_.class);
         intent.putExtra("AGENDA_POINT", point);
 
         if (floor == 6) {

@@ -32,20 +32,20 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358605452979" ignored="false" />
     <file path="/Dummy.txt" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329441334" ignored="false" />
-    <file path="/AgendaAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360036588950" ignored="false" />
+    <file path="/AgendaAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360077911478" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358329990581" ignored="false" />
-    <file path="/Overview.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359798886327" ignored="false" />
+    <file path="/Overview.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360077929109" ignored="false" />
     <file path="/overview.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358487270708" ignored="false" />
     <file path="/string_overview.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358504045947" ignored="false" />
     <file path="/overview_venue.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358504632910" ignored="false" />
     <file path="/overview_tranportation.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358501763406" ignored="false" />
-    <file path="/Map.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360066778987" ignored="false" />
+    <file path="/Map.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360076652791" ignored="false" />
     <file path="/map.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358506732317" ignored="false" />
-    <file path="/Agenda.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360061208378" ignored="false" />
+    <file path="/Agenda.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360081716802" ignored="false" />
     <file path="/AgendaDB.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359191901206" ignored="false" />
-    <file path="/AgendaDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358931336930" ignored="false" />
-    <file path="/ExhibitAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358535989956" ignored="false" />
-    <file path="/ExhibitsDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358582776739" ignored="false" />
+    <file path="/AgendaDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360078047916" ignored="false" />
+    <file path="/ExhibitAdapter.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360078088058" ignored="false" />
+    <file path="/ExhibitsDetail.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360078067907" ignored="false" />
     <file path="/ExhibitDB.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360061391939" ignored="false" />
     <file path="/BaseActivity.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359053784234" ignored="false" />
     <file path="/SessionParser.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359191750520" ignored="false" />
@@ -58,16 +58,13 @@
     <file path="/ExhibitorParser.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358850417700" ignored="false" />
     <file path="/SessionAssetParser.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358850432942" ignored="false" />
     <file path="/pin_gray_selector.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358851567082" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Agenda_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360061469218" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Map_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360065305711" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/AgendaDetail_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1358931414231" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Splash_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359056220354" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsAll_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360061974375" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsSponsor_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360061974375" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/Overview_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360037095411" ignored="false" />
     <file path="/readme.md" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359101034517" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/esri/webops/feduc2013/BuildConfig.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359179043515" ignored="false" />
-    <file path="$PROJECT_DIR$/.apt_generated/com/esri/webops/feduc2013/ExhibitsDetail_.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1359799827294" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/esri/webops/feduc2013/Manifest.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360084234320" ignored="false" />
+    <file path="/AreaMap.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360080199576" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360077901394" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/esri/webops/feduc2013/R.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360084234320" ignored="false" />
+    <file path="/VenueMap.java" changelist="5c7362a9-a059-40db-90be-0bd12a2d0429" time="1360077341711" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,19 +123,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="41" selection-start="2694" selection-end="2694" vertical-scroll-proportion="-1.8721805">
+            <state line="4" column="30" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapView.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/SDK/ArcGISAndroidSDK_v2/plugins/lib/ArcGIS_Android.jar!/com/esri/android/map/MapView.class">
+      <file leaf-file-name="readme.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="16" selection-start="7116" selection-end="7116" vertical-scroll-proportion="-2.24">
+            <state line="0" column="31" selection-start="31" selection-end="38" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,22 +156,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaAssetDB.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/ExhibitorParser.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/SessionAssetParser.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/SessionParser.java" />
-        <option value="$PROJECT_DIR$/res/layout/overview_venue.xml" />
-        <option value="$PROJECT_DIR$/res/values/string_overview.xml" />
-        <option value="$PROJECT_DIR$/res/layout/overview_tranportation.xml" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/OverviewAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsDetail.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Agenda.java" />
         <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/ExhibitDB.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java" />
-        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsSponsor.java" />
         <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/AgendaDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/ExhibitAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/VenueMap.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/AreaMap.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/Agenda.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaDB.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaAssetDB.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsSponsor.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -295,19 +292,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feduc2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feduc2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FEDUC-2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".apt_generated" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ExportedApkPath" value="$USER_HOME$/Desktop/FEDUC2013_1_7.apk" />
+    <property name="ExportedApkPath" value="$USER_HOME$/Desktop/FEDUC2013_1_8.apk" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="preferences.fileTypes" />
     <property name="recentsLimit" value="5" />
     <property name="ExportedModule" value="FEDUC2013" />
     <property name="last_opened_file_path" value="$USER_HOME$/SDK/ArcGISAndroidSDK_v2/plugins/lib/jackson-mapper-lgpl-1.9.5.jar!/" />
@@ -527,15 +582,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40651557" sideWeight="0.49426112" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40651557" sideWeight="0.49426112" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.223099" sideWeight="0.674221" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32577905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.223099" sideWeight="0.5934844" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4631728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2123386" sideWeight="0.6865248" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -606,108 +661,135 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/parser/SessionParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="18" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.670571" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/OverviewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="19" selection-start="5835" selection-end="5835" vertical-scroll-proportion="0.6149341">
-          <folding />
+        <state line="56" column="61" selection-start="1890" selection-end="1899" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="0" selection-start="5383" selection-end="5383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="57" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/ExhibitAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="89" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.5270864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/adapter/AgendaAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="559" selection-end="559" vertical-scroll-proportion="0.16961652">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="64" selection-start="11732" selection-end="11732" vertical-scroll-proportion="0.41740412">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="79" selection-start="9433" selection-end="9433" vertical-scroll-proportion="0.556391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/ExhibitDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="78" selection-start="4249" selection-end="4249" vertical-scroll-proportion="0.15634218">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Agenda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="13" selection-start="7901" selection-end="8934" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="13" selection-start="9383" selection-end="9383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsHours.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsSponsor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="13" selection-start="9328" selection-end="9328" vertical-scroll-proportion="0.7443609">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/SDK/ArcGISAndroidSDK_v2/plugins/lib/ArcGIS_Android.jar!/com/esri/android/map/MapView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="16" selection-start="7116" selection-end="7116" vertical-scroll-proportion="-2.24">
+        <state line="79" column="17" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="41" selection-start="2694" selection-end="2694" vertical-scroll-proportion="-1.8721805">
+        <state line="94" column="4" selection-start="3843" selection-end="3915" vertical-scroll-proportion="0.26466164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Overview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="340" column="46" selection-start="10687" selection-end="10687" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10943#11810#0" expanded="true" />
+            <element signature="e#11803#11804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/AreaMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="5" selection-start="6558" selection-end="6558" vertical-scroll-proportion="0.49022555">
+          <folding>
+            <element signature="e#5922#6706#0" expanded="true" />
+            <element signature="e#6695#6696#0" expanded="true" />
+            <element signature="e#11896#11912#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/VenueMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="101" selection-start="7999" selection-end="7999" vertical-scroll-proportion="0.5864662">
+          <folding>
+            <element signature="e#4853#5369#0" expanded="true" />
+            <element signature="e#5358#5359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/ExhibitDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="13" selection-start="3980" selection-end="4273" vertical-scroll-proportion="0.5973451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="5" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/db/AgendaAssetDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="5" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/comman/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="87" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.55309737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/Agenda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="271" column="23" selection-start="9776" selection-end="9776" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="261" column="37" selection-start="8389" selection-end="8389" vertical-scroll-proportion="4.5789475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsSponsor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="101" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.4150376">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3796#4303#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/esri/webops/feduc2013/ExhibitsAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="6" selection-start="4199" selection-end="4272" vertical-scroll-proportion="0.50526315">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3687#4190#0" expanded="true" />
+            <element signature="e#4185#4186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="30" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="31" selection-start="31" selection-end="38" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

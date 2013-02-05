@@ -28,6 +28,16 @@ public class AgendaAssetDB extends DB {
 		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ZSESSIONID=" + id, null);
 	}
 
+    public void delete (String ids) {
+        try {
+            mDatabase.execSQL("DELETE FROM " + TABLE_NAME + " WHERE ZOBJECTID NOT IN (" + ids + ")");
+        }
+        catch (Exception ex) {
+            Logger.getLogger("Esri").log(Level.INFO,"Error in deleting records", ex);
+        }
+
+    }
+
     @SuppressLint("SimpleDateFormat")
     public String getLastUpdatedDate() {
         String date = null;

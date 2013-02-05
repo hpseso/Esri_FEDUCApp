@@ -77,7 +77,7 @@ public class ExhibitAdapter extends CursorAdapter implements Filterable {
 			@Override
 			public void onClick(View arg0) {
 				Point point = new Point(x, y);
-				Intent intent = new Intent(context,Map_.class);
+				Intent intent = new Intent(context,VenueMap_.class);
 				intent.putExtra("EXHIBIT_POINT", point);
                 intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
                 intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_GREEN);

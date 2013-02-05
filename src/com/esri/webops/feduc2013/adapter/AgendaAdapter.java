@@ -14,10 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.esri.core.geometry.Point;
-import com.esri.webops.feduc2013.Agenda;
-import com.esri.webops.feduc2013.Map;
-import com.esri.webops.feduc2013.Map_;
-import com.esri.webops.feduc2013.R;
+import com.esri.webops.feduc2013.*;
 import com.esri.webops.feduc2013.util.Util;
 
 public class AgendaAdapter extends CursorAdapter implements Filterable {
@@ -57,7 +54,7 @@ public class AgendaAdapter extends CursorAdapter implements Filterable {
 			public void onClick(View arg0) {
 				Point point = new Point(x, y);
                 int tFloor = floor;
-				Intent intent = new Intent(context,Map_.class);
+				Intent intent = new Intent(context, VenueMap_.class);
 				intent.putExtra("AGENDA_POINT", point);
 
                 if (floor == 6) {

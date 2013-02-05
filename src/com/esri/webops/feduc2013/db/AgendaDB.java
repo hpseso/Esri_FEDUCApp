@@ -34,6 +34,16 @@ public class AgendaDB extends DB {
 		//return mDatabase.query(TABLE_NAME, null, filter, null, null, null, orderby);
 		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE _id=" + id, null);
 	}
+
+    public void delete (String ids) {
+        try {
+            mDatabase.execSQL("DELETE FROM " + TABLE_NAME + " WHERE ZOBJECTID NOT IN (" + ids + ")");
+        }
+        catch (Exception ex) {
+            Logger.getLogger("Esri").log(Level.INFO,"Error in deleting records", ex);
+        }
+
+    }
 	
 	public int update(Session session) {
 		ContentValues cVal = new ContentValues();

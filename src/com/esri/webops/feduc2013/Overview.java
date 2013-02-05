@@ -21,6 +21,7 @@ import android.widget.ImageSwitcher;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
 import com.esri.core.geometry.Point;
 import com.googlecode.androidannotations.annotations.*;
 
@@ -332,11 +333,12 @@ public class Overview extends BaseActivity {
             if (xy != null && xy.length() > 0) {
                 String arr[] = xy.split(",");
                 if (arr != null && arr.length == 2) {
-                    Intent intent = new Intent(Overview.this,Map_.class);
+                    Intent intent = new Intent(Overview.this,VenueMap_.class);
                     intent.putExtra("MAP_TYPE", Map.VENUE_MAP_TYPE);
                     Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
                     intent.putExtra("MAP_LEVEL", Map.MAP_LEVEL2);
-                    intent.putExtra("MAP_POINT", point);
+                    intent.putExtra("AGENDA_POINT", point);
+                    intent.putExtra("FLOOR", 1);
                     intent.putExtra("MARKER_COLOR", Map.MAP_MARKER_BROWN);
                     startActivity(intent);
                 }
@@ -353,7 +355,7 @@ public class Overview extends BaseActivity {
             if (xy != null && xy.length() > 0) {
                 String arr[] = xy.split(",");
                 if (arr != null && arr.length == 2) {
-                    Intent intent = new Intent(Overview.this,Map_.class);
+                    Intent intent = new Intent(Overview.this,AreaMap_.class);
                     intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
                     intent.putExtra("isShowCallout",true);
                     Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));
@@ -374,7 +376,7 @@ public class Overview extends BaseActivity {
             if (xy != null && xy.length() > 0) {
                 String arr[] = xy.split(",");
                 if (arr != null && arr.length == 2) {
-                    Intent intent = new Intent(Overview.this,Map_.class);
+                    Intent intent = new Intent(Overview.this,AreaMap_.class);
                     intent.putExtra("MAP_TYPE", Map.AREA_MAP_TYPE);
                     intent.putExtra("isShowCallout",true);
                     Point point = new Point(Double.parseDouble(arr[0]), Double.parseDouble(arr[1]));

@@ -163,12 +163,12 @@ public class ExhibitsAll extends BaseActivity {
             else
                 str = "?limit=1000";
 
-//            Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
+            Logger.getLogger("Esri").info("Requesting url:" + App.SESSION_URL +str);
             InputStream is =  makeWebPost(App.SESSION_URL +str);
             String response = parseResponseToString(is);
-//            Logger.getLogger("Esri").info("Response is:" + response);
+            Logger.getLogger("Esri").info("Response is:" + response);
 
-
+            String recordsToDelete = "";
             SessionParser parser = new Gson().fromJson(response, SessionParser.class);
             if (parser != null && parser.sessionList != null && parser.sessionList.size() > 0) {
                 for (SessionParser.Session session : parser.sessionList) {
@@ -177,7 +177,14 @@ public class ExhibitsAll extends BaseActivity {
                     if (result == 0) {
                         result = adb.insert(session);
 //                        Logger.getLogger("Esri").info("Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
+                }
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    adb.delete(recordsToDelete);
                 }
             }
 
@@ -187,16 +194,17 @@ public class ExhibitsAll extends BaseActivity {
             Logger.getLogger("Esri").info("Date For Asset :" + date);
             str = "";
             if (date != null && date.trim().length() > 0)
-                str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}") + "&limit=1000";
+                str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}")  + "&limit=1000";
             else
                 str = "?limit=1000";
 
-//            Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
+            Logger.getLogger("Esri").info("Requesting url for Asset:" + App.SESSION_ASSET_URL +str);
             is =  makeWebPost(App.SESSION_ASSET_URL +str);
             response = parseResponseToString(is);
-//            Logger.getLogger("Esri").info("Response for Asset is:" + response);
+            Logger.getLogger("Esri").info("Response for Asset is:" + response);
 
 
+            recordsToDelete = "";
             SessionAssetParser sparser = new Gson().fromJson(response, SessionAssetParser.class);
             if (sparser != null && sparser.sessionAssetList != null && sparser.sessionAssetList.size() > 0) {
                 for (SessionAssetParser.SessionAsset session : sparser.sessionAssetList) {
@@ -205,7 +213,14 @@ public class ExhibitsAll extends BaseActivity {
                     if (result == 0) {
                         result = asdb.insert(session);
 //                        Logger.getLogger("Esri").info("Session Asset Insert result is:" + result);
+                        recordsToDelete += "'" +  session.objectId + "',";
                     }
+                }
+
+                if (recordsToDelete.trim().length() > 0) {
+                    recordsToDelete = recordsToDelete.substring(0, recordsToDelete.length()-1);
+                    Logger.getLogger("Esri").info("Records to delete : " + recordsToDelete);
+                    asdb.delete(recordsToDelete);
                 }
             }
 
@@ -216,17 +231,17 @@ public class ExhibitsAll extends BaseActivity {
             Logger.getLogger("Esri").info("Date For Exhibitor :" + date);
             str = "";
             if (date != null && date.trim().length() > 0)
-                str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}") + "&limit=1000";
+                str = "?where=" + URLEncoder.encode("{\"updatedAt\":{\"$gte\":{\"__type\":\"Date\",\"iso\":\"" + date + "\"}}}")  + "&limit=1000";
             else
                 str = "?limit=1000";
 
-//            Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
+            Logger.getLogger("Esri").info("Requesting url for Exhibitor:" + App.EXHIBITOR_URL +str);
             is =  makeWebPost(App.EXHIBITOR_URL +str);
             response = parseResponseToString(is);
-//            Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
-
+            Logger.getLogger("Esri").info("Response for Exhibitor is:" + response);
+//
             ExhibitorParser eparser = new Gson().fromJson(response, ExhibitorParser.class);
-            String recordsToDelete = "";
+            recordsToDelete = "";
             if (eparser != null && eparser.exhibitorList != null && eparser.exhibitorList.size() > 0) {
                 for (ExhibitorParser.Exhibitor session : eparser.exhibitorList) {
                     long result = edb.update(session);

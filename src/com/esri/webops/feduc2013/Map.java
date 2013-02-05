@@ -385,18 +385,21 @@ public class Map extends Activity {
 
     @Click
     void m_btn() {
-        if (m_btn.getText().toString().equalsIgnoreCase("Area Map")) {
-            graphicsLayer.removeAll();
-            m_btn.setText("Floor Plan");
-            showAreaMap();
+//        if (m_btn.getText().toString().equalsIgnoreCase("Area Map")) {
+//            graphicsLayer.removeAll();
+//            m_btn.setText("Floor Plan");
+//            showAreaMap();
+//
+//        }
+//        else {
+//            graphicsLayer.removeAll();
+//            m_btn.setText("Area Map");
+//            showVenueMap();
+//
+//        }
 
-        }
-        else {
-            graphicsLayer.removeAll();
-            m_btn.setText("Area Map");
-            showVenueMap();
-
-        }
+        startActivity(getIntent().setClass(this,AreaMap_.class));
+        finish();
     }
 	
 	@Click

@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.esri.webops.feduc2013.R.id;
 import com.esri.webops.feduc2013.R.layout;
-import com.googlecode.androidannotations.api.BackgroundExecutor;
 
 public final class ExhibitsSponsor_
     extends ExhibitsSponsor
@@ -38,25 +37,10 @@ public final class ExhibitsSponsor_
 
     private void afterSetContentView_() {
         sponsor_txvw = ((TextView) findViewById(id.sponsor_txvw));
+        hours_txvw = ((TextView) findViewById(id.hours_txvw));
+        empty_txvw = ((TextView) findViewById(id.empty_txvw));
         sponsorList = ((ListView) findViewById(id.sponsorList));
         all_txvw = ((TextView) findViewById(id.all_txvw));
-        empty_txvw = ((TextView) findViewById(id.empty_txvw));
-        hours_txvw = ((TextView) findViewById(id.hours_txvw));
-        {
-            View view = findViewById(id.hours_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ExhibitsSponsor_.this.hours_txvw();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = findViewById(id.refresh_btn);
             if (view!= null) {
@@ -81,6 +65,36 @@ public final class ExhibitsSponsor_
                     @Override
                     public void onClick(View view) {
                         ExhibitsSponsor_.this.all_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.map_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsSponsor_.this.map_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.hours_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsSponsor_.this.hours_txvw();
                     }
 
                 }
@@ -121,24 +135,6 @@ public final class ExhibitsSponsor_
             public void run() {
                 try {
                     ExhibitsSponsor_.super.updateUI();
-                } catch (RuntimeException e) {
-                    Log.e("ExhibitsSponsor_", "A runtime exception was thrown while executing code in a runnable", e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void loadDataFromWeb() {
-        BackgroundExecutor.execute(new Runnable() {
-
-
-            @Override
-            public void run() {
-                try {
-                    ExhibitsSponsor_.super.loadDataFromWeb();
                 } catch (RuntimeException e) {
                     Log.e("ExhibitsSponsor_", "A runtime exception was thrown while executing code in a runnable", e);
                 }

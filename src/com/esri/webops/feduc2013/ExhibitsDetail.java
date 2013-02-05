@@ -178,7 +178,7 @@ public class ExhibitsDetail extends BaseActivity {
 	void locate_btn() {
 		Logger.getLogger("ESRI").info("Exhibits Point:" + x + "," + y);
 //		Point point = new Point(x, y);
-		Intent intent = new Intent(this,Map_.class);
+		Intent intent = new Intent(this,VenueMap_.class);
         Point point = new Point(x, y);
 
         intent.putExtra("EXHIBIT_POINT", point);

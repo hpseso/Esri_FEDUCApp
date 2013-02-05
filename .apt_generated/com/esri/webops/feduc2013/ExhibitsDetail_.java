@@ -37,29 +37,44 @@ public final class ExhibitsDetail_
 
     private void afterSetContentView_() {
         logo_imgvw = ((ImageView) findViewById(com.esri.webops.feduc2013.R.id.logo_imgvw));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
-        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
-        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
-        address2_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address2_txvw));
         address1_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address1_txvw));
-        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
-        call_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.call_btn));
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
+        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
         booth_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.booth_txvw));
         back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
-        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
-        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
         partner_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.partner_txvw));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
+        locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
+        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
+        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        call_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.call_btn));
+        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
         email_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.email_btn));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        address2_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address2_txvw));
         {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.email_btn);
+            View view = findViewById(com.esri.webops.feduc2013.R.id.call_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        ExhibitsDetail_.this.email_btn();
+                        ExhibitsDetail_.this.call_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.link_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsDetail_.this.link_btn();
                     }
 
                 }
@@ -82,21 +97,6 @@ public final class ExhibitsDetail_
             }
         }
         {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.call_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ExhibitsDetail_.this.call_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(com.esri.webops.feduc2013.R.id.back_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -112,14 +112,14 @@ public final class ExhibitsDetail_
             }
         }
         {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.link_btn);
+            View view = findViewById(com.esri.webops.feduc2013.R.id.email_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        ExhibitsDetail_.this.link_btn();
+                        ExhibitsDetail_.this.email_btn();
                     }
 
                 }
