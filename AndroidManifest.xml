@@ -3,7 +3,7 @@
       package="com.esri.webops.feduc2013"
       android:versionCode="2"
       android:versionName="1.1">
-    <uses-sdk android:minSdkVersion="8"  android:targetSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="8" />
 
 	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
 	<uses-permission android:name="android.permission.CALL_PHONE"/> 

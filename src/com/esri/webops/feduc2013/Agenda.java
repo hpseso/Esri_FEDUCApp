@@ -337,12 +337,12 @@ public class Agenda extends BaseActivity {
 		final AgendaDB db = new AgendaDB(Agenda.this);
 		String filter = "";
 		if (selectedSession == 0 )
-			filter = "ZSTARTDAY=" + d + " AND ZSTARTMONTH=" + m + " AND ZSTARTYEAR=" + y;
+			filter = "ZSTARTDAY=" + d + " AND ZSTARTMONTH=" + m + " AND ZSTARTYEAR=" + y ;
 		else
 			filter = "ZSTARTDAY=" + d + " AND ZSTARTMONTH=" + m + " AND ZSTARTYEAR=" + y + " AND ZEVENTTYPEID='" + (sessionIndex[selectedSession]) + "'";
 			
 //		Logger.getLogger("ESRI").info("Fiter:" + filter);
-		Cursor c = db.fetchAllRow(filter,"ZSTARTDATE asc");
+        Cursor c = db.fetchAllRow(filter,"ZSTARTDAY,ZSTARTMONTH,ZSTARTYEAR,ZSTARTHOUR,ZSTARTMINUTE asc");
 		adapter = new AgendaAdapter(this, c, true);
 		agendaList.setAdapter(adapter);
 	}

@@ -44,22 +44,22 @@ public final class AreaMap_
     }
 
     private void afterSetContentView_() {
-        m_btn = ((Button) findViewById(id.m_btn));
         mapView = ((MapView) findViewById(id.map));
-        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
-        info_view = ((LinearLayout) findViewById(id.info_view));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
         imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
+        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
+        info_view = ((LinearLayout) findViewById(id.info_view));
+        m_btn = ((Button) findViewById(id.m_btn));
         current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
+        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
         {
-            View view = findViewById(id.link7_txvw);
+            View view = findViewById(id.imagery_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.link7_txvw();
+                        AreaMap_.this.imagery_txvw();
                     }
 
                 }
@@ -67,14 +67,14 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.link8_txvw);
+            View view = findViewById(id.link3_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.link8_txvw();
+                        AreaMap_.this.link3_txvw();
                     }
 
                 }
@@ -112,14 +112,14 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.link6_txvw);
+            View view = findViewById(id.info_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.link6_txvw();
+                        AreaMap_.this.info_btn();
                     }
 
                 }
@@ -142,6 +142,51 @@ public final class AreaMap_
             }
         }
         {
+            View view = findViewById(id.m_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.m_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link6_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link6_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link7_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link7_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.info_close_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -150,81 +195,6 @@ public final class AreaMap_
                     @Override
                     public void onClick(View view) {
                         AreaMap_.this.info_close_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.info_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.info_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.imagery_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.imagery_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link3_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.link3_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link1_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.link1_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link2_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.link2_txvw();
                     }
 
                 }
@@ -247,14 +217,44 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.m_btn);
+            View view = findViewById(id.link2_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.m_btn();
+                        AreaMap_.this.link2_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link8_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link8_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link1_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link1_txvw();
                     }
 
                 }
@@ -302,16 +302,16 @@ public final class AreaMap_
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MAP_POINT")) {
+            if (extras_.containsKey("FLOOR")) {
                 try {
-                    mapPoint = cast_(extras_.get("MAP_POINT"));
+                    floor = cast_(extras_.get("FLOOR"));
                 } catch (ClassCastException e) {
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("FLOOR")) {
+            if (extras_.containsKey("MAP_POINT")) {
                 try {
-                    floor = cast_(extras_.get("FLOOR"));
+                    mapPoint = cast_(extras_.get("MAP_POINT"));
                 } catch (ClassCastException e) {
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -397,13 +397,13 @@ public final class AreaMap_
             return this;
         }
 
-        public AreaMap_.IntentBuilder_ mapPoint(Point mapPoint) {
-            intent_.putExtra("MAP_POINT", ((Serializable) mapPoint));
+        public AreaMap_.IntentBuilder_ floor(Integer floor) {
+            intent_.putExtra("FLOOR", ((Serializable) floor));
             return this;
         }
 
-        public AreaMap_.IntentBuilder_ floor(Integer floor) {
-            intent_.putExtra("FLOOR", ((Serializable) floor));
+        public AreaMap_.IntentBuilder_ mapPoint(Point mapPoint) {
+            intent_.putExtra("MAP_POINT", ((Serializable) mapPoint));
             return this;
         }
 

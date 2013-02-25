@@ -65,7 +65,11 @@ public class Util {
 		int ehour = c.getInt(c.getColumnIndex("ZENDHOUR"));
 		int emin = c.getInt(c.getColumnIndex("ZENDMINUTE"));
 		
-		String amPM = " PM";
+		String startAMPM = " PM";
+        if (shour < 13)
+            startAMPM = " AM";
+
+        String amPM = " PM";
 		if (ehour < 13)
 			amPM = " AM";
 		
@@ -83,7 +87,7 @@ public class Util {
 		if (ehour > 12)
 			ehour = ehour - 12;
 		
-		return date += shour + ":" + sMinStr + " - " + ehour + ":" + eMinStr + amPM;
+		return date += shour + ":" + sMinStr + startAMPM + " - " + ehour + ":" + eMinStr + amPM;
 		
 	}
 	
