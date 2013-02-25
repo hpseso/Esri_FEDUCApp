@@ -32,7 +32,7 @@ public class AgendaDB extends DB {
 	
 	public Cursor get(int id) {
 		//return mDatabase.query(TABLE_NAME, null, filter, null, null, null, orderby);
-		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE _id=" + id, null);
+		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ZSESSIONID=" + id, null);
 	}
 
     public void delete (String ids) {

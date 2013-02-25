@@ -30,7 +30,7 @@ public class AgendaAdapter extends CursorAdapter implements Filterable {
 
 	@Override
 	public void bindView(View view, final Context context, Cursor c) {
-		final int id = c.getInt(c.getColumnIndex("_id"));
+		final int id = c.getInt(c.getColumnIndex("ZSESSIONID"));
 		String title = c.getString(c.getColumnIndex("ZSESSIONTITLE"));
 		String lable3 = c.getString(c.getColumnIndex("ZROOM"));
 		

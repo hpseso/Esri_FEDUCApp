@@ -17,7 +17,8 @@ public class ExhibitsHours extends Activity {
 	
 	@AfterViews
 	void loadView() {
-		map_btn.setVisibility(View.GONE);
+        if (map_btn != null)
+		    map_btn.setVisibility(View.GONE);
 	}
 	
 }

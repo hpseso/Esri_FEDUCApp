@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -40,6 +41,9 @@ public class AgendaDetail extends BaseActivity {
 	
 	@ViewById
 	ScrollView detail_container;
+
+    @ViewById
+    LinearLayout  detail_sub_container;
 	
 	int day,month,year,hour,min;
 	int eday,emonth,eyear,ehour,emin;
@@ -88,30 +92,42 @@ public class AgendaDetail extends BaseActivity {
 			AgendaAssetDB adb = new AgendaAssetDB(this);
 			Cursor c = adb.get(id); 
 			if (c !=null && c.moveToFirst()) {
-				String atitle = c.getString(c.getColumnIndex("ZSESSIONASSETTITLE"));
-				String description = c.getString(c.getColumnIndex("ZSESSIONASSETDESCRIPTION"));
-				String author = c.getString(c.getColumnIndex("ZSESSIONASSETAUTHOR"));
-				String orgName = c.getString(c.getColumnIndex("ZSESSIONASSETAUTHORORGANIZATIONNAME"));
-				
-				if (atitle != null)
-					asset_title_txvw.setText(atitle);
-				else
-					asset_title_txvw.setVisibility(View.GONE);
-				
-				if (author != null)
-					author_txvw.setText(atitle);
-				else
-					author_txvw.setVisibility(View.GONE);
-				
-				if (orgName != null)
-					org_name_txvw.setText(orgName);
-				else
-					org_name_txvw.setVisibility(View.GONE);
-				
-				if (description != null)
-					description_txvw.setText(description);
-				else
-					description_txvw.setVisibility(View.GONE);
+
+
+                while (c.isAfterLast() == false) {
+
+                    View view = getLayoutInflater().inflate(R.layout.cellview6,null);
+
+                    String atitle = c.getString(c.getColumnIndex("ZSESSIONASSETTITLE"));
+                    String description = c.getString(c.getColumnIndex("ZSESSIONASSETDESCRIPTION"));
+                    String author = c.getString(c.getColumnIndex("ZSESSIONASSETAUTHOR"));
+                    String orgName = c.getString(c.getColumnIndex("ZSESSIONASSETAUTHORORGANIZATIONNAME"));
+
+                    if (atitle != null && atitle.length() > 0 && !atitle.trim().equalsIgnoreCase("null"))
+                        ((TextView)view.findViewById(R.id.asset_title_txvw)).setText(atitle);
+                    else
+                        ((TextView)view.findViewById(R.id.asset_title_txvw)).setVisibility(View.GONE);
+
+                    if (author != null && author.length() > 0 && !author.trim().equalsIgnoreCase("null"))
+                        ((TextView)view.findViewById(R.id.author_txvw)).setText(author);
+                    else
+                        ((TextView)view.findViewById(R.id.author_txvw)).setVisibility(View.GONE);
+
+                    if (orgName != null && orgName.length() > 0 && !orgName.trim().equalsIgnoreCase("null"))
+                        ((TextView)view.findViewById(R.id.org_name_txvw)).setText(orgName);
+                    else
+                        ((TextView)view.findViewById(R.id.org_name_txvw)).setVisibility(View.GONE);
+
+                    if (description != null && description.length() > 0 && !description.trim().equalsIgnoreCase("null"))
+                        ((TextView)view.findViewById(R.id.description_txvw)).setText(description);
+                    else
+                        ((TextView)view.findViewById(R.id.description_txvw)).setVisibility(View.GONE);
+
+                    detail_sub_container.addView(view);
+
+                    c.moveToNext();
+                }
+
 				c.close();
 			}
 			else 

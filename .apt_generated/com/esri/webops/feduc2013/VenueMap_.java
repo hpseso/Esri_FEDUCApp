@@ -39,69 +39,24 @@ public final class VenueMap_
     }
 
     private void afterSetContentView_() {
-        mapView = ((MapView) findViewById(id.map));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
-        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
-        level_one_txvw = ((TextView) findViewById(id.level_one_txvw));
         m_btn = ((Button) findViewById(id.m_btn));
+        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
+        mapView = ((MapView) findViewById(id.map));
+        current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
+        level_two_txvw = ((TextView) findViewById(id.level_two_txvw));
+        level_one_txvw = ((TextView) findViewById(id.level_one_txvw));
+        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
         floor_menu_container = ((LinearLayout) findViewById(id.floor_menu_container));
         info_view = ((LinearLayout) findViewById(id.info_view));
-        level_two_txvw = ((TextView) findViewById(id.level_two_txvw));
-        level_three_txvw = ((TextView) findViewById(id.level_three_txvw));
         {
-            View view = findViewById(id.info_close_btn);
+            View view = findViewById(id.m_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.info_close_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link2_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        VenueMap_.this.link2_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link5_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        VenueMap_.this.link5_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link3_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        VenueMap_.this.link3_txvw();
+                        VenueMap_.this.m_btn();
                     }
 
                 }
@@ -124,14 +79,14 @@ public final class VenueMap_
             }
         }
         {
-            View view = findViewById(id.level_three_txvw);
+            View view = findViewById(id.info_close_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.level_three_txvw();
+                        VenueMap_.this.info_close_btn();
                     }
 
                 }
@@ -154,14 +109,14 @@ public final class VenueMap_
             }
         }
         {
-            View view = findViewById(id.link8_txvw);
+            View view = findViewById(id.info_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.link8_txvw();
+                        VenueMap_.this.info_btn();
                     }
 
                 }
@@ -169,14 +124,14 @@ public final class VenueMap_
             }
         }
         {
-            View view = findViewById(id.m_btn);
+            View view = findViewById(id.link3_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.m_btn();
+                        VenueMap_.this.link3_txvw();
                     }
 
                 }
@@ -184,14 +139,14 @@ public final class VenueMap_
             }
         }
         {
-            View view = findViewById(id.link6_txvw);
+            View view = findViewById(id.level_three_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.link6_txvw();
+                        VenueMap_.this.level_three_txvw();
                     }
 
                 }
@@ -214,14 +169,29 @@ public final class VenueMap_
             }
         }
         {
-            View view = findViewById(id.info_btn);
+            View view = findViewById(id.link8_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        VenueMap_.this.info_btn();
+                        VenueMap_.this.link8_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link2_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        VenueMap_.this.link2_txvw();
                     }
 
                 }
@@ -237,6 +207,36 @@ public final class VenueMap_
                     @Override
                     public void onClick(View view) {
                         VenueMap_.this.close_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link6_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        VenueMap_.this.link6_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link5_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        VenueMap_.this.link5_txvw();
                     }
 
                 }
@@ -307,9 +307,9 @@ public final class VenueMap_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey("AGENDA_POINT")) {
+            if (extras_.containsKey("MARKER_COLOR")) {
                 try {
-                    agendaPoint = cast_(extras_.get("AGENDA_POINT"));
+                    markerColor = cast_(extras_.get("MARKER_COLOR"));
                 } catch (ClassCastException e) {
                     Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -321,13 +321,6 @@ public final class VenueMap_
                     Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MAP_LEVEL")) {
-                try {
-                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
-                } catch (ClassCastException e) {
-                    Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
-                }
-            }
             if (extras_.containsKey("EXHIBIT_POINT")) {
                 try {
                     exhibitPoint = cast_(extras_.get("EXHIBIT_POINT"));
@@ -335,9 +328,16 @@ public final class VenueMap_
                     Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MARKER_COLOR")) {
+            if (extras_.containsKey("MAP_LEVEL")) {
                 try {
-                    markerColor = cast_(extras_.get("MARKER_COLOR"));
+                    mapLevel = cast_(extras_.get("MAP_LEVEL"));
+                } catch (ClassCastException e) {
+                    Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
+                }
+            }
+            if (extras_.containsKey("AGENDA_POINT")) {
+                try {
+                    agendaPoint = cast_(extras_.get("AGENDA_POINT"));
                 } catch (ClassCastException e) {
                     Log.e("VenueMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -382,8 +382,8 @@ public final class VenueMap_
             }
         }
 
-        public VenueMap_.IntentBuilder_ agendaPoint(Point agendaPoint) {
-            intent_.putExtra("AGENDA_POINT", ((Serializable) agendaPoint));
+        public VenueMap_.IntentBuilder_ markerColor(Integer markerColor) {
+            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
             return this;
         }
 
@@ -392,18 +392,18 @@ public final class VenueMap_
             return this;
         }
 
-        public VenueMap_.IntentBuilder_ mapLevel(Integer mapLevel) {
-            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
-            return this;
-        }
-
         public VenueMap_.IntentBuilder_ exhibitPoint(Point exhibitPoint) {
             intent_.putExtra("EXHIBIT_POINT", ((Serializable) exhibitPoint));
             return this;
         }
 
-        public VenueMap_.IntentBuilder_ markerColor(Integer markerColor) {
-            intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
+        public VenueMap_.IntentBuilder_ mapLevel(Integer mapLevel) {
+            intent_.putExtra("MAP_LEVEL", ((Serializable) mapLevel));
+            return this;
+        }
+
+        public VenueMap_.IntentBuilder_ agendaPoint(Point agendaPoint) {
+            intent_.putExtra("AGENDA_POINT", ((Serializable) agendaPoint));
             return this;
         }
 

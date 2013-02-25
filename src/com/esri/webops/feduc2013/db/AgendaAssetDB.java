@@ -25,7 +25,7 @@ public class AgendaAssetDB extends DB {
 	}
 	
 	public Cursor get(int id) {
-		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ZSESSIONID=" + id, null);
+		return mDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE ZSESSIONID=" + id + " ORDER BY ZSESSIONASSETSEQUENCENUMBER", null);
 	}
 
     public void delete (String ids) {

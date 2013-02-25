@@ -36,51 +36,21 @@ public final class ExhibitsDetail_
     }
 
     private void afterSetContentView_() {
-        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
+        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
         address2_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address2_txvw));
         call_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.call_btn));
-        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
-        address1_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address1_txvw));
-        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
-        booth_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.booth_txvw));
-        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
-        description_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.description_txvw));
-        logo_imgvw = ((ImageView) findViewById(com.esri.webops.feduc2013.R.id.logo_imgvw));
-        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
+        map_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.map_btn));
         partner_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.partner_txvw));
+        email_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.email_txvw));
+        booth_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.booth_txvw));
         email_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.email_btn));
+        address1_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.address1_txvw));
+        link_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.link_btn));
+        title_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.title_txvw));
+        logo_imgvw = ((ImageView) findViewById(com.esri.webops.feduc2013.R.id.logo_imgvw));
         locate_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.locate_btn));
         back_btn = ((Button) findViewById(com.esri.webops.feduc2013.R.id.back_btn));
-        {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.email_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ExhibitsDetail_.this.email_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(com.esri.webops.feduc2013.R.id.back_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ExhibitsDetail_.this.back_btn();
-                    }
-
-                }
-                );
-            }
-        }
+        phone_txvw = ((TextView) findViewById(com.esri.webops.feduc2013.R.id.phone_txvw));
         {
             View view = findViewById(com.esri.webops.feduc2013.R.id.locate_btn);
             if (view!= null) {
@@ -105,6 +75,36 @@ public final class ExhibitsDetail_
                     @Override
                     public void onClick(View view) {
                         ExhibitsDetail_.this.link_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.email_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsDetail_.this.email_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(com.esri.webops.feduc2013.R.id.back_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ExhibitsDetail_.this.back_btn();
                     }
 
                 }

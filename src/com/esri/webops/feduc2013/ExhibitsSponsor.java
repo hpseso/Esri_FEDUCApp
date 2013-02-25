@@ -63,7 +63,7 @@ public class ExhibitsSponsor extends BaseActivity {
 		sponsorList.setEmptyView(empty_txvw);
 		
 		loadData();
-		loadDataFromWeb();
+        refresh_btn();
 	}
 
     @Click
@@ -148,6 +148,7 @@ public class ExhibitsSponsor extends BaseActivity {
 		loadDataFromWeb();
 	}
 
+    @Background
     void loadDataFromWeb() {
         try {
 
