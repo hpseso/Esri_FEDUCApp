@@ -166,16 +166,17 @@ public class AgendaDetail extends BaseActivity {
 	@Click
 	void locate_btn() {
 		Logger.getLogger("ESRI").info("Agenda Point:" + x +":"+ y);
-		Point point = new Point(x, y);
+        Point point = new Point(x, y);
         int tFloor = floor;
-        Intent intent = new Intent(this,VenueMap_.class);
+        Intent intent = new Intent(this, VenueMap_.class);
         intent.putExtra("AGENDA_POINT", point);
 
         if (floor == 6) {
-            if (x == 0)
-                tFloor = 1;
-            else
-                tFloor = floor;
+            if (x == 0) {
+                point = new Point(-8574257.053513,4707757.743657);
+            }
+            intent = new Intent(this,AreaMap_.class);
+            intent.putExtra("MAP_POINT", point);
         }
         else {
             if (x == 0)

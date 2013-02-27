@@ -58,10 +58,11 @@ public class AgendaAdapter extends CursorAdapter implements Filterable {
 				intent.putExtra("AGENDA_POINT", point);
 
                 if (floor == 6) {
-                    if (x == 0)
-                        tFloor = 1;
-                    else
-                        tFloor = floor;
+                    if (x == 0) {
+                        point = new Point(-8574257.053513,4707757.743657);
+                    }
+                    intent = new Intent(context,AreaMap_.class);
+                    intent.putExtra("MAP_POINT", point);
                 }
                 else {
                     if (x == 0)

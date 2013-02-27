@@ -44,13 +44,28 @@ public final class AreaMap_
     }
 
     private void afterSetContentView_() {
-        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
-        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
-        m_btn = ((Button) findViewById(id.m_btn));
-        info_view = ((LinearLayout) findViewById(id.info_view));
-        mapView = ((MapView) findViewById(id.map));
         current_map_txvw = ((TextView) findViewById(id.current_map_txvw));
+        info_view = ((LinearLayout) findViewById(id.info_view));
+        world_topo_txvw = ((TextView) findViewById(id.world_topo_txvw));
         imagery_txvw = ((TextView) findViewById(id.imagery_txvw));
+        m_btn = ((Button) findViewById(id.m_btn));
+        map_menu_container = ((LinearLayout) findViewById(id.map_menu_container));
+        mapView = ((MapView) findViewById(id.map));
+        {
+            View view = findViewById(id.link8_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link8_txvw();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = findViewById(id.link2_txvw);
             if (view!= null) {
@@ -60,21 +75,6 @@ public final class AreaMap_
                     @Override
                     public void onClick(View view) {
                         AreaMap_.this.link2_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.info_close_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.info_close_btn();
                     }
 
                 }
@@ -97,59 +97,14 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.m_btn);
+            View view = findViewById(id.imagery_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.m_btn();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link6_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.link6_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.link3_txvw);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.link3_txvw();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.close_btn);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AreaMap_.this.close_btn();
+                        AreaMap_.this.imagery_txvw();
                     }
 
                 }
@@ -172,6 +127,21 @@ public final class AreaMap_
             }
         }
         {
+            View view = findViewById(id.link6_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link6_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = findViewById(id.link4_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -187,14 +157,14 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.world_topo_txvw);
+            View view = findViewById(id.info_close_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.world_topo_txvw();
+                        AreaMap_.this.info_close_btn();
                     }
 
                 }
@@ -217,14 +187,14 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.link8_txvw);
+            View view = findViewById(id.m_btn);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.link8_txvw();
+                        AreaMap_.this.m_btn();
                     }
 
                 }
@@ -247,14 +217,44 @@ public final class AreaMap_
             }
         }
         {
-            View view = findViewById(id.imagery_txvw);
+            View view = findViewById(id.world_topo_txvw);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        AreaMap_.this.imagery_txvw();
+                        AreaMap_.this.world_topo_txvw();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.close_btn);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.close_btn();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.link3_txvw);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AreaMap_.this.link3_txvw();
                     }
 
                 }
@@ -295,6 +295,13 @@ public final class AreaMap_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
+            if (extras_.containsKey("LOAD_POI")) {
+                try {
+                    loadPOI = cast_(extras_.get("LOAD_POI"));
+                } catch (ClassCastException e) {
+                    Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
+                }
+            }
             if (extras_.containsKey("MARKER_COLOR")) {
                 try {
                     markerColor = cast_(extras_.get("MARKER_COLOR"));
@@ -302,16 +309,16 @@ public final class AreaMap_
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("MAP_POINT")) {
+            if (extras_.containsKey("FLOOR")) {
                 try {
-                    mapPoint = cast_(extras_.get("MAP_POINT"));
+                    floor = cast_(extras_.get("FLOOR"));
                 } catch (ClassCastException e) {
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("FLOOR")) {
+            if (extras_.containsKey("MAP_POINT")) {
                 try {
-                    floor = cast_(extras_.get("FLOOR"));
+                    mapPoint = cast_(extras_.get("MAP_POINT"));
                 } catch (ClassCastException e) {
                     Log.e("AreaMap_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -392,18 +399,23 @@ public final class AreaMap_
             }
         }
 
+        public AreaMap_.IntentBuilder_ loadPOI(Boolean loadPOI) {
+            intent_.putExtra("LOAD_POI", ((Serializable) loadPOI));
+            return this;
+        }
+
         public AreaMap_.IntentBuilder_ markerColor(Integer markerColor) {
             intent_.putExtra("MARKER_COLOR", ((Serializable) markerColor));
             return this;
         }
 
-        public AreaMap_.IntentBuilder_ mapPoint(Point mapPoint) {
-            intent_.putExtra("MAP_POINT", ((Serializable) mapPoint));
+        public AreaMap_.IntentBuilder_ floor(Integer floor) {
+            intent_.putExtra("FLOOR", ((Serializable) floor));
             return this;
         }
 
-        public AreaMap_.IntentBuilder_ floor(Integer floor) {
-            intent_.putExtra("FLOOR", ((Serializable) floor));
+        public AreaMap_.IntentBuilder_ mapPoint(Point mapPoint) {
+            intent_.putExtra("MAP_POINT", ((Serializable) mapPoint));
             return this;
         }
 

@@ -81,6 +81,9 @@ public class AreaMap extends Activity {
     @ViewById
     LinearLayout info_view;
 
+    @Extra("LOAD_POI")
+    Boolean loadPOI = true;
+
     // feature extent
     GraphicsLayer graphicsLayer;
 
@@ -151,7 +154,14 @@ public class AreaMap extends Activity {
                 Logger.getLogger("Esri").info("Status changed:" + source.toString() + ":" + status);
 
                 if (OnStatusChangedListener.STATUS.INITIALIZED == status && source == mapView) {
-                    loadPOI();
+                    if (loadPOI)
+                        loadPOI();
+                    else {
+                        Unit mapUnit = SpatialReference.create(3857).getUnit();
+                        double zoomWidth = Unit.convertUnits(1,Unit.create(LinearUnit.Code.MILE_US),mapUnit);
+                        Envelope zoomExtent = new Envelope(mapPoint,zoomWidth, zoomWidth);
+                        mapView.setExtent(zoomExtent);
+                    }
                 }
             }
         });
